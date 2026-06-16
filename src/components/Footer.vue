@@ -57,7 +57,6 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
-import { Github, Twitter, Linkedin, Mail } from 'lucide-vue-next'
 import { messages } from '../locales'
 import logoImg from '../assets/logo/logo.png'
 
