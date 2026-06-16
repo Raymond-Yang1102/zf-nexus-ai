@@ -1,4 +1,4 @@
-import{c as e}from"./Footer.vue_vue_type_script_setup_true_lang-CmrobCHn.js";/**
+import{c as e}from"./Footer.vue_vue_type_script_setup_true_lang-BL2F6KD2.js";/**
  * @license lucide-vue-next v0.365.0 - ISC
  *
  * This source code is licensed under the ISC license.
