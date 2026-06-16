@@ -571,6 +571,11 @@
         }
       ]
     },
+    notFound: {
+      title: 'ページが見つかりません',
+      description: '申し訳ありません、お探しのページは存在しません。',
+      backToHome: 'ホームに戻る'
+    },
     terms: {
       title: '利用規約',
       lastUpdated: '最終更新: 2026年6月',
@@ -1224,6 +1229,11 @@
         }
       ]
     },
+    notFound: {
+      title: '页面未找到',
+      description: '抱歉，您访问的页面不存在。',
+      backToHome: '返回首页'
+    },
     terms: {
       title: '服务条款',
       lastUpdated: '最后更新：2026年6月',
@@ -1876,6 +1886,11 @@
           content: 'If you have questions regarding this Privacy Policy, please contact support@nexus-ai.jp.',
         }
       ]
+    },
+    notFound: {
+      title: 'Page Not Found',
+      description: 'Sorry, the page you are looking for does not exist.',
+      backToHome: 'Back to Home'
     },
     terms: {
       title: 'Terms of Service',
