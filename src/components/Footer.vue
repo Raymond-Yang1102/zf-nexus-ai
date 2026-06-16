@@ -11,12 +11,6 @@
           <p class="text-washi-200 text-sm mb-6 leading-relaxed">
             {{ footerData?.description }}
           </p>
-          <div class="flex items-center space-x-4">
-            <a v-for="social in socialLinks" :key="social.href" :href="social.href"
-              class="w-10 h-10 rounded-lg bg-sumi-800/80 flex items-center justify-center text-washi-200 hover:text-white hover:bg-sky-600 transition-colors">
-              <component :is="social.icon" class="w-5 h-5" />
-            </a>
-          </div>
         </div>
 
         <div v-for="section in footerLinks" :key="section.title">
@@ -77,13 +71,6 @@ const effectiveLocale = computed<Locale>(() => {
   return 'ja' as Locale
 })
 const router = useRouter()
-
-const socialLinks = [
-  { icon: Github, href: '#' },
-  { icon: Twitter, href: '#' },
-  { icon: Linkedin, href: '#' },
-  { icon: Mail, href: '#' }
-]
 
 const footerData = computed(() => messages[effectiveLocale.value]?.footer ?? { company: '', copyright: '', description: '', links: {}, sections: {}, contactInfo: {} })
 
