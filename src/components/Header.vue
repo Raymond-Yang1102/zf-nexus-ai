@@ -7,7 +7,7 @@
       <div class="flex items-center justify-between h-16">
         <button @click="goToHome" class="flex items-center space-x-2 cursor-pointer">
           <!-- logo -->
-           <img :src="logoImg" alt="logo" class="w-12 h-12">
+          <img :src="logoImg" alt="logo" class="w-12 h-12">
           <span :class="['font-bold text-xl', textColorClass]">
             {{ messages[effectiveLocale]?.header?.companyName }}
           </span>
@@ -29,7 +29,8 @@
               class="absolute left-0 mt-2 w-[520px] rounded-xl shadow-xl py-2 border border-washi-200 bg-white z-50">
               <div class="flex">
                 <div class="w-[160px] border-r border-washi-100">
-                  <button v-for="(key, index) in productKeys" :key="key" @mouseenter="selectedProduct = index" @click="handleProductClick(key)"
+                  <button v-for="(key, index) in productKeys" :key="key" @mouseenter="selectedProduct = index"
+                    @click="handleProductClick(key)"
                     class="w-full flex items-center space-x-2 px-3 py-2.5 text-left transition-all duration-200 cursor-pointer"
                     :class="selectedProduct === index ? 'bg-coral-50' : 'hover:bg-washi-50'">
                     <div class="w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-200"
@@ -54,7 +55,7 @@
                     </div>
                     <div>
                       <div class="font-bold text-sumi-800 text-base">{{ productsData[productKeys[selectedProduct]]?.name
-                      }}</div>
+                        }}</div>
                       <div class="text-xs text-sumi-600">{{ productsData[productKeys[selectedProduct]]?.userValue }}
                       </div>
                     </div>
@@ -142,12 +143,13 @@
       shouldUseDarkText ? 'bg-white/95 border-washi-200' : 'bg-sumi-900/95 border-sumi-600'
     ]">
       <div class="px-4 py-4 space-y-3">
-        <a v-for="item in navItems" :key="item.key" href="#" @click.prevent="handleNavClick(item); isMobileMenuOpen = false" :class="[
-          'block px-4 py-2 rounded-lg transition-colors',
-          shouldUseDarkText
-            ? 'text-sumi-700 hover:bg-washi-50'
-            : 'text-washi-200 hover:bg-sumi-700'
-        ]">
+        <a v-for="item in navItems" :key="item.key" href="#"
+          @click.prevent="handleNavClick(item); isMobileMenuOpen = false" :class="[
+            'block px-4 py-2 rounded-lg transition-colors',
+            shouldUseDarkText
+              ? 'text-sumi-700 hover:bg-washi-50'
+              : 'text-washi-200 hover:bg-sumi-700'
+          ]">
           {{ messages[effectiveLocale]?.header?.nav[item.key] }}
         </a>
         <div class="pt-3 border-t" :class="shouldUseDarkText ? 'border-washi-200' : 'border-sumi-600'">
@@ -165,15 +167,16 @@
                 'absolute right-0 mt-2 w-24 rounded-lg shadow-xl py-1 border z-50 backdrop-blur-md overflow-hidden',
                 shouldUseDarkText ? 'bg-white/95 border-washi-200' : 'bg-sumi-900/95 border-sumi-600'
               ]">
-                <button v-for="lang in languages" :key="lang.code" @click="selectLanguage(lang.code); isMobileMenuOpen = false" :class="[
-                  'w-full text-left px-4 py-2 text-sm hover:transition-colors',
-                  shouldUseDarkText
-                    ? 'hover:bg-washi-50'
-                    : 'hover:bg-sumi-700',
-                  currentLocale === lang.code
-                    ? (shouldUseDarkText ? 'text-sky-600 font-medium' : 'text-sky-400 font-medium')
-                    : (shouldUseDarkText ? 'text-sumi-700' : 'text-washi-200')
-                ]">
+                <button v-for="lang in languages" :key="lang.code"
+                  @click="selectLanguage(lang.code); isMobileMenuOpen = false" :class="[
+                    'w-full text-left px-4 py-2 text-sm hover:transition-colors',
+                    shouldUseDarkText
+                      ? 'hover:bg-washi-50'
+                      : 'hover:bg-sumi-700',
+                    currentLocale === lang.code
+                      ? (shouldUseDarkText ? 'text-sky-600 font-medium' : 'text-sky-400 font-medium')
+                      : (shouldUseDarkText ? 'text-sumi-700' : 'text-washi-200')
+                  ]">
                   {{ lang.label }}
                 </button>
               </div>
@@ -221,15 +224,14 @@ const effectiveLocale = computed(() => {
 })
 
 interface NavItem {
-  key: 'features' | 'pricing' | 'about' | 'help'
-  /** route: 路由跳转（如 /pricing）；section: 首页锚点滚动 */
+  key: 'features' | 'about' | 'help'
+  /** route: 路由跳转；section: 首页锚点滚动 */
   type: 'route' | 'section'
   target: string
 }
 
 const navItems: NavItem[] = [
   { key: 'features', type: 'section', target: 'features' },
-  { key: 'pricing', type: 'route', target: '/pricing' },
   { key: 'about', type: 'route', target: '/about' },
   { key: 'help', type: 'route', target: '/help' }
 ]
@@ -455,5 +457,3 @@ onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
 })
 </script>
-
-

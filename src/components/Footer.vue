@@ -104,7 +104,6 @@ const footerLinks = computed(() => {
     {
       title: ft?.sections?.company ?? '',
       items: [
-        { label: ft?.sections?.pricing ?? '', isLink: true, href: '/pricing', isExternal: false },
         { label: ft?.sections?.about ?? '', isLink: true, href: '/about', isExternal: false },
         { label: msg?.header?.nav?.help ?? '', isLink: true, href: '/help', isExternal: false }
       ]

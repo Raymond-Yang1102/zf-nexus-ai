@@ -11,8 +11,7 @@
         products: '製品',
         features: '特徴',
         about: '会社概要',
-        help: 'ヘルプセンター',
-        pricing: '価格'
+        help: 'ヘルプセンター'
       },
       companyName: '霊枢智匯',    // 会社名
       language: {
@@ -324,7 +323,6 @@
       sections: {
         products: '製品',
         resources: 'リソース',
-        pricing: '価格',
         company: '概要',
         about: '会社概要',
         careers: '採用',
@@ -350,87 +348,6 @@
         address: '住所',
         phone: '電話',
         hours: '営業時間'
-      }
-    },
-    pricing: {
-      title: '価格',
-      subtitle: '各製品の詳細をご確認ください',
-      back: '戻る',
-      popular: '人気',
-      noteGPT: {
-        name: 'NoteGPT',
-        description: 'AIノート作成ツール',
-        features: ['AIによる自動要約', '複数フォーマット出力', 'クラウド同期'],
-        plans: [
-          {
-            name: 'フリー',
-            description: '個人利用の無料プラン',
-            features: ['月100回AI生成', '基本ノート機能', '1GBストレージ', 'メールサポート'],
-            cta: '無料で開始'
-          },
-          {
-            name: 'プロ',
-            description: 'プロフェッショナル向け',
-            features: ['無制限AI生成', '高度編集機能', '無制限ストレージ', 'プライオリティサポート', 'チームコラボレーション'],
-            cta: 'プロにアップグレード'
-          },
-          {
-            name: 'ビジネス',
-            description: '企業向けソリューション',
-            features: ['プロの全機能', 'カスタム統合', 'SLA保証', '専属アカウントマネージャー', 'オンプレミス展開'],
-            cta: 'お問い合わせ'
-          }
-        ]
-      },
-      visualGPT: {
-        name: 'VisualGPT',
-        description: 'AI画像・動画生成・編集ツール',
-        features: ['高品質画像生成', '動画作成', '商用利用可'],
-        plans: [
-          {
-            name: 'Starter',
-            description: '個人利用の無料プラン',
-            features: ['月100枚画像生成', '月12本動画', '基本スタイル', 'スタンダード画質', 'メールサポート'],
-            cta: '無料で開始'
-          },
-          {
-            name: 'Basic',
-            description: '定期利用向け',
-            features: ['月500枚画像生成', '月65本動画', '全スタイルアクセス', '高画質ダウンロード', '商用利用', 'メールサポート'],
-            cta: 'サブスクライブ'
-          },
-          {
-            name: 'Pro',
-            description: 'プロフェッショナル向け',
-            features: ['月2,000枚画像生成', '月250本動画', 'バッチ編集', 'Lifetime Credit Pack対応', '高画質ダウンロード', '商用利用', '優先サポート'],
-            cta: 'プロにアップグレード'
-          }
-        ]
-      },
-      photoGPT: {
-        name: 'PhotoGPT',
-        description: 'AI照片編集・強化・生成ツール',
-        features: ['AI写真編集', '高度強化ツール', '一括処理'],
-        plans: [
-          {
-            name: 'Starter',
-            description: '個人利用の無料プラン',
-            features: ['月50枚編集', '基本編集機能', '自動背景除去', 'スタンダード画質', 'メールサポート'],
-            cta: '無料で開始'
-          },
-          {
-            name: 'Pro',
-            description: '定期利用向け',
-            features: ['月300枚編集', '全AI機能アクセス', 'バッチ生成', '高画質ダウンロード', '商用利用', '優先サポート'],
-            cta: 'プロにアップグレード'
-          },
-          {
-            name: 'Ultra',
-            description: 'ヘビーユーザー向け',
-            features: ['月3,000枚編集', '全AI機能アクセス', 'バッチ生成', 'Lifetime Credit Pack対応', '高画質ダウンロード', '商用利用', '優先サポート'],
-            cta: 'Ultraプラン'
-          }
-        ]
       }
     },
     about: {
@@ -665,8 +582,7 @@
         products: '产品',
         features: '特性',
         about: '关于我们',
-        help: '帮助中心',
-        pricing: '价格'
+        help: '帮助中心'
       },
       companyName: '灵枢智汇',
       language: {
@@ -982,7 +898,6 @@
       sections: {
         products: '产品',
         resources: '资源',
-        pricing: '价格',
         company: '关于',
         about: '关于我们',
         careers: '招聘',
@@ -1008,87 +923,6 @@
         address: '地址',
         phone: '电话',
         hours: '营业时间'
-      }
-    },
-    pricing: {
-      title: '价格',
-      subtitle: '查看各产品详情',
-      back: '返回',
-      popular: '热门',
-      noteGPT: {
-        name: 'NoteGPT',
-        description: 'AI笔记工具',
-        features: ['AI自动摘要', '多格式输出', '云端同步'],
-        plans: [
-          {
-            name: '免费版',
-            description: '个人使用的免费方案',
-            features: ['每月100次AI生成', '基本笔记功能', '1GB存储', '邮件支持'],
-            cta: '免费开始'
-          },
-          {
-            name: '专业版',
-            description: '面向专业人士',
-            features: ['无限AI生成', '高级编辑功能', '无限存储', '优先支持', '团队协作'],
-            cta: '升级专业版'
-          },
-          {
-            name: '企业版',
-            description: '企业解决方案',
-            features: ['专业版所有功能', '定制集成', 'SLA保障', '专属客户经理', '本地部署'],
-            cta: '联系我们'
-          }
-        ]
-      },
-      visualGPT: {
-        name: 'VisualGPT',
-        description: 'AI图像·视频生成·编辑工具',
-        features: ['高质量图像生成', '视频制作', '商业使用许可'],
-        plans: [
-          {
-            name: 'Starter',
-            description: '个人使用的免费方案',
-            features: ['每月100张图像生成', '每月12个视频', '基本风格', '标准画质', '邮件支持'],
-            cta: '免费开始'
-          },
-          {
-            name: 'Basic',
-            description: 'Regular用户方案',
-            features: ['每月500张图像生成', '每月65个视频', '全风格访问', '高清画质下载', '商业使用', '邮件支持'],
-            cta: '订阅'
-          },
-          {
-            name: 'Pro',
-            description: '专业用户方案',
-            features: ['每月2,000张图像生成', '每月250个视频', '批量编辑', 'Lifetime Credit Pack', '高清画质下载', '商业使用', '优先支持'],
-            cta: '升级专业版'
-          }
-        ]
-      },
-      photoGPT: {
-        name: 'PhotoGPT',
-        description: 'AI照片编辑·强化·生成工具',
-        features: ['AI照片编辑', '高级强化工具', '批量处理'],
-        plans: [
-          {
-            name: 'Starter',
-            description: '个人使用的免费方案',
-            features: ['每月50张编辑', '基本编辑功能', '自动背景去除', '标准画质', '邮件支持'],
-            cta: '免费开始'
-          },
-          {
-            name: 'Pro',
-            description: 'Regular用户方案',
-            features: ['每月300张编辑', '全AI功能访问', '批量生成', '高清画质下载', '商业使用', '优先支持'],
-            cta: '升级专业版'
-          },
-          {
-            name: 'Ultra',
-            description: '重度用户方案',
-            features: ['每月3,000张编辑', '全AI功能访问', '批量生成', 'Lifetime Credit Pack', '高清画质下载', '商业使用', '优先支持'],
-            cta: 'Ultra方案'
-          }
-        ]
       }
     },
     about: {
@@ -1323,8 +1157,7 @@
         products: 'Products',
         features: 'Features',
         about: 'About',
-        help: 'Help Center',
-        pricing: 'Pricing'
+        help: 'Help Center'
       },
       companyName: 'Nexus AI',
       language: {
@@ -1626,7 +1459,7 @@
       title: 'Open new doors of creativity with AI',
       subtitle: 'Start free today and expand your possibilities',
       cta: 'Get Started Free',
-      secondary: 'Check Pricing'
+      secondary: 'Learn More'
     },
     footer: {
       company: 'Nexus AI',
@@ -1640,7 +1473,6 @@
       sections: {
         products: 'Products',
         resources: 'Resources',
-        pricing: 'Pricing',
         company: 'About',
         about: 'About Us',
         careers: 'Careers',
@@ -1666,87 +1498,6 @@
         address: 'Address',
         phone: 'Phone',
         hours: 'Hours'
-      }
-    },
-    pricing: {
-      title: 'Pricing',
-      subtitle: 'Check details for each product',
-      back: 'Back',
-      popular: 'Popular',
-      noteGPT: {
-        name: 'NoteGPT',
-        description: 'AI note-taking tool',
-        features: ['AI auto-summarization', 'Multiple format output', 'Cloud sync'],
-        plans: [
-          {
-            name: 'Free',
-            description: 'Free plan for personal use',
-            features: ['100 AI generations per month', 'Basic note features', '1GB storage', 'Email support'],
-            cta: 'Get Started Free'
-          },
-          {
-            name: 'Pro',
-            description: 'For professionals',
-            features: ['Unlimited AI generations', 'Advanced editing', 'Unlimited storage', 'Priority support', 'Team collaboration'],
-            cta: 'Upgrade to Pro'
-          },
-          {
-            name: 'Business',
-            description: 'Enterprise solution',
-            features: ['All Pro features', 'Custom integrations', 'SLA guarantee', 'Dedicated account manager', 'On-premise deployment'],
-            cta: 'Contact Us'
-          }
-        ]
-      },
-      visualGPT: {
-        name: 'VisualGPT',
-        description: 'AI Image & Video Generator & Editor',
-        features: ['High-quality image generation', 'Video creation', 'Commercial use'],
-        plans: [
-          {
-            name: 'Starter',
-            description: 'Free plan for personal use',
-            features: ['100 images/month', '12 videos/month', 'Basic styles', 'Standard quality', 'Email support'],
-            cta: 'Get Started Free'
-          },
-          {
-            name: 'Basic',
-            description: 'For regular users',
-            features: ['500 images/month', '65 videos/month', 'All styles access', 'High-quality download', 'Commercial use', 'Email support'],
-            cta: 'Subscribe'
-          },
-          {
-            name: 'Pro',
-            description: 'For professionals',
-            features: ['2,000 images/month', '250 videos/month', 'Batch editing', 'Lifetime Credit Pack', 'High-quality download', 'Commercial use', 'Priority support'],
-            cta: 'Upgrade to Pro'
-          }
-        ]
-      },
-      photoGPT: {
-        name: 'PhotoGPT',
-        description: 'AI Photo Editor, Enhancer & Generator',
-        features: ['AI photo editing', 'Advanced enhancement tools', 'Batch processing'],
-        plans: [
-          {
-            name: 'Starter',
-            description: 'Free plan for personal use',
-            features: ['50 edits/month', 'Basic editing features', 'Auto background removal', 'Standard quality', 'Email support'],
-            cta: 'Get Started Free'
-          },
-          {
-            name: 'Pro',
-            description: 'For regular users',
-            features: ['300 edits/month', 'All AI features access', 'Batch generation', 'High-quality download', 'Commercial use', 'Priority support'],
-            cta: 'Upgrade to Pro'
-          },
-          {
-            name: 'Ultra',
-            description: 'For heavy users',
-            features: ['3,000 edits/month', 'All AI features access', 'Batch generation', 'Lifetime Credit Pack', 'High-quality download', 'Commercial use', 'Priority support'],
-            cta: 'Ultra Plan'
-          }
-        ]
       }
     },
     about: {
@@ -1801,7 +1552,7 @@
         },
         {
           question: 'What is the difference between the free and paid plans?',
-          answer: 'The free plan gives you access to basic features with usage limits. Paid plans significantly increase your usage limits and unlock advanced AI features along with priority support. Please visit our pricing page for details.'
+          answer: 'The free plan gives you access to basic features with usage limits. Paid plans significantly increase your usage limits and unlock advanced AI features along with priority support.'
         },
         {
           question: 'Where should I direct billing and payment inquiries?',
