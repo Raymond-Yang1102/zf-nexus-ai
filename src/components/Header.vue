@@ -229,8 +229,8 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   { key: 'features', type: 'section', target: 'features' },
-  { key: 'about', type: 'route', target: '/about' },
-  { key: 'help', type: 'route', target: '/help' }
+  { key: 'about', type: 'route', target: 'about' },
+  { key: 'help', type: 'route', target: 'help' }
 ]
 
 /**
@@ -249,13 +249,17 @@ const scrollToElement = (id: string) => {
 
 const handleNavClick = (item: NavItem) => {
   if (item.type === 'route') {
-    router.push(item.target)
+    const lang = locale.value as string
+    const path = `/${lang}/${item.target}`
+    router.push(path)
     return
   }
   if (isHomePage.value) {
     scrollToElement(item.target)
   } else {
-    router.push({ path: '/', hash: `#${item.target}` })
+    const lang = locale.value as string
+    const path = lang === 'ja' ? '/' : `/${lang}/`
+    router.push({ path, hash: `#${item.target}` })
   }
 }
 
@@ -327,7 +331,8 @@ const languages = Object.entries(messages[effectiveLocale.value]?.header?.langua
 }));
 
 const isHomePage = computed(() => {
-  return router.currentRoute.value.path === '/'
+  const path = router.currentRoute.value.path
+  return path === '/' || path === '/ja/' || path === '/zh/' || path === '/en/'
 })
 
 const shouldUseDarkText = computed(() => {
@@ -438,10 +443,13 @@ const cancelLangMenuClose = () => {
 }
 
 const goToHome = () => {
+  const lang = locale.value as string
+  const homePath = lang === 'ja' ? '/' : `/${lang}/`
+  
   if (isHomePage.value) {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   } else {
-    router.push('/')
+    router.push(homePath)
   }
 }
 
