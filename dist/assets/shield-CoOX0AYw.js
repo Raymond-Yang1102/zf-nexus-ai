@@ -1,4 +1,4 @@
-import{c as o}from"./Footer.vue_vue_type_script_setup_true_lang-qPFLjxm1.js";/**
+import{c as o}from"./Footer.vue_vue_type_script_setup_true_lang-2OLVFN_o.js";/**
  * @license lucide-vue-next v0.365.0 - ISC
  *
  * This source code is licensed under the ISC license.

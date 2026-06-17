@@ -1,22 +1,3 @@
-<script setup lang="ts">
-import { computed } from 'vue'
-import { useI18n } from 'vue-i18n'
-import { Star, Quote, Calendar } from 'lucide-vue-next'
-import { messages, type Locale } from '../locales'
-
-const i18n = useI18n()
-const locale = i18n.locale as unknown as { value: Locale }
-
-const title = computed(() => messages[locale.value]?.testimonials?.title)
-const description = computed(() => messages[locale.value]?.testimonials?.description)
-
-// duplicated for seamless marquee loop
-const marqueeItems = computed(() => {
-  const items = messages[locale.value]?.testimonials?.items ?? []
-  return [...items, ...items]
-})
-</script>
-
 <template>
   <section id="about" class="py-12 bg-gradient-to-b from-washi-50 to-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -71,6 +52,25 @@ const marqueeItems = computed(() => {
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { Star, Quote, Calendar } from 'lucide-vue-next'
+import { messages, type Locale } from '../locales'
+
+const i18n = useI18n()
+const locale = i18n.locale as unknown as { value: Locale }
+
+const title = computed(() => messages[locale.value]?.testimonials?.title)
+const description = computed(() => messages[locale.value]?.testimonials?.description)
+
+// duplicated for seamless marquee loop
+const marqueeItems = computed(() => {
+  const items = messages[locale.value]?.testimonials?.items ?? []
+  return [...items, ...items]
+})
+</script>
 
 <style scoped>
 .marquee-wrapper {

@@ -1,38 +1,3 @@
-<script setup lang="ts">
-import { computed } from 'vue'
-import { useI18n } from 'vue-i18n'
-import { Sparkles, ArrowRight } from 'lucide-vue-next'
-import { messages } from '../locales'
-import notegptLogo from '../assets/logo/notegpt.png'
-import visualgptLogo from '../assets/logo/visualgpt.png'
-import photogptLogo from '../assets/logo/photogpt.png'
-
-type Locale = keyof typeof messages
-
-const { locale } = useI18n()
-
-const effectiveLocale = computed<Locale>(() => {
-  const loc = locale.value as string
-  if (loc in messages) return loc as Locale
-  return 'ja' as Locale
-})
-
-const heroData = computed(() => messages[effectiveLocale.value]?.hero)
-
-const productLogos = [notegptLogo, visualgptLogo, photogptLogo]
-
-const productsData = computed(() => messages[effectiveLocale.value]?.products)
-
-/** 滚动到产品区域（补偿固定页眉高度） */
-const scrollToProducts = () => {
-  const el = document.getElementById('products')
-  if (!el) return
-  const HEADER_OFFSET = 64
-  const y = el.getBoundingClientRect().top + window.scrollY - HEADER_OFFSET
-  window.scrollTo({ top: y, behavior: 'smooth' })
-}
-</script>
-
 <template>
   <section id="home"
     class="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-washi-50 via-white to-washi-100">
@@ -101,21 +66,6 @@ const scrollToProducts = () => {
               productsData[key]?.userValue }}</span>
           </div>
         </div>
-
-        <!-- <div class="mt-20 grid grid-cols-3 gap-8 max-w-lg mx-auto animate-fade-in delay-700">
-          <div class="text-center">
-            <div class="text-3xl sm:text-4xl font-bold text-sky-600">80M+</div>
-            <div class="text-sm text-sumi-500 mt-1">{{ heroData.stats.users }}</div>
-          </div>
-          <div class="text-center">
-            <div class="text-3xl sm:text-4xl font-bold text-wisteria-600">99%</div>
-            <div class="text-sm text-sumi-500 mt-1">{{ heroData.stats.uptime }}</div>
-          </div>
-          <div class="text-center">
-            <div class="text-3xl sm:text-4xl font-bold text-seigaiha-600">24/7</div>
-            <div class="text-sm text-sumi-500 mt-1">{{ heroData.stats.support }}</div>
-          </div>
-        </div> -->
       </div>
     </div>
 
@@ -126,3 +76,38 @@ const scrollToProducts = () => {
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { Sparkles, ArrowRight } from 'lucide-vue-next'
+import { messages } from '../locales'
+import notegptLogo from '../assets/logo/notegpt.png'
+import visualgptLogo from '../assets/logo/visualgpt.png'
+import photogptLogo from '../assets/logo/photogpt.png'
+
+type Locale = keyof typeof messages
+
+const { locale } = useI18n()
+
+const effectiveLocale = computed<Locale>(() => {
+  const loc = locale.value as string
+  if (loc in messages) return loc as Locale
+  return 'ja' as Locale
+})
+
+const heroData = computed(() => messages[effectiveLocale.value]?.hero)
+
+const productLogos = [notegptLogo, visualgptLogo, photogptLogo]
+
+const productsData = computed(() => messages[effectiveLocale.value]?.products)
+
+/** 滚动到产品区域（补偿固定页眉高度） */
+const scrollToProducts = () => {
+  const el = document.getElementById('products')
+  if (!el) return
+  const HEADER_OFFSET = 64
+  const y = el.getBoundingClientRect().top + window.scrollY - HEADER_OFFSET
+  window.scrollTo({ top: y, behavior: 'smooth' })
+}
+</script>

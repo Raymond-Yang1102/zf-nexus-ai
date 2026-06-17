@@ -1,51 +1,3 @@
-<script setup lang="ts">
-import { onMounted, nextTick } from 'vue'
-import { useRouter } from 'vue-router'
-import Header from '../components/Header.vue'
-import Hero from '../components/Hero.vue'
-import Products from '../components/Products.vue'
-import Features from '../components/Features.vue'
-import EnterpriseLogos from '../components/EnterpriseLogos.vue'
-import Testimonials from '../components/Testimonials.vue'
-import Footer from '../components/Footer.vue'
-
-defineProps<{
-  currentLocale: string
-}>()
-
-const emit = defineEmits<{
-  (e: 'change-locale', lang: string): void
-}>()
-
-const router = useRouter()
-
-const handleLocaleChange = (lang: string) => {
-  emit('change-locale', lang)
-}
-
-/** 处理 hash 锚点滚动：当路由带有 #features / #about / #footer 等时触发 */
-onMounted(async () => {
-  await nextTick()
-  const hash = router.currentRoute.value.hash
-  if (hash) {
-    // 多次重试等待异步内容完全渲染
-    const tryScroll = (retries = 5) => {
-      setTimeout(() => {
-        const el = document.querySelector(hash)
-        if (el) {
-          const HEADER_OFFSET = 64
-          const y = el.getBoundingClientRect().top + window.scrollY - HEADER_OFFSET
-          window.scrollTo({ top: y, behavior: 'smooth' })
-        } else if (retries > 0) {
-          tryScroll(retries - 1)
-        }
-      }, 200)
-    }
-    tryScroll()
-  }
-})
-</script>
-
 <template>
   <div class="min-h-screen bg-washi-50">
     <Header :currentLocale="currentLocale" @change-locale="handleLocaleChange" />
@@ -97,3 +49,52 @@ onMounted(async () => {
     </section>
   </div>
 </template>
+
+<script setup lang="ts">
+import { onMounted, nextTick } from 'vue'
+import { useRouter } from 'vue-router'
+import Header from '../components/Header.vue'
+import Hero from '../components/Hero.vue'
+import Products from '../components/Products.vue'
+import Features from '../components/Features.vue'
+import EnterpriseLogos from '../components/EnterpriseLogos.vue'
+import Testimonials from '../components/Testimonials.vue'
+import Footer from '../components/Footer.vue'
+
+defineProps<{
+  currentLocale: string
+}>()
+
+const emit = defineEmits<{
+  (e: 'change-locale', lang: string): void
+}>()
+
+const router = useRouter()
+
+const handleLocaleChange = (lang: string) => {
+  emit('change-locale', lang)
+}
+
+/** 处理 hash 锚点滚动：当路由带有 #features / #about / #footer 等时触发 */
+onMounted(async () => {
+  await nextTick()
+  const hash = router.currentRoute.value.hash
+  if (hash) {
+    // 多次重试等待异步内容完全渲染
+    const tryScroll = (retries = 5) => {
+      setTimeout(() => {
+        const el = document.querySelector(hash)
+        if (el) {
+          const HEADER_OFFSET = 64
+          const y = el.getBoundingClientRect().top + window.scrollY - HEADER_OFFSET
+          window.scrollTo({ top: y, behavior: 'smooth' })
+        } else if (retries > 0) {
+          tryScroll(retries - 1)
+        }
+      }, 200)
+    }
+    tryScroll()
+  }
+})
+</script>
+

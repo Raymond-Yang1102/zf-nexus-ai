@@ -1,3 +1,9 @@
+<template>
+  <RouterView v-slot="{ Component }">
+    <component :is="Component" :currentLocale="currentLocale" @change-locale="changeLocale" />
+  </RouterView>
+</template>
+
 <script setup lang="ts">
 import { computed, watch, onMounted } from 'vue'
 import { RouterView } from 'vue-router'
@@ -33,8 +39,4 @@ onMounted(() => {
 })
 </script>
 
-<template>
-  <RouterView v-slot="{ Component }">
-    <component :is="Component" :currentLocale="currentLocale" @change-locale="changeLocale" />
-  </RouterView>
-</template>
+
