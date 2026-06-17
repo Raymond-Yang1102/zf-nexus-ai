@@ -316,8 +316,6 @@
       copyright: '© 2026 Nexus AI. All rights reserved.',
       description: 'AIで生産性を最大限に引き出すための強力なツールを提供します。',
       links: {
-        privacy: 'プライバシーポリシー',
-        terms: '利用規約',
         help: 'ヘルプ'
       },
       sections: {
@@ -395,179 +393,110 @@
       learnMore: '詳細を見る',
       faqTitle: 'よくある質問',
       faqDescription: 'お客様からよく寄せられるご質問をまとめました。',
-      faqs: [
+      faqCategories: [
         {
-          question: 'サービスの利用開始方法を教えてください。',
-          answer: '各製品ページ（NoteGPT、VisualGPT、PhotoGPT）から「無料で始める」ボタンをクリックし、アカウント登録を行ってください。登録後すぐに無料プランでご利用いただけます。'
+          key: 'general',
+          title: '一般的な質問',
+          faqs: [
+            {
+              question: 'AIプロダクティビティエコシステムとは何ですか？',
+              answer: '当社のAIプロダクティビティエコシステムは、3つの特化したAI製品を統合したプラットフォームです：\n\n• NoteGPT\n• VisualGPT\n• PhotoGPT\n\nこれらの製品が連携することで、ユーザーは学習を加速し、より良いコンテンツを作成し、プロフェッショナルなデジタルアイデンティティを構築することができます。'
+            },
+            {
+              question: '製品の対象ユーザーは誰ですか？',
+              answer: '当社の製品は以下の方々を対象としています：\n\n• 学生\n• プロフェッショナル\n• 研究者\n• クリエイター\n• マーケター\n• 起業家\n• チームおよび企業'
+            },
+            {
+              question: 'AIの知識がなくてもプラットフォームを利用できますか？',
+              answer: 'はい、問題ありません。\n\nすべての製品は直感的で初心者にも使いやすいように設計されています。技術的な知識やAIの専門知識は必要ありません。'
+            }
+          ]
         },
         {
-          question: '無料プランと有料プランの違いは何ですか？',
-          answer: '無料プランでは基本的な機能を一定回数ご利用いただけます。有料プランでは、利用回数の上限が大幅に増え、より高度なAI機能や優先サポートをご利用いただけます。詳細は料金ページをご確認ください。'
+          key: 'products',
+          title: '製品について',
+          faqs: [
+            {
+              question: 'NoteGPTとは何ですか？',
+              answer: 'NoteGPTはAIパワードの学習アシスタントです。\n\n動画の要約、PDFの分析、マインドマップの作成、フラッシュカードの生成、AIチャットを介した知識との対話などを支援します。'
+            },
+            {
+              question: 'VisualGPTとは何ですか？',
+              answer: 'VisualGPTはAIビジュアルクリエーションプラットフォームです。\n\nユーザーは画像の生成、動画の作成、コンテンツの編集、商用レベルのビジュアルコンテンツの制作が可能です。'
+            },
+            {
+              question: 'PhotoGPTとは何ですか？',
+              answer: 'PhotoGPTはAIポートレートプラットフォームです。\n\n従来の写真撮影なしで、プロフェッショナルなヘッドショット、個人ブランディング写真、チーム写真を作成することができます。'
+            },
+            {
+              question: '1つのアカウントで複数の製品を利用できますか？',
+              answer: 'はい、できます。\n\n1つのアカウントでエコシステム内の複数の製品にアクセスでき、シームレスなAI体験を提供します。'
+            }
+          ]
         },
         {
-          question: '請求や支払いに関するお問い合わせはどこにすればよいですか？',
-          answer: '請求やお支払いに関するご質問は、こちらのメールアドレス（support@nexus-ai.jp）まで直接ご連絡ください。対象のアカウント情報を明記いただくと、迅速に対応いたします。'
+          key: 'privacy',
+          title: 'プライバシーとセキュリティ',
+          faqs: [
+            {
+              question: 'ユーザーデータをAIモデルのトレーニングに使用しますか？',
+              answer: 'いいえ、使用しません。\n\n明示的な同意なしに、ユーザーコンテンツ、文書、プロンプト、画像、または生成された出力をAIモデルのトレーニングに使用することはありません。'
+            },
+            {
+              question: 'アップロードしたファイルは安全ですか？',
+              answer: 'はい、安全です。\n\nユーザー情報とファイルを保護するために、暗号化、アクセス制御、セキュリティ監視を実装しています。'
+            },
+            {
+              question: 'アップロードした写真はどうなりますか？',
+              answer: 'アップロードされた写真は、リクエストされた結果を生成するためにのみ使用されます。\n\n顔データの販売、生体認証プロファイルの作成、顔認識データベースの構築は行っていません。'
+            },
+            {
+              question: 'データを削除することはできますか？',
+              answer: 'はい、できます。\n\nユーザーはいつでもアカウントおよび関連データの削除をリクエストすることができます。\n\n削除リクエストは適用法に従って処理されます。'
+            }
+          ]
         },
         {
-          question: 'アカウントの解約方法を教えてください。',
-          answer: 'アカウント設定ページの「サブスクリプション管理」から、いつでもプランの解約やダウングレードが可能です。解約後も、現在の請求期間が終了するまではサービスをご利用いただけます。'
+          key: 'enterprise',
+          title: '企業向けソリューション',
+          faqs: [
+            {
+              question: '企業向けソリューションを提供していますか？',
+              answer: 'はい、提供しています。\n\nチームおよび組織向けにスケーラブルなAIソリューションを提供しており、強化されたセキュリティ、管理コントロール、カスタムデプロイオプションが含まれます。'
+            },
+            {
+              question: '教育機関をサポートしていますか？',
+              answer: 'はい、サポートしています。\n\n当社の製品は大学、学校、研修機関、研究チームに広く適用可能です。'
+            },
+            {
+              question: '商用利用に適していますか？',
+              answer: 'はい、適しています。\n\n商用利用は許可されています。'
+            }
+          ]
         },
         {
-          question: 'API連携や法人契約について相談したいです。',
-          answer: '法人のお客様向けに、専用プランやAPI連携のご提案を承っております。お手数ですが、メール（support@nexus-ai.jp）にて「法人相談希望」と明記の上、ご連絡ください。専門担当者よりご返信いたします。'
-        },
-        {
-          question: '不具合やバグを見つけた場合、どこに報告すればよいですか？',
-          answer: '不具合を発見された場合は、メール（support@nexus-ai.jp）にて、発生した状況やスクリーンショットなどの詳細情報とともにお知らせください。開発チームが迅速に対応いたします。'
+          key: 'support',
+          title: 'サポート',
+          faqs: [
+            {
+              question: 'サポートに連絡するにはどうすればよいですか？',
+              answer: 'ユーザーはメール、オンラインフォーム、またはヘルプセンターを通じてサポートチームに連絡することができます。'
+            },
+            {
+              question: '更新情報や製品ニュースはどこで確認できますか？',
+              answer: '最新の更新、機能リリース、お知らせは、公式ウェブサイトおよびブログを通じて公開されます。'
+            }
+          ]
         }
       ],
       contactUs: 'お問い合わせ',
       contactDescription: '上記の情報で問題が解決できない場合は、ページ下部のメールアドレスまたは電話でお問い合わせください。',
       contactButton: 'お問い合わせ'
     },
-    privacy: {
-      title: 'プライバシーポリシー',
-      lastUpdated: '最終更新: 2026年6月',
-      sections: [
-        {
-          title: '1. はじめに',
-          content: '霊枢智匯（以下「本サービス」）へようこそ。本プライバシーポリシーは、お客様が当社の製品、ウェブサイト、アプリケーションおよび関連サービスをご利用になる際に、当社がどのように情報を収集、使用、保存、保護するかについて説明します。本サービスを利用することにより、お客様は本プライバシーポリシーに従った情報の収集および利用に同意したものとみなされます。',
-        },
-        {
-          title: '2. 収集する情報',
-          content: '',
-          items: [
-            '【アカウント情報】名前、メールアドレス、プロフィール画像、ログイン情報、言語設定、国・地域',
-            '【提供コンテンツ】NoteGPT: ドキュメント、PDF、ノート、音声ファイル、動画ファイル、チャットメッセージ / VisualGPT: 画像、動画、プロンプト、生成コンテンツ / PhotoGPT: ポートレート写真、ヘッドショット、スタイル選択、生成ポートレート',
-            '【自動収集情報】IPアドレス、ブラウザ種別、デバイス情報、OS、利用ログ、Cookie情報、パフォーマンスデータ'
-          ]
-        },
-        {
-          title: '3. 情報の利用方法',
-          content: '収集した情報は、サービスの提供、アカウント管理、支払い処理、製品機能の改善、不正利用の防止、プラットフォームセキュリティの維持、カスタマーサポートの提供、法的義務の遵守のために使用します。',
-        },
-        {
-          title: '4. AI処理とモデルトレーニング',
-          content: '当社はユーザーのプライバシーを尊重します。お客様の明示的な許可がない限り、当社はアップロードされたファイル、プロンプト、生成された出力をAIモデルのトレーニングに使用することはありません。また、ユーザーコンテンツを第三者に販売することはありません。ユーザーコンテンツは、要求されたサービスを提供するためにのみ処理されます。',
-        },
-        {
-          title: '5. 顔画像・生体データ',
-          content: 'ポートレート生成を含む製品について：アップロードされた写真は要求された処理にのみ使用されます。当社は顔データを販売せず、生体プロファイルを作成せず、顔認識データベースを構築せず、明示的な同意なしに顔画像をAIモデルのトレーニングに使用しません。',
-        },
-        {
-          title: '6. 情報の共有',
-          content: '当社は、プラットフォーム運営に必要な信頼できるサービスプロバイダー（クラウドインフラ、決済処理、認証、セキュリティ・不正防止サービス等）と情報を共有する場合があります。当社は個人情報を広告主やデータブローカーに販売しません。',
-        },
-        {
-          title: '7. データ保持',
-          content: '当社は必要な期間のみ情報を保持します。アカウントデータはアカウントが有効な間保持され、削除されたアカウントは合理的な期間内に削除されます。バックアップコピーはセキュリティおよびコンプライアンス目的で一時的に保持される場合があります。',
-        },
-        {
-          title: '8. お客様の権利',
-          content: '適用される法律に基づき、お客様は情報へのアクセス、不正確な情報の訂正、情報の削除、情報のエクスポート、処理の制限、同意の撤回の権利を有する場合があります。ご依頼はサポートチャネルを通じてご提出ください。',
-        },
-        {
-          title: '9. 国際データ転送',
-          content: '本サービスはグローバルに運営される場合があります。お客様の情報は、お客様の居住国とは異なる国で処理・保存される可能性があります。当社は転送される情報を保護するために合理的な保護措置を講じます。',
-        },
-        {
-          title: '10. セキュリティ',
-          content: '当社は、転送中の暗号化、安全な認証、アクセス制御、インフラ監視など、ユーザー情報を保護するための技術的および組織的措置を実装しています。ただし、いかなるシステムも絶対的なセキュリティを保証することはできません。',
-        },
-        {
-          title: '11. 子どものプライバシー',
-          content: '本サービスは13歳未満の子どもを対象としていません。当社は故意に子どもから個人情報を収集することはありません。',
-        },
-        {
-          title: '12. 本ポリシーの変更',
-          content: '当社は本プライバシーポリシーを定期的に更新する場合があります。更新版は本ページに掲載されます。本サービスの継続利用は、更新されたポリシーへの同意を構成します。',
-        },
-        {
-          title: '13. お問い合わせ',
-          content: '本プライバシーポリシーに関するご質問は、support@nexus-ai.jp までご連絡ください。',
-        }
-      ]
-    },
     notFound: {
       title: 'ページが見つかりません',
       description: '申し訳ありません、お探しのページは存在しません。',
       backToHome: 'ホームに戻る'
-    },
-    terms: {
-      title: '利用規約',
-      lastUpdated: '最終更新: 2026年6月',
-      sections: [
-        {
-          title: '1. 利用規約の承諾',
-          content: '本サービスにアクセスまたは利用することにより、お客様は本利用規約に拘束されることに同意したものとみなされます。本規約に同意されない場合は、本サービスの利用を中止してください。',
-        },
-        {
-          title: '2. サービス内容',
-          content: '当社は、AI学習支援、文書分析、画像生成、動画生成、ポートレート生成、クリエイティブコンテンツ生成、ナレッジ管理などを含むAI搭載の生産性ツールを提供します。機能は予告なく変更される場合があります。',
-        },
-        {
-          title: '3. アカウントの責任',
-          content: 'お客様は、アカウントのセキュリティ維持、パスワードの保護、正確な情報の提供、適用法令の遵守について責任を負います。アカウントを他者と共有することはできません。',
-        },
-        {
-          title: '4. ユーザーコンテンツ',
-          content: 'お客様はアップロードしたすべてのコンテンツの所有権を保持します。本サービスを利用することにより、お客様は当社に対し、コンテンツの保存、処理、要求された出力の生成、プラットフォーム機能の提供に必要な限定的なライセンスを付与します。当社はお客様のコンテンツの所有権を主張しません。',
-        },
-        {
-          title: '5. AI生成コンテンツ',
-          content: '人工知能は不正確または不完全な情報を生成する可能性があります。出力には誤りが含まれる可能性があり、独自に確認する必要があり、「現状有姿」で提供されます。ユーザーは生成されたコンテンツの使用方法について単独で責任を負います。',
-        },
-        {
-          title: '6. 適正利用',
-          content: 'お客様は、本サービスを以下の目的で使用しないことに同意します：',
-          items: [
-            '違法行為：詐欺、資金洗浄、違法取引、犯罪行為',
-            '有害コンテンツ：マルウェア、フィッシング、サイバー攻撃、不正アクセス',
-            '禁止AIコンテンツ：同意なきディープフェイク、なりすまし、児童性的虐待素材、搾取コンテンツ、ヘイトスピーチ、テロ関連コンテンツ、暴力的過激主義',
-            '知的財産権侵害：著作権侵害、商標権侵害、保護コンテンツの無断使用'
-          ]
-        },
-        {
-          title: '7. 知的財産権',
-          content: 'お客様はアップロードしたコンテンツおよび生成された出力を所有します（適用法に従う）。当社はソフトウェア、プラットフォームデザイン、ロゴ、ブランディング、アルゴリズム、ウェブサイトコンテンツを所有します。',
-        },
-        {
-          title: '8. サブスクリプションとクレジット',
-          content: '一部のサービスには有料サブスクリプションが必要です。クレジットは譲渡不可であり、金銭的価値はなく、通貨と交換できず、プランルールに従って失効する場合があります。未使用クレジットの繰越は保証されません。',
-        },
-        {
-          title: '9. 請求と自動更新',
-          content: 'サブスクリプションは、更新日の前にキャンセルされない限り自動更新される場合があります。お客様はサブスクリプション設定の管理に責任を負います。',
-        },
-        {
-          title: '10. 返金ポリシー',
-          content: '法令で要求される場合を除き、購入は原則として返金不可です。消費済みクレジットおよび完了したAI処理は返金不可です。重複請求、請求エラー、当社システムに起因するサービス障害については例外が認められる場合があります。',
-        },
-        {
-          title: '11. アカウント停止・終了',
-          content: '当社は、本規約に違反するアカウント、プラットフォームリソースを濫用するアカウント、不正行為を行うアカウント、プラットフォームセキュリティを脅かすアカウントを停止または終了する権利を留保します。本規約違反による返金は行われません。',
-        },
-        {
-          title: '12. 保証の否認',
-          content: '本サービスは「現状有姿」および「利用可能な範囲」で提供されます。当社は正確性、可用性、信頼性、特定目的への適合性について一切の保証を行いません。',
-        },
-        {
-          title: '13. 責任の制限',
-          content: '法律で認められる最大限の範囲において、当社は本サービスの利用に起因する間接損害、逸失利益、データ損失、事業中断について一切の責任を負いません。',
-        },
-        {
-          title: '14. 規約の変更',
-          content: '当社は本規約を定期的に更新する場合があります。更新版は公開時点で効力を生じます。',
-        },
-        {
-          title: '15. 準拠法',
-          content: '本規約は、運営会社が登録されている管轄区域で適用される法律に準拠します。',
-        },
-        {
-          title: '16. お問い合わせ',
-          content: '法的なお問い合わせは、support@nexus-ai.jp までご連絡ください。',
-        }
-      ]
     }
   },
   zh: {
@@ -891,8 +820,6 @@
       copyright: '© 2026 Nexus AI. All rights reserved.',
       description: '提供强大的工具，助您通过AI最大限度地提高生产力。',
       links: {
-        privacy: '隐私政策',
-        terms: '服务条款',
         help: '帮助'
       },
       sections: {
@@ -970,179 +897,110 @@
       learnMore: '了解更多',
       faqTitle: '常见问题',
       faqDescription: '以下是用户经常咨询的问题汇总。',
-      faqs: [
+      faqCategories: [
         {
-          question: '如何开始使用服务？',
-          answer: '在各产品页面（NoteGPT、VisualGPT、PhotoGPT）点击"免费开始"按钮注册账户即可。注册后可立即使用免费套餐。'
+          key: 'general',
+          title: '常见问题',
+          faqs: [
+            {
+              question: '什么是AI生产力生态系统？',
+              answer: '我们的AI生产力生态系统整合了三款专业AI产品：\n\n• NoteGPT\n• VisualGPT\n• PhotoGPT\n\n它们协同工作，帮助用户更快学习、创作更好的内容并建立专业的数字身份。'
+            },
+            {
+              question: '产品面向哪些用户？',
+              answer: '我们的产品面向以下用户：\n\n• 学生\n• 专业人士\n• 研究人员\n• 创作者\n• 营销人员\n• 企业家\n• 团队和企业'
+            },
+            {
+              question: '使用平台需要AI经验吗？',
+              answer: '不需要。\n\n所有产品都设计得直观易用，适合初学者。无需技术或AI专业知识。'
+            }
+          ]
         },
         {
-          question: '免费版和付费版有什么区别？',
-          answer: '免费版可使用基础功能（有次数限制）。付费版大幅提升使用次数上限，并解锁高级AI功能及优先客服支持。详情请查看价格页面。'
+          key: 'products',
+          title: '产品相关',
+          faqs: [
+            {
+              question: '什么是NoteGPT？',
+              answer: 'NoteGPT是一个AI驱动的学习助手。\n\n它帮助用户总结视频、分析PDF、创建思维导图、生成闪卡，并通过AI聊天与知识互动。'
+            },
+            {
+              question: '什么是VisualGPT？',
+              answer: 'VisualGPT是一个AI视觉创作平台。\n\n用户可以生成图像、创建视频、编辑内容并制作商业级视觉素材。'
+            },
+            {
+              question: '什么是PhotoGPT？',
+              answer: 'PhotoGPT是一个AI肖像平台。\n\n无需传统摄影，即可帮助用户创建专业头像、个人品牌照片和团队肖像。'
+            },
+            {
+              question: '一个账户可以使用多个产品吗？',
+              answer: '是的。\n\n一个账户可以访问生态系统中的多个产品，提供无缝的AI体验。'
+            }
+          ]
         },
         {
-          question: '账单和支付相关问题应该联系哪里？',
-          answer: '账单和支付相关问题请直接发送邮件至 support@nexus-ai.jp，附上您的账户信息，我们会尽快处理。'
+          key: 'privacy',
+          title: '隐私与安全',
+          faqs: [
+            {
+              question: '您使用我的数据训练AI模型吗？',
+              answer: '不。\n\n未经您明确同意，我们不会使用用户内容、文档、提示词、图像或生成的输出来训练AI模型。'
+            },
+            {
+              question: '我上传的文件安全吗？',
+              answer: '是的。\n\n我们实施加密、访问控制和安全监控来保护用户信息和文件。'
+            },
+            {
+              question: '上传的照片会怎样处理？',
+              answer: '上传的照片仅用于生成请求的结果。\n\n我们不出售面部数据、不创建生物识别档案、不建立面部识别数据库。'
+            },
+            {
+              question: '我可以删除我的数据吗？',
+              answer: '是的。\n\n用户可以随时请求删除其账户和相关数据。\n\n我们根据适用法律处理删除请求。'
+            }
+          ]
         },
         {
-          question: '如何取消订阅？',
-          answer: '在账户设置的"订阅管理"页面，您可以随时取消或降级套餐。取消后，当前计费周期结束前仍可继续使用服务。'
+          key: 'enterprise',
+          title: '企业解决方案',
+          faqs: [
+            {
+              question: '提供企业解决方案吗？',
+              answer: '是的。\n\n我们为团队和组织提供可扩展的AI解决方案，包括增强安全性、管理控制和定制部署选项。'
+            },
+            {
+              question: '支持教育机构吗？',
+              answer: '是的。\n\n我们的产品广泛适用于大学、学校、培训机构和研究团队。'
+            },
+            {
+              question: '适合商业用途吗？',
+              answer: '是的。\n\n商业使用已获得许可。'
+            }
+          ]
         },
         {
-          question: '我想咨询API集成或企业合作。',
-          answer: '我们为企业客户提供定制方案和API集成服务。请发送邮件至 support@nexus-ai.jp，注明"企业合作咨询"，专属顾问将与您联系。'
-        },
-        {
-          question: '发现Bug或使用问题应如何反馈？',
-          answer: '如发现任何问题，请发送邮件至 support@nexus-ai.jp，附上问题描述和截图等详细信息，开发团队将尽快处理。'
+          key: 'support',
+          title: '技术支持',
+          faqs: [
+            {
+              question: '如何联系支持团队？',
+              answer: '用户可以通过电子邮件、在线表单或帮助中心联系我们的支持团队。'
+            },
+            {
+              question: '在哪里可以找到更新和产品新闻？',
+              answer: '最新更新、功能发布和公告通过我们的官方网站和博客发布。'
+            }
+          ]
         }
       ],
       contactUs: '联系我们',
       contactDescription: '如果以上信息无法解决您的问题，请通过页面底部的邮箱、地址或电话联系我们。',
       contactButton: '联系我们'
     },
-    privacy: {
-      title: '隐私政策',
-      lastUpdated: '最后更新：2026年6月',
-      sections: [
-        {
-          title: '1. 引言',
-          content: '欢迎使用灵枢智汇（以下简称"本服务"）。本隐私政策说明了在您使用我们的产品、网站、应用程序及相关服务时，我们如何收集、使用、存储和保护您的信息。使用本服务即表示您同意按照本隐私政策收集和使用信息。',
-        },
-        {
-          title: '2. 我们收集的信息',
-          content: '',
-          items: [
-            '【账户信息】姓名、邮箱地址、头像、登录凭据、语言偏好、国家或地区',
-            '【您提供的内容】NoteGPT：文档、PDF、笔记、音频文件、视频文件、聊天消息 / VisualGPT：图片、视频、提示词、生成内容 / PhotoGPT：人像照片、头像、风格选择、生成人像',
-            '【自动收集的信息】IP地址、浏览器类型、设备信息、操作系统、使用日志、Cookie信息、性能数据'
-          ]
-        },
-        {
-          title: '3. 信息使用方式',
-          content: '我们使用收集的信息来提供服务、管理账户、处理付款、改进产品功能、防止滥用和欺诈、维护平台安全、提供客户支持以及遵守法律义务。',
-        },
-        {
-          title: '4. AI处理与模型训练',
-          content: '我们尊重用户隐私。除非获得您的明确授权，我们不会使用您上传的文件、提示词或生成的输出来训练AI模型，也不会将用户内容出售给第三方。用户内容仅用于提供所请求的服务。',
-        },
-        {
-          title: '5. 面部图像与生物特征数据',
-          content: '对于涉及人像生成的产品：上传的照片仅用于所请求的处理。我们不出售面部数据，不创建生物特征档案，不建立面部识别数据库，未经明确同意不使用面部图像进行AI模型训练。',
-        },
-        {
-          title: '6. 信息共享',
-          content: '我们可能与运营平台所需的可信服务提供商共享信息（包括云基础设施提供商、支付处理商、认证提供商、安全与防欺诈服务等）。我们不会向广告商或数据经纪人出售个人信息。',
-        },
-        {
-          title: '7. 数据保留',
-          content: '我们仅在必要时保留信息。账户数据在账户活跃期间保留，已删除账户将在合理期限内移除。出于安全和合规目的，备份副本可能会临时保留。',
-        },
-        {
-          title: '8. 您的权利',
-          content: '根据适用法律，您可能有权访问您的信息、更正不准确信息、删除信息、导出信息、限制处理以及撤回同意。请求可通过我们的支持渠道提交。',
-        },
-        {
-          title: '9. 国际数据传输',
-          content: '我们的服务可能在全球范围内运营。您的信息可能在您所在国家以外的国家进行处理和存储。我们采取合理的安全措施保护传输的信息。',
-        },
-        {
-          title: '10. 安全',
-          content: '我们实施技术和组织措施保护用户信息，包括传输加密、安全认证、访问控制和基础设施监控。但任何系统都无法保证绝对安全。',
-        },
-        {
-          title: '11. 儿童隐私',
-          content: '本服务不面向13岁以下儿童。我们不会故意收集儿童的个人信息。',
-        },
-        {
-          title: '12. 本政策变更',
-          content: '我们可能会定期更新本隐私政策。更新版本将发布在此页面上。继续使用本服务即表示接受更新后的政策。',
-        },
-        {
-          title: '13. 联系我们',
-          content: '如有关于本隐私政策的问题，请联系 support@nexus-ai.jp。',
-        }
-      ]
-    },
     notFound: {
       title: '页面未找到',
       description: '抱歉，您访问的页面不存在。',
       backToHome: '返回首页'
-    },
-    terms: {
-      title: '服务条款',
-      lastUpdated: '最后更新：2026年6月',
-      sections: [
-        {
-          title: '1. 条款接受',
-          content: '访问或使用本服务即表示您同意受本服务条款约束。如果您不同意这些条款，请停止使用本服务。',
-        },
-        {
-          title: '2. 服务内容',
-          content: '我们提供AI驱动的生产力工具，包括但不限于：AI学习辅助、文档分析、图像生成、视频生成、人像生成、创意内容生成、知识管理。功能可能随时变更。',
-        },
-        {
-          title: '3. 账户责任',
-          content: '您负责维护账户安全、保护密码、提供准确信息并遵守适用法律。您不得与他人共享账户。',
-        },
-        {
-          title: '4. 用户内容',
-          content: '您保留所有上传内容的所有权。使用本服务即表示您授予我们存储、处理内容、生成所请求输出以及提供平台功能所需的有限许可。我们不主张对您内容的所有权。',
-        },
-        {
-          title: '5. AI生成内容',
-          content: '人工智能可能生成不准确或不完整的信息。您确认：输出可能包含错误、应独立审查、按"原样"提供。用户对生成内容的使用方式自行负责。',
-        },
-        {
-          title: '6. 可接受使用',
-          content: '您同意不将本服务用于以下目的：',
-          items: [
-            '违法活动：欺诈、洗钱、非法交易、犯罪行为',
-            '有害内容：恶意软件、钓鱼攻击、网络攻击、未经授权的访问',
-            '禁止的AI内容：未经同意的深度伪造、身份冒充、儿童性虐待材料、剥削内容、仇恨言论、恐怖主义内容、暴力极端主义',
-            '知识产权侵权：版权侵权、商标侵权、未经授权使用受保护内容'
-          ]
-        },
-        {
-          title: '7. 知识产权',
-          content: '您拥有上传的内容和生成的输出（受适用法律约束）。我们拥有软件、平台设计、标识、品牌、算法和网站内容。',
-        },
-        {
-          title: '8. 订阅与积分',
-          content: '部分服务需要付费订阅。积分不可转让、无现金价值、不可兑换货币，并可能根据计划规则过期。未使用积分的结转不作保证。',
-        },
-        {
-          title: '9. 计费与自动续费',
-          content: '订阅可能在续订日期前取消，否则将自动续订。用户负责管理订阅设置。',
-        },
-        {
-          title: '10. 退款政策',
-          content: '除非法律要求，购买一般不予退款。已消费积分和已完成的AI处理不予退款。重复收费、计费错误或由我们系统造成的服务故障可能例外处理。',
-        },
-        {
-          title: '11. 暂停与终止',
-          content: '我们保留暂停或终止违反本条款、滥用平台资源、从事欺诈活动或威胁平台安全的账户的权利。因违反本条款导致的终止不予退款。',
-        },
-        {
-          title: '12. 免责声明',
-          content: '本服务按"现状"和"可用"提供。我们不对准确性、可用性、可靠性或特定用途适用性作任何保证。',
-        },
-        {
-          title: '13. 责任限制',
-          content: '在法律允许的最大范围内，我们不对因使用本服务导致的间接损害、利润损失、数据丢失或业务中断承担责任。',
-        },
-        {
-          title: '14. 条款变更',
-          content: '我们可能定期更新本条款。更新版本自发布之日起生效。',
-        },
-        {
-          title: '15. 管辖法律',
-          content: '本条款受运营公司注册地管辖区的适用法律管辖。',
-        },
-        {
-          title: '16. 联系我们',
-          content: '法律相关咨询请联系 support@nexus-ai.jp。',
-        }
-      ]
     }
   },
   en: {
@@ -1466,8 +1324,6 @@
       copyright: '© 2026 Nexus AI. All rights reserved.',
       description: 'Providing powerful tools to maximize your productivity with AI.',
       links: {
-        privacy: 'Privacy Policy',
-        terms: 'Terms of Service',
         help: 'Help'
       },
       sections: {
@@ -1545,179 +1401,110 @@
       learnMore: 'Learn More',
       faqTitle: 'Frequently Asked Questions',
       faqDescription: 'Find answers to the most common questions from our users.',
-      faqs: [
+      faqCategories: [
         {
-          question: 'How do I get started with the service?',
-          answer: 'Simply click the "Get Started Free" button on any product page (NoteGPT, VisualGPT, PhotoGPT) and create an account. You can start using the free plan immediately after registration.'
+          key: 'general',
+          title: 'General Questions',
+          faqs: [
+            {
+              question: 'What is your AI Productivity Ecosystem?',
+              answer: 'Our AI Productivity Ecosystem combines three specialized AI products:\n\n• NoteGPT\n• VisualGPT\n• PhotoGPT\n\nTogether they help users learn faster, create better content and build professional digital identities.'
+            },
+            {
+              question: 'Who are your products designed for?',
+              answer: 'Our products are designed for:\n\n• Students\n• Professionals\n• Researchers\n• Creators\n• Marketers\n• Entrepreneurs\n• Teams and enterprises'
+            },
+            {
+              question: 'Do I need AI experience to use the platform?',
+              answer: 'No.\n\nAll products are designed to be intuitive and beginner-friendly.\n\nNo technical or AI expertise is required.'
+            }
+          ]
         },
         {
-          question: 'What is the difference between the free and paid plans?',
-          answer: 'The free plan gives you access to basic features with usage limits. Paid plans significantly increase your usage limits and unlock advanced AI features along with priority support.'
+          key: 'products',
+          title: 'Product Questions',
+          faqs: [
+            {
+              question: 'What is NoteGPT?',
+              answer: 'NoteGPT is an AI-powered learning assistant.\n\nIt helps users summarize videos, analyze PDFs, create mind maps, generate flashcards and interact with knowledge through AI chat.'
+            },
+            {
+              question: 'What is VisualGPT?',
+              answer: 'VisualGPT is an AI visual creation platform.\n\nUsers can generate images, create videos, edit content and produce commercial-ready visuals.'
+            },
+            {
+              question: 'What is PhotoGPT?',
+              answer: 'PhotoGPT is an AI portrait platform.\n\nIt helps users create professional headshots, personal branding photos and team portraits without traditional photo shoots.'
+            },
+            {
+              question: 'Can I use multiple products with one account?',
+              answer: 'Yes.\n\nA single account can access multiple products within our ecosystem, providing a seamless AI experience.'
+            }
+          ]
         },
         {
-          question: 'Where should I direct billing and payment inquiries?',
-          answer: 'For billing and payment questions, please email us directly at support@nexus-ai.jp with your account details, and we will respond promptly.'
+          key: 'privacy',
+          title: 'Privacy & Security',
+          faqs: [
+            {
+              question: 'Do you use my data to train AI models?',
+              answer: 'No.\n\nWe do not use user content, documents, prompts, images or generated outputs to train AI models without explicit consent.'
+            },
+            {
+              question: 'Are my uploaded files secure?',
+              answer: 'Yes.\n\nWe implement encryption, access controls and security monitoring to protect user information and files.'
+            },
+            {
+              question: 'What happens to uploaded photos?',
+              answer: 'Uploaded photos are used solely to generate requested results.\n\nWe do not sell facial data, create biometric profiles or establish facial recognition databases.'
+            },
+            {
+              question: 'Can I delete my data?',
+              answer: 'Yes.\n\nUsers can request deletion of their account and associated data at any time.\n\nWe process deletion requests in accordance with applicable laws.'
+            }
+          ]
         },
         {
-          question: 'How do I cancel my subscription?',
-          answer: 'You can cancel or downgrade your plan at any time from the "Subscription Management" section in your account settings. After cancellation, you can still use the service until the end of the current billing cycle.'
+          key: 'enterprise',
+          title: 'Enterprise Questions',
+          faqs: [
+            {
+              question: 'Do you offer enterprise solutions?',
+              answer: 'Yes.\n\nWe provide scalable AI solutions for teams and organizations, including enhanced security, administrative controls and custom deployment options.'
+            },
+            {
+              question: 'Do you support educational institutions?',
+              answer: 'Yes.\n\nOur products are widely applicable for universities, schools, training organizations and research teams.'
+            },
+            {
+              question: 'Is your platform suitable for commercial use?',
+              answer: 'Yes.\n\nCommercial usage is permitted.'
+            }
+          ]
         },
         {
-          question: 'I would like to discuss API integration or enterprise plans.',
-          answer: 'We offer customized plans and API integration for enterprise clients. Please email us at support@nexus-ai.jp with the subject "Enterprise Inquiry", and a dedicated representative will reach out to you.'
-        },
-        {
-          question: 'How do I report a bug or issue?',
-          answer: 'If you encounter any issues, please email support@nexus-ai.jp with a description of the problem and any relevant screenshots. Our development team will address it promptly.'
+          key: 'support',
+          title: 'Support Questions',
+          faqs: [
+            {
+              question: 'How can I contact support?',
+              answer: 'Users can contact our support team through email, online forms or the help center.'
+            },
+            {
+              question: 'Where can I find updates and product news?',
+              answer: 'Latest updates, feature releases and announcements are published through our official website and blog.'
+            }
+          ]
         }
       ],
       contactUs: 'Contact Us',
       contactDescription: 'If the above information cannot solve your problem, please contact us through the email, address, or phone at the bottom of the page.',
       contactButton: 'Contact Us'
     },
-    privacy: {
-      title: 'Privacy Policy',
-      lastUpdated: 'Last Updated: June 2026',
-      sections: [
-        {
-          title: '1. Introduction',
-          content: 'Welcome to Nexus AI Services ("Services"). This Privacy Policy explains how we collect, use, store, and protect your information when you use our products, websites, applications, and related services. By using our Services, you agree to the collection and use of information in accordance with this Privacy Policy.',
-        },
-        {
-          title: '2. Information We Collect',
-          content: '',
-          items: [
-            '[Account Information] Name, email address, profile image, login credentials, language preferences, country or region',
-            '[Content You Provide] NoteGPT: Documents, PDFs, notes, audio files, video files, chat messages / VisualGPT: Images, videos, prompts, generated content / PhotoGPT: Portrait photos, headshots, style selections, generated portraits',
-            '[Automatically Collected] IP address, browser type, device information, operating system, usage logs, cookie information, performance data'
-          ]
-        },
-        {
-          title: '3. How We Use Information',
-          content: 'We use collected information to provide Services, manage accounts, process payments, improve product functionality, prevent abuse and fraud, maintain platform security, provide customer support, and comply with legal obligations.',
-        },
-        {
-          title: '4. AI Processing and Model Training',
-          content: 'We respect user privacy. Unless explicitly authorized by you, we do not use your uploaded files, prompts, or generated outputs to train AI models. We do not sell user content to third parties. User content is processed solely to provide requested Services.',
-        },
-        {
-          title: '5. Facial Images and Biometric Data',
-          content: 'For products involving portrait generation: Uploaded photos are used only for requested processing. We do not sell facial data, create biometric profiles, establish facial recognition databases, or use facial images for AI model training without explicit consent.',
-        },
-        {
-          title: '6. Sharing Information',
-          content: 'We may share information with trusted service providers necessary to operate the platform, including cloud infrastructure providers, payment processors, authentication providers, and security/fraud prevention services. We do not sell personal information to advertisers or data brokers.',
-        },
-        {
-          title: '7. Data Retention',
-          content: 'We retain information only as long as necessary. Account data remains while the account is active. Deleted accounts are removed within a reasonable period. Backup copies may remain temporarily for security and compliance purposes.',
-        },
-        {
-          title: '8. Your Rights',
-          content: 'Depending on applicable laws, you may have the right to access your information, correct inaccurate information, delete your information, export your information, restrict processing, and withdraw consent. Requests may be submitted through our support channels.',
-        },
-        {
-          title: '9. International Data Transfers',
-          content: 'Our services may operate globally. Your information may be processed and stored in countries different from your own. We implement reasonable safeguards to protect transferred information.',
-        },
-        {
-          title: '10. Security',
-          content: 'We implement technical and organizational measures designed to protect user information, including encryption in transit, secure authentication, access controls, and infrastructure monitoring. No system can guarantee absolute security.',
-        },
-        {
-          title: '11. Children\'s Privacy',
-          content: 'Our Services are not intended for children under 13 years of age. We do not knowingly collect personal information from children.',
-        },
-        {
-          title: '12. Changes to This Policy',
-          content: 'We may update this Privacy Policy periodically. Updated versions will be posted on this page. Continued use of our Services constitutes acceptance of the updated policy.',
-        },
-        {
-          title: '13. Contact Us',
-          content: 'If you have questions regarding this Privacy Policy, please contact support@nexus-ai.jp.',
-        }
-      ]
-    },
     notFound: {
       title: 'Page Not Found',
       description: 'Sorry, the page you are looking for does not exist.',
       backToHome: 'Back to Home'
-    },
-    terms: {
-      title: 'Terms of Service',
-      lastUpdated: 'Last Updated: June 2026',
-      sections: [
-        {
-          title: '1. Acceptance of Terms',
-          content: 'By accessing or using our Services, you agree to be bound by these Terms of Service. If you do not agree with these Terms, please discontinue use of the Services.',
-        },
-        {
-          title: '2. Services',
-          content: 'We provide AI-powered productivity tools including but not limited to: AI learning assistance, document analysis, image generation, video generation, portrait generation, creative content generation, and knowledge management. Features may change at any time.',
-        },
-        {
-          title: '3. Account Responsibilities',
-          content: 'You are responsible for maintaining account security, protecting passwords, providing accurate information, and complying with applicable laws. You may not share your account with others.',
-        },
-        {
-          title: '4. User Content',
-          content: 'You retain ownership of all content you upload. By using our Services, you grant us a limited license necessary to store content, process content, generate requested outputs, and provide platform functionality. We do not claim ownership of your content.',
-        },
-        {
-          title: '5. AI Generated Content',
-          content: 'Artificial intelligence may generate inaccurate or incomplete information. You acknowledge that outputs may contain errors, should be independently reviewed, and are provided "as-is". Users are solely responsible for how generated content is used.',
-        },
-        {
-          title: '6. Acceptable Use',
-          content: 'You agree not to use the Services for:',
-          items: [
-            'Illegal Activities: Fraud, money laundering, illegal transactions, criminal conduct',
-            'Harmful Content: Malware, phishing, cyber attacks, unauthorized access',
-            'Prohibited AI Content: Deepfakes without consent, identity impersonation, child sexual abuse material, exploitation content, hate speech, terrorist content, violent extremism',
-            'Intellectual Property Violations: Copyright infringement, trademark infringement, unauthorized use of protected content'
-          ]
-        },
-        {
-          title: '7. Intellectual Property',
-          content: 'You own uploaded content and generated outputs (subject to applicable law). We own the software, platform design, logos, branding, algorithms, and website content.',
-        },
-        {
-          title: '8. Subscription and Credits',
-          content: 'Some Services require paid subscriptions. Credits are non-transferable, have no cash value, cannot be exchanged for currency, and may expire according to plan rules. Unused credits are not guaranteed to roll over.',
-        },
-        {
-          title: '9. Billing and Auto-Renewal',
-          content: 'Subscriptions may automatically renew unless canceled before the renewal date. Users are responsible for managing subscription settings.',
-        },
-        {
-          title: '10. Refund Policy',
-          content: 'Unless required by law, purchases are generally non-refundable. Consumed credits and completed AI processing are non-refundable. Exceptions may be granted for duplicate charges, billing errors, or service failures caused by our systems.',
-        },
-        {
-          title: '11. Suspension and Termination',
-          content: 'We reserve the right to suspend or terminate accounts that violate these Terms, abuse platform resources, engage in fraudulent activity, or threaten platform security. No refunds will be provided for violations of these Terms.',
-        },
-        {
-          title: '12. Disclaimer of Warranties',
-          content: 'Services are provided "AS IS" and "AS AVAILABLE". We make no guarantees regarding accuracy, availability, reliability, or fitness for a particular purpose.',
-        },
-        {
-          title: '13. Limitation of Liability',
-          content: 'To the maximum extent permitted by law, we shall not be liable for indirect damages, lost profits, data loss, or business interruption resulting from use of the Services.',
-        },
-        {
-          title: '14. Changes to Terms',
-          content: 'We may update these Terms periodically. Updated versions become effective upon publication.',
-        },
-        {
-          title: '15. Governing Law',
-          content: 'These Terms shall be governed by the laws applicable in the jurisdiction where the operating company is registered.',
-        },
-        {
-          title: '16. Contact',
-          content: 'For legal inquiries, please contact support@nexus-ai.jp.',
-        }
-      ]
     }
   }
 }

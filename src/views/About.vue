@@ -4,16 +4,24 @@
 
     <main class="pt-16">
       <!-- Hero -->
-      <section class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section class="py-16 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-600 animate-gradient"></div>
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-500 animate-gradient-delay">
+        </div>
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-500 animate-gradient-delay-2">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div class="text-center">
-            <div class="w-16 h-16 rounded-2xl bg-sky-100 flex items-center justify-center mx-auto mb-6">
-              <Building2 class="w-8 h-8 text-sky-600" />
+            <div
+              class="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center mx-auto mb-6">
+              <Building2 class="w-8 h-8 text-white" />
             </div>
-            <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            <h1 class="text-3xl sm:text-4xl font-bold text-white mb-4">
               {{ aboutData?.title }}
             </h1>
-            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p class="text-lg text-white/80 max-w-3xl mx-auto">
               {{ aboutData?.subtitle }}
             </p>
           </div>
@@ -46,8 +54,7 @@
             <h2 class="text-2xl font-bold text-gray-900">{{ aboutData?.story?.title }}</h2>
           </div>
           <div class="space-y-4">
-            <p v-for="(paragraph, idx) in aboutData?.story?.content" :key="idx"
-              class="text-gray-600 leading-relaxed">
+            <p v-for="(paragraph, idx) in aboutData?.story?.content" :key="idx" class="text-gray-600 leading-relaxed">
               {{ paragraph }}
             </p>
           </div>
@@ -121,3 +128,71 @@ const highlights = [
   { icon: Award, key: 'values' }
 ] as const
 </script>
+
+<style scoped>
+@keyframes gradient {
+  0% {
+    opacity: 1;
+  }
+
+  33% {
+    opacity: 0;
+  }
+
+  66% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes gradient-delay {
+  0% {
+    opacity: 0;
+  }
+
+  33% {
+    opacity: 1;
+  }
+
+  66% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes gradient-delay-2 {
+  0% {
+    opacity: 0;
+  }
+
+  33% {
+    opacity: 0;
+  }
+
+  66% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-gradient {
+  animation: gradient 12s ease-in-out infinite;
+}
+
+.animate-gradient-delay {
+  animation: gradient-delay 12s ease-in-out infinite;
+}
+
+.animate-gradient-delay-2 {
+  animation: gradient-delay-2 12s ease-in-out infinite;
+}
+</style>

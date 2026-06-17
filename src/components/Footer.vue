@@ -34,20 +34,10 @@
         </div>
       </div>
 
-      <div class="border-t border-sumi-600/50 mt-8 pt-8 flex flex-col md:flex-row items-center justify-between">
-        <p class="text-washi-200 text-sm">
+      <div class="border-t border-sumi-600/50 mt-8 pt-8">
+        <p class="text-washi-200 text-sm text-center">
           {{ footerData?.copyright }}
         </p>
-        <div class="flex items-center space-x-6 mt-4 md:mt-0">
-          <button @click="router.push('/privacy')"
-            class="text-washi-200 hover:text-white text-sm transition-colors bg-transparent border-none cursor-pointer">
-            {{ footerData?.links?.privacy }}
-          </button>
-          <button @click="router.push('/terms')"
-            class="text-washi-200 hover:text-white text-sm transition-colors bg-transparent border-none cursor-pointer">
-            {{ footerData?.links?.terms }}
-          </button>
-        </div>
       </div>
     </div>
   </footer>

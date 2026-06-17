@@ -18,16 +18,7 @@ const routes: RouteRecordRaw[] = [
     name: 'Help',
     component: () => import('../views/Help.vue')
   },
-  {
-    path: '/privacy',
-    name: 'Privacy',
-    component: () => import('../views/Privacy.vue')
-  },
-  {
-    path: '/terms',
-    name: 'Terms',
-    component: () => import('../views/Terms.vue')
-  },
+
   {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
