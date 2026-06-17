@@ -57,7 +57,7 @@ const initialLocale = resolveInitialLocale()
 const i18n = createI18n({
   legacy: false,
   locale: initialLocale,
-  fallbackLocale: 'en',
+  fallbackLocale: 'ja',
   messages
 })
 
