@@ -113,7 +113,7 @@ zf-nexus-ai/
 
 ```bash
 # 克隆仓库
-git clone https://github.com/Raymond-Yang1102/zf-aura-ai.git
+git clone https://github.com/Raymond-Yang1102/zf-nexus-ai.git
 cd zf-nexus-ai
 
 # 安装依赖包
@@ -290,7 +290,7 @@ export const messages = {
 
 ```env
 VITE_APP_TITLE=灵枢智汇
-VITE_APP_API_URL=https://api.nexus-ai.jp
+VITE_APP_API_URL=https://nexus-ai.jp
 ```
 
 ### 自定义要点
