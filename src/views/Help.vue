@@ -122,11 +122,11 @@
           <p class="text-gray-600 max-w-xl mx-auto mb-8">
             {{ helpData?.contactDescription }}
           </p>
-          <a href="mailto:support@nexus-ai.jp"
+          <!-- <a href="mailto:support@nexus-ai.jp"
             class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-600 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5">
             <MessageCircle class="w-5 h-5 mr-2" />
             {{ helpData?.contactButton }}
-          </a>
+          </a> -->
         </div>
       </section>
     </main>
