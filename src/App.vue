@@ -19,19 +19,28 @@ const currentLocale = computed(() => locale.value)
 const changeLocale = (lang: string) => {
   locale.value = lang
   localStorage.setItem(LOCALE_STORAGE_KEY, lang)
-  
+
   const currentPath = route.path
   const currentLang = route.params.lang as string
-  
+
   let newPath = currentPath
-  
+
   if (currentLang) {
     newPath = currentPath.replace(`/${currentLang}`, `/${lang}`)
   } else {
-    const pathWithoutSlash = currentPath === '/' ? '' : currentPath
-    newPath = `/${lang}${pathWithoutSlash}`
+    const langPattern = new RegExp(`^/(?:${SUPPORTED_LOCALES.join('|')})`)
+    if (langPattern.test(currentPath)) {
+      newPath = currentPath.replace(langPattern, `/${lang}`)
+    } else {
+      if (route.name === 'NotFound') {
+        newPath = `/${lang}${currentPath}`
+      } else {
+        const pathWithoutSlash = currentPath === '/' ? '' : currentPath
+        newPath = `/${lang}${pathWithoutSlash}`
+      }
+    }
   }
-  
+
   router.push(newPath)
 }
 
@@ -50,7 +59,7 @@ watch(currentLocale, () => {
 
 onMounted(() => {
   const langParam = route.params.lang as string
-  
+
   if (langParam && SUPPORTED_LOCALES.includes(langParam as any)) {
     locale.value = langParam
     localStorage.setItem(LOCALE_STORAGE_KEY, langParam)
@@ -58,7 +67,7 @@ onMounted(() => {
     locale.value = DEFAULT_LOCALE
     localStorage.setItem(LOCALE_STORAGE_KEY, DEFAULT_LOCALE)
   }
-  
+
   updateDocumentHead()
 })
 </script>
