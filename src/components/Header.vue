@@ -190,11 +190,11 @@ import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 import { Menu, X, Globe, Check } from 'lucide-vue-next'
-import { messages } from '../locales'
-import logoImg from '../assets/logo/logo.png'
-import notegptLogo from '../assets/logo/notegpt.png'
-import visualgptLogo from '../assets/logo/visualgpt.png'
-import photogptLogo from '../assets/logo/photogpt.png'
+import { messages } from '@/locales'
+import logoImg from '@/assets/logo/logo.png'
+import notegptLogo from '@/assets/logo/notegpt.png'
+import visualgptLogo from '@/assets/logo/visualgpt.png'
+import photogptLogo from '@/assets/logo/photogpt.png'
 
 type Locale = keyof typeof messages
 

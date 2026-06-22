@@ -114,10 +114,10 @@
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { ArrowRight, Check, ChevronDown, ChevronUp } from 'lucide-vue-next'
-import { messages } from '../locales'
-import notegptLogo from '../assets/logo/notegpt.png'
-import visualgptLogo from '../assets/logo/visualgpt.png'
-import photogptLogo from '../assets/logo/photogpt.png'
+import { messages } from '@/locales'
+import notegptLogo from '@/assets/logo/notegpt.png'
+import visualgptLogo from '@/assets/logo/visualgpt.png'
+import photogptLogo from '@/assets/logo/photogpt.png'
 
 type Locale = keyof typeof messages
 

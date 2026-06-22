@@ -23,7 +23,7 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useI18n } from 'vue-i18n'
-import type { Locale } from '../locales'
+import type { Locale } from '@/locales'
 
 const i18n = useI18n()
 const locale = i18n.locale as unknown as { value: Locale }

@@ -94,9 +94,9 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { Building2, Target, Users, Award, Globe, Lightbulb } from 'lucide-vue-next'
-import { messages } from '../locales'
-import Header from '../components/Header.vue'
-import Footer from '../components/Footer.vue'
+import { messages } from '@/locales'
+import Header from '@/components/Header.vue'
+import Footer from '@/components/Footer.vue'
 
 defineProps<{
   currentLocale: string

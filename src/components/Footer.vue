@@ -47,8 +47,8 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
-import { messages } from '../locales'
-import logoImg from '../assets/logo/logo.png'
+import { messages } from '@/locales'
+import logoImg from '@/assets/logo/logo.png'
 
 type Locale = keyof typeof messages
 

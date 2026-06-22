@@ -51,7 +51,7 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import {  Zap, Shield,Brain, Globe, Cloud, Clock } from 'lucide-vue-next'
-import { messages } from '../locales'
+import { messages } from '@/locales'
 
 type Locale = keyof typeof messages
 

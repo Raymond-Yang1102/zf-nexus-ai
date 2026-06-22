@@ -57,7 +57,7 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { Star, Quote, Calendar } from 'lucide-vue-next'
-import { messages, type Locale } from '../locales'
+import { messages, type Locale } from '@/locales'
 
 const i18n = useI18n()
 const locale = i18n.locale as unknown as { value: Locale }

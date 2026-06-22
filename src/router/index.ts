@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import type { RouteRecordRaw } from 'vue-router'
-import { SUPPORTED_LOCALES, DEFAULT_LOCALE } from '../config/locale'
+import { SUPPORTED_LOCALES, DEFAULT_LOCALE } from '@/config/locale'
 
 const langPattern = SUPPORTED_LOCALES.join('|')
 
@@ -12,15 +12,15 @@ interface BaseRoute {
 const baseRoutes: BaseRoute[] = [
   {
     name: 'Home',
-    component: () => import('../views/Home.vue')
+    component: () => import('@/views/Home.vue')
   },
   {
     name: 'About',
-    component: () => import('../views/About.vue')
+    component: () => import('@/views/About.vue')
   },
   {
     name: 'Help',
-    component: () => import('../views/Help.vue')
+    component: () => import('@/views/Help.vue')
   }
 ]
 
@@ -65,7 +65,7 @@ routes.push(
 routes.push({
   path: '/:pathMatch(.*)*',
   name: 'NotFound',
-  component: () => import('../views/NotFound.vue')
+  component: () => import('@/views/NotFound.vue')
 })
 
 const router = createRouter({

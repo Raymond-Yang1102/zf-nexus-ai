@@ -53,13 +53,13 @@
 <script setup lang="ts">
 import { onMounted, nextTick } from 'vue'
 import { useRouter } from 'vue-router'
-import Header from '../components/Header.vue'
-import Hero from '../components/Hero.vue'
-import Products from '../components/Products.vue'
-import Features from '../components/Features.vue'
-import EnterpriseLogos from '../components/EnterpriseLogos.vue'
-import Testimonials from '../components/Testimonials.vue'
-import Footer from '../components/Footer.vue'
+import Header from '@/components/Header.vue'
+import Hero from '@/components/Hero.vue'
+import Products from '@/components/Products.vue'
+import Features from '@/components/Features.vue'
+import EnterpriseLogos from '@/components/EnterpriseLogos.vue'
+import Testimonials from '@/components/Testimonials.vue'
+import Footer from '@/components/Footer.vue'
 
 defineProps<{
   currentLocale: string

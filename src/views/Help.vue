@@ -139,11 +139,11 @@
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { HelpCircle, MessageCircle, FileText, ChevronDown, ChevronUp, BookOpen, Shield, Building, Headphones } from 'lucide-vue-next'
-import Header from '../components/Header.vue'
-import Footer from '../components/Footer.vue'
-import notegptLogo from '../assets/logo/notegpt.png'
-import visualgptLogo from '../assets/logo/visualgpt.png'
-import photogptLogo from '../assets/logo/photogpt.png'
+import Header from '@/components/Header.vue'
+import Footer from '@/components/Footer.vue'
+import notegptLogo from '@/assets/logo/notegpt.png'
+import visualgptLogo from '@/assets/logo/visualgpt.png'
+import photogptLogo from '@/assets/logo/photogpt.png'
 
 defineProps<{
   currentLocale: string

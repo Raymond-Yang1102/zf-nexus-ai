@@ -1,4 +1,4 @@
-import type { Locale } from '../locales'
+import type { Locale } from '@/locales'
 
 export const LOCALE_STORAGE_KEY = 'locale'
 
