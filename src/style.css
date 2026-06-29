@@ -220,6 +220,8 @@ body {
   border-radius: 3px;
 }
 
+
+
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: #a68b6d;
 }
