@@ -6,10 +6,9 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <button @click="goToHome" class="flex items-center space-x-2 cursor-pointer">
-          <!-- logo -->
-           <img :src="logoImg" alt="logo" class="w-12 h-12">
-          <span :class="['font-bold text-xl', textColorClass]">
-            {{ messages[effectiveLocale]?.header?.companyName }}
+          <img :src="logoImg" alt="ZIFU" class="w-10 h-10">
+          <span :class="['font-bold text-xl', brandNameClass]">
+            ZIFU
           </span>
         </button>
 
@@ -17,12 +16,20 @@
           <a href="#" @click.prevent="goToHome" :class="['text-sm font-medium transition-colors', navTextColorClass]">
             {{ messages[effectiveLocale]?.header?.nav['home'] }}
           </a>
-          <a href="#" @click.prevent="goToProducts" :class="['text-sm font-medium transition-colors', navTextColorClass]">
+          <a href="#" @click.prevent="goToCompany"
+            :class="['text-sm font-medium transition-colors', navTextColorClass]">
+            {{ messages[effectiveLocale]?.header?.nav['company'] }}
+          </a>
+          <a href="#" @click.prevent="goToProducts"
+            :class="['text-sm font-medium transition-colors', navTextColorClass]">
             {{ messages[effectiveLocale]?.header?.nav['products'] }}
           </a>
-          <a v-for="item in navItems" :key="item.key" href="#" @click.prevent="handleNavClick(item)"
+          <a href="#" @click.prevent="goToTechnology"
             :class="['text-sm font-medium transition-colors', navTextColorClass]">
-            {{ messages[effectiveLocale]?.header?.nav[item.key] }}
+            {{ messages[effectiveLocale]?.header?.nav['technology'] }}
+          </a>
+          <a href="#" @click.prevent="goToTeam" :class="['text-sm font-medium transition-colors', navTextColorClass]">
+            {{ messages[effectiveLocale]?.header?.nav['team'] }}
           </a>
         </nav>
 
@@ -35,16 +42,16 @@
             </button>
             <div v-if="isLangMenuOpen" @mouseenter="cancelLangMenuClose" :class="[
               'absolute right-0 mt-2 w-24 rounded-lg shadow-xl py-1 border z-50 backdrop-blur-md overflow-hidden',
-              shouldUseDarkText ? 'bg-white/95 border-washi-200' : 'bg-sumi-900/95 border-sumi-600'
+              shouldUseDarkText ? 'bg-white/95 border-gray-200' : 'bg-gray-900/95 border-gray-600'
             ]">
               <button v-for="lang in languages" :key="lang.code" @click="selectLanguage(lang.code)" :class="[
                 'w-full text-left px-4 py-2 text-sm hover:transition-colors',
                 shouldUseDarkText
-                  ? 'hover:bg-washi-50'
-                  : 'hover:bg-sumi-700',
+                  ? 'hover:bg-gray-50'
+                  : 'hover:bg-gray-700',
                 currentLocale === lang.code
-                  ? (shouldUseDarkText ? 'text-sky-600 font-medium' : 'text-sky-400 font-medium')
-                  : (shouldUseDarkText ? 'text-sumi-700' : 'text-washi-200')
+                  ? (shouldUseDarkText ? 'text-blue-600 font-medium' : 'text-blue-400 font-medium')
+                  : (shouldUseDarkText ? 'text-gray-700' : 'text-gray-200')
               ]">
                 {{ lang.label }}
               </button>
@@ -61,31 +68,51 @@
 
     <div v-if="isMobileMenuOpen" :class="[
       'md:hidden border-t transition-colors backdrop-blur-md',
-      shouldUseDarkText ? 'bg-white/95 border-washi-200' : 'bg-sumi-900/95 border-sumi-600'
+      shouldUseDarkText ? 'bg-white/95 border-gray-200' : 'bg-gray-900/95 border-gray-600'
     ]">
       <div class="px-4 py-4 space-y-3">
+        <a href="#" @click.prevent="goToHome(); isMobileMenuOpen = false" :class="[
+          'block px-4 py-2 rounded-lg transition-colors',
+          shouldUseDarkText
+            ? 'text-gray-700 hover:bg-gray-50'
+            : 'text-gray-200 hover:bg-gray-700'
+        ]">
+          {{ messages[effectiveLocale]?.header?.nav?.home }}
+        </a>
+        <a href="#" @click.prevent="goToCompany(); isMobileMenuOpen = false" :class="[
+          'block px-4 py-2 rounded-lg transition-colors',
+          shouldUseDarkText
+            ? 'text-gray-700 hover:bg-gray-50'
+            : 'text-gray-200 hover:bg-gray-700'
+        ]">
+          {{ messages[effectiveLocale]?.header?.nav?.company }}
+        </a>
         <a href="#" @click.prevent="goToProducts(); isMobileMenuOpen = false" :class="[
           'block px-4 py-2 rounded-lg transition-colors',
           shouldUseDarkText
-            ? 'text-sumi-700 hover:bg-washi-50'
-            : 'text-washi-200 hover:bg-sumi-700'
+            ? 'text-gray-700 hover:bg-gray-50'
+            : 'text-gray-200 hover:bg-gray-700'
         ]">
           {{ messages[effectiveLocale]?.header?.nav?.products }}
         </a>
-        <a v-for="item in navItems" :key="item.key" href="#" @click.prevent="handleNavClick(item); isMobileMenuOpen = false" :class="[
+        <a href="#" @click.prevent="goToTechnology(); isMobileMenuOpen = false" :class="[
           'block px-4 py-2 rounded-lg transition-colors',
           shouldUseDarkText
-            ? 'text-sumi-700 hover:bg-washi-50'
-            : 'text-washi-200 hover:bg-sumi-700'
+            ? 'text-gray-700 hover:bg-gray-50'
+            : 'text-gray-200 hover:bg-gray-700'
         ]">
-          {{ messages[effectiveLocale]?.header?.nav[item.key] }}
+          {{ messages[effectiveLocale]?.header?.nav?.technology }}
         </a>
-        <div class="pt-3 border-t" :class="shouldUseDarkText ? 'border-washi-200' : 'border-sumi-600'">
+        <a href="#" @click.prevent="goToTeam(); isMobileMenuOpen = false" :class="[
+          'block px-4 py-2 rounded-lg transition-colors',
+          shouldUseDarkText
+            ? 'text-gray-700 hover:bg-gray-50'
+            : 'text-gray-200 hover:bg-gray-700'
+        ]">
+          {{ messages[effectiveLocale]?.header?.nav?.team }}
+        </a>
+        <div class="pt-3 border-t" :class="shouldUseDarkText ? 'border-gray-200' : 'border-gray-600'">
           <div class="flex items-center justify-between mb-3">
-            <button @click="goToHome(); isMobileMenuOpen = false"
-              :class="['text-sm cursor-pointer bg-transparent border-none', shouldUseDarkText ? 'text-sumi-700 hover:text-sky-500' : 'text-washi-200 hover:text-white']">
-              {{ messages[effectiveLocale]?.header?.nav?.home }}
-            </button>
             <div class="relative" @mouseenter="openLangMenu" @mouseleave="closeLangMenu">
               <button :class="['flex items-center space-x-1 px-3 py-1.5 rounded-full cursor-pointer', langBtnClass]">
                 <Globe class="w-4 h-4" />
@@ -93,17 +120,18 @@
               </button>
               <div v-if="isLangMenuOpen" @mouseenter="cancelLangMenuClose" :class="[
                 'absolute right-0 mt-2 w-24 rounded-lg shadow-xl py-1 border z-50 backdrop-blur-md overflow-hidden',
-                shouldUseDarkText ? 'bg-white/95 border-washi-200' : 'bg-sumi-900/95 border-sumi-600'
+                shouldUseDarkText ? 'bg-white/95 border-gray-200' : 'bg-gray-900/95 border-gray-600'
               ]">
-                <button v-for="lang in languages" :key="lang.code" @click="selectLanguage(lang.code); isMobileMenuOpen = false" :class="[
-                  'w-full text-left px-4 py-2 text-sm hover:transition-colors',
-                  shouldUseDarkText
-                    ? 'hover:bg-washi-50'
-                    : 'hover:bg-sumi-700',
-                  currentLocale === lang.code
-                    ? (shouldUseDarkText ? 'text-sky-600 font-medium' : 'text-sky-400 font-medium')
-                    : (shouldUseDarkText ? 'text-sumi-700' : 'text-washi-200')
-                ]">
+                <button v-for="lang in languages" :key="lang.code"
+                  @click="selectLanguage(lang.code); isMobileMenuOpen = false" :class="[
+                    'w-full text-left px-4 py-2 text-sm hover:transition-colors',
+                    shouldUseDarkText
+                      ? 'hover:bg-gray-50'
+                      : 'hover:bg-gray-700',
+                    currentLocale === lang.code
+                      ? (shouldUseDarkText ? 'text-blue-600 font-medium' : 'text-blue-400 font-medium')
+                      : (shouldUseDarkText ? 'text-gray-700' : 'text-gray-200')
+                  ]">
                   {{ lang.label }}
                 </button>
               </div>
@@ -138,7 +166,6 @@ const router = useRouter()
 const isScrolled = ref(false)
 const isMobileMenuOpen = ref(false)
 const isLangMenuOpen = ref(false)
-const isDarkMode = ref(false)
 let langMenuCloseTimer: ReturnType<typeof setTimeout> | null = null
 
 const effectiveLocale = computed(() => {
@@ -147,51 +174,6 @@ const effectiveLocale = computed(() => {
   return 'ja' as Locale
 })
 
-interface NavItem {
-  key: 'features' | 'about' | 'help'
-  /** route: 路由跳转；section: 首页锚点滚动 */
-  type: 'route' | 'section'
-  target: string
-}
-
-const navItems: NavItem[] = [
-  { key: 'about', type: 'route', target: 'about' },
-  { key: 'help', type: 'route', target: 'help' }
-]
-
-/**
- * 统一导航处理：
- * - route 类型：直接走 Vue Router 跳转
- * - section 类型：首页直接滚动（补偿固定页眉高度），非首页先跳回首页再滚动
- */
-const HEADER_OFFSET = 64
-
-const scrollToElement = (id: string) => {
-  const el = document.getElementById(id)
-  if (!el) return
-  const y = el.getBoundingClientRect().top + window.scrollY - HEADER_OFFSET
-  window.scrollTo({ top: y, behavior: 'smooth' })
-}
-
-const handleNavClick = (item: NavItem) => {
-  if (item.type === 'route') {
-    const lang = locale.value as string
-    const path = `/${lang}/${item.target}`
-    router.push(path)
-    return
-  }
-  if (isHomePage.value) {
-    scrollToElement(item.target)
-  } else {
-    const lang = locale.value as string
-    const path = lang === 'ja' ? '/' : `/${lang}/`
-    router.push({ path, hash: `#${item.target}` })
-  }
-}
-
-
-
-// 动态获取语言列表
 const languages = Object.entries(messages[effectiveLocale.value]?.header?.language ?? {}).map(([code, label]) => ({
   code,
   label
@@ -216,62 +198,23 @@ const headerBgClass = computed(() => {
   return 'bg-transparent'
 })
 
-const textColorClass = computed(() => {
-  return shouldUseDarkText.value ? 'text-sumi-800' : 'text-white'
+const brandNameClass = computed(() => {
+  return 'brand-gradient-text filter-text-shadow'
 })
 
 const navTextColorClass = computed(() => {
-  return shouldUseDarkText.value ? 'text-sumi-700 hover:text-sky-500' : 'text-white/90 hover:text-white'
+  return shouldUseDarkText.value ? 'text-gray-700 hover:text-blue-500' : 'text-white/90 hover:text-white'
 })
 
 const langBtnClass = computed(() => {
   if (shouldUseDarkText.value) {
-    return 'bg-washi-100 text-sumi-700 hover:bg-washi-200'
+    return 'bg-gray-100 text-gray-700 hover:bg-gray-200'
   }
   return 'bg-white/10 text-white/90 hover:bg-white/20'
 })
 
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 20
-
-  if (isHomePage.value) {
-    const sections = ['#home', '#products', '#features', '#about', '#contact']
-    for (const sectionId of sections) {
-      const element = document.querySelector(sectionId)
-      if (element) {
-        const rect = element.getBoundingClientRect()
-        if (rect.top <= 100 && rect.bottom >= 100) {
-          const computedStyle = window.getComputedStyle(element)
-          const bgColor = computedStyle.backgroundColor
-          if (bgColor) {
-            const brightness = getColorBrightness(bgColor)
-            isDarkMode.value = brightness < 128
-            break
-          }
-        }
-      }
-    }
-  }
-}
-
-const getColorBrightness = (color: string): number => {
-  const hex = color.replace(/^#/, '')
-  if (hex.length === 6) {
-    const r = parseInt(hex.substring(0, 2), 16)
-    const g = parseInt(hex.substring(2, 4), 16)
-    const b = parseInt(hex.substring(4, 6), 16)
-    return (r * 299 + g * 587 + b * 114) / 1000
-  }
-
-  const rgbaMatch = color.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/)
-  if (rgbaMatch) {
-    const r = parseInt(rgbaMatch[1])
-    const g = parseInt(rgbaMatch[2])
-    const b = parseInt(rgbaMatch[3])
-    return (r * 299 + g * 587 + b * 114) / 1000
-  }
-
-  return 255
 }
 
 const toggleMobileMenu = () => {
@@ -312,7 +255,7 @@ const cancelLangMenuClose = () => {
 const goToHome = () => {
   const lang = locale.value as string
   const homePath = lang === 'ja' ? '/' : `/${lang}/`
-  
+
   if (isHomePage.value) {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   } else {
@@ -320,10 +263,28 @@ const goToHome = () => {
   }
 }
 
+const goToCompany = () => {
+  const lang = locale.value as string
+  const companyPath = lang === 'ja' ? '/company' : `/${lang}/company`
+  router.push(companyPath)
+}
+
 const goToProducts = () => {
   const lang = locale.value as string
   const productsPath = lang === 'ja' ? '/products' : `/${lang}/products`
   router.push(productsPath)
+}
+
+const goToTechnology = () => {
+  const lang = locale.value as string
+  const technologyPath = lang === 'ja' ? '/technology' : `/${lang}/technology`
+  router.push(technologyPath)
+}
+
+const goToTeam = () => {
+  const lang = locale.value as string
+  const teamPath = lang === 'ja' ? '/team' : `/${lang}/team`
+  router.push(teamPath)
 }
 
 onMounted(() => {
@@ -335,5 +296,3 @@ onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
 })
 </script>
-
-

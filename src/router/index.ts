@@ -15,16 +15,20 @@ const baseRoutes: BaseRoute[] = [
     component: () => import('@/views/Home.vue')
   },
   {
+    name: 'Company',
+    component: () => import('@/views/Company.vue')
+  },
+  {
     name: 'Products',
     component: () => import('@/views/Products.vue')
   },
   {
-    name: 'About',
-    component: () => import('@/views/About.vue')
+    name: 'Technology',
+    component: () => import('@/views/Technology.vue')
   },
   {
-    name: 'Help',
-    component: () => import('@/views/Help.vue')
+    name: 'Team',
+    component: () => import('@/views/Team.vue')
   }
 ]
 
@@ -34,7 +38,6 @@ baseRoutes.forEach((route) => {
   const path = route.name === 'Home' ? '' : route.name.toLowerCase()
 
   if (route.name === 'Home') {
-    // 首页：保留无语种根路径作为日语入口
     routes.push(
       {
         path: '/',
@@ -44,7 +47,6 @@ baseRoutes.forEach((route) => {
     )
   }
 
-  // 所有页面均携带语种前缀
   routes.push(
     {
       path: `/:lang(${langPattern})${path ? `/${path}` : '/'}`,
@@ -54,19 +56,22 @@ baseRoutes.forEach((route) => {
   )
 })
 
-// 无语种的非首页路径 → 重定向到日语版本
 routes.push(
+  {
+    path: '/company',
+    redirect: '/ja/company'
+  },
   {
     path: '/products',
     redirect: '/ja/products'
   },
   {
-    path: '/about',
-    redirect: '/ja/about'
+    path: '/technology',
+    redirect: '/ja/technology'
   },
   {
-    path: '/help',
-    redirect: '/ja/help'
+    path: '/team',
+    redirect: '/ja/team'
   }
 )
 

@@ -1,145 +1,167 @@
 <template>
-  <div class="min-h-screen bg-washi-50">
+  <div class="min-h-screen bg-white">
     <Header :currentLocale="currentLocale" @change-locale="handleLocaleChange" />
     <main class="pt-16">
-      <section id="products-header" class="relative py-20 md:py-25 bg-gradient-to-br from-washi-50 via-white to-washi-100">
-        <div class="absolute inset-0 seigaiha-pattern opacity-20"></div>
-        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div class="inline-flex items-center space-x-2 px-6 py-3 rounded-full bg-white/80 backdrop-blur-md border border-washi-300 shadow-soft mb-8">
-            <Sparkles class="w-4 h-4 text-sky-500" />
-            <span class="text-sumi-700 text-sm font-medium">{{ productsData.pageTitle }}</span>
-          </div>
-          <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-sumi-800 mb-6">
-            {{ productsData.pageHeader }}
-          </h1>
-          <p class="text-lg text-sumi-600 max-w-3xl mx-auto mb-8">
-            {{ productsData.pageDescription }}
-          </p>
-          <div class="flex flex-wrap justify-center gap-3 mb-12">
-            <span v-for="(tag, index) in productsData.tags" :key="index"
-              class="px-4 py-2 rounded-full bg-washi-100 text-sumi-700 text-sm font-medium border border-washi-200">
-              {{ tag }}
-            </span>
-          </div>
-          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="#products"
-              class="group px-8 py-4 rounded-2xl btn-gradient-japanese text-white font-medium text-lg flex items-center space-x-2 hover:scale-105 hover:shadow-xl transition-all duration-300">
-              <span>{{ cta.cta }}</span>
-              <ArrowRight class="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </a>
+      <section class="relative py-16 hero-bg-indigo overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4 brand-gradient-text filter-text-shadow animate-fade-in">{{ productsData.hero.title }}</h1>
+        </div>
+      </section>
+
+      <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">{{ productsData.overview.title }}</h2>
+          <p class="text-gray-600 mb-8 text-center leading-relaxed">{{ productsData.overview.description }}</p>
+          <div class="flex flex-wrap justify-center gap-6">
+            <div v-for="(icon, index) in productsData.overview.icons" :key="index"
+              class="flex flex-col items-center">
+              <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center mb-3">
+                <component :is="productIcons[index]" class="w-8 h-8 text-blue-600" />
+              </div>
+              <span class="text-sm font-semibold text-gray-700">{{ icon.name }}</span>
+              <span class="text-xs text-gray-500">{{ icon.label }}</span>
+            </div>
           </div>
         </div>
       </section>
 
-      <div class="section-fade h-24 -mt-6 pointer-events-none">
-        <div class="absolute inset-0 bg-gradient-to-b from-washi-50 to-white"></div>
-      </div>
-
-      <section id="products" class="py-24 bg-white">
+      <section id="notegpt" class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="text-center mb-16">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-sumi-800 mb-4">
-              {{ productsData.title }}
-            </h2>
-            <p class="text-lg text-sumi-600 max-w-2xl mx-auto">
-              {{ productsData.description }}
-            </p>
-          </div>
-
-          <div class="space-y-6">
-            <div v-for="product in products" :key="product.key"
-              class="bg-washi-50 rounded-3xl border transition-all duration-500 hover:shadow-card"
-              :class="product.borderColor">
-              <div class="p-8 lg:p-10">
-                <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
-                  <div class="lg:w-1/3 flex flex-col">
-                    <div
-                      @click="openProduct(product.url)"
-                      class="group cursor-pointer select-none">
-                      <div class="w-20 h-20 rounded-2xl bg-gradient-to-br flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-300">
-                        <img :src="product.logo" :alt="getProductData(product.key).name" class="w-14 h-14 object-contain" />
-                      </div>
-
-                      <h3 class="text-2xl font-bold text-sumi-800 mb-2 group-hover:text-sky-500 transition-colors">
-                        {{ getProductData(product.key).name }}
-                      </h3>
-
-                      <p class="text-sm font-semibold text-sky-500 mb-4">
-                        {{ getProductData(product.key).tagline }}
-                      </p>
-                    </div>
-
-                    <p class="text-sumi-600 mb-6 leading-relaxed">
-                      {{ getProductData(product.key).description }}
-                    </p>
-
-                    <div class="mb-6 p-4 rounded-xl bg-gradient-to-r from-sky-50 to-washi-50">
-                      <h4 class="text-sm font-semibold text-sumi-700 mb-2">{{ labels.advantages }}</h4>
-                      <div class="grid grid-cols-1 gap-2">
-                        <div v-for="(advantage, index) in getProductData(product.key).advantages" :key="index"
-                          class="flex items-center justify-between text-sm">
-                          <span class="text-sumi-700 font-medium">{{ advantage.title }}</span>
-                          <span class="text-xs px-2 py-1 rounded-full bg-sky-100 text-sky-600 font-medium">{{ advantage.desc }}</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="flex flex-wrap gap-2 mb-6">
-                      <span v-for="(useCase, index) in getProductData(product.key).useCases" :key="index"
-                        class="px-4 py-2 rounded-full bg-washi-100 text-sumi-600 text-sm font-medium">
-                        {{ useCase }}
-                      </span>
-                    </div>
-
-                    <a :href="product.url" target="_blank" rel="noopener noreferrer"
-                      v-if="getProductData(product.key).cta"
-                      class="inline-flex items-center justify-center space-x-2 px-6 py-3 rounded-xl font-medium text-white transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 bg-gradient-to-r"
-                      :class="product.bgGradient">
-                      <span>{{ getProductData(product.key).cta }}</span>
-                      <ArrowRight class="w-4 h-4" />
-                    </a>
-
-                    <p class="mt-4 text-sm text-center text-sumi-500">
-                      {{ getProductData(product.key).userValue }}
-                    </p>
-                  </div>
-
-                  <div class="lg:w-2/3">
-                    <button 
-                      @click="toggleFeature(product.key)"
-                      class="w-full flex items-center justify-between mb-6 p-4 rounded-xl bg-washi-50 hover:bg-washi-100 transition-colors"
-                    >
-                      <span class="text-lg font-semibold text-sumi-800">{{ labels.coreFeatures }}</span>
-                      <ChevronDown v-if="expandedFeature !== product.key" class="w-5 h-5 text-sumi-500" />
-                      <ChevronUp v-else class="w-5 h-5 text-sumi-500" />
-                    </button>
-
-                    <div v-if="expandedFeature === product.key" class="space-y-4">
-                      <div v-for="(feature, index) in getProductData(product.key).detailedFeatures" :key="index"
-                        class="p-6 rounded-xl border border-washi-200 bg-white hover:border-sky-200 transition-colors">
-                        <h4 class="text-lg font-semibold text-sumi-800 mb-3">{{ feature.title }}</h4>
-                        <p class="text-sumi-600 mb-4">{{ feature.description }}</p>
-                        <div class="flex flex-wrap gap-2">
-                          <span v-for="(item, itemIndex) in feature.items" :key="itemIndex"
-                            class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-washi-50 text-sumi-600 text-sm">
-                            <Check class="w-3 h-3 text-seigaiha-500" />
-                            <span>{{ item }}</span>
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div v-else class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                      <div v-for="(feature, index) in getProductData(product.key).detailedFeatures" :key="index"
-                        class="p-5 rounded-xl border border-washi-200 hover:border-sky-200 hover:shadow-sm transition-all cursor-pointer"
-                        @click="toggleFeature(product.key)">
-                        <h4 class="text-sm font-semibold text-sumi-800 mb-2">{{ feature.title }}</h4>
-                        <p class="text-sumi-500 text-sm line-clamp-2">{{ feature.description }}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+          <div class="flex flex-col lg:flex-row gap-12 items-center">
+            <div class="lg:w-1/2">
+              <div class="w-full aspect-video bg-gray-200 rounded-2xl flex items-center justify-center">
+                <img :src="notegptLogo" alt="NoteGPT" class="w-32 h-32 object-contain opacity-50" />
               </div>
+            </div>
+            <div class="lg:w-1/2">
+              <h2 class="text-3xl font-bold text-gray-800 mb-2">{{ productsData.noteGPT.title }}</h2>
+              <p class="text-blue-600 font-semibold mb-4">{{ productsData.noteGPT.subtitle }}</p>
+              <a :href="productsData.noteGPT.url" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center space-x-2 text-blue-600 font-medium hover:underline mb-6">
+                <ExternalLink class="w-4 h-4" />
+                <span>{{ productsData.noteGPT.url }}</span>
+              </a>
+              <p class="text-gray-600 mb-6 leading-relaxed">{{ productsData.noteGPT.description }}</p>
+              <div class="mb-6">
+                <h3 class="text-lg font-semibold text-gray-800 mb-3">{{ messages[effectiveLocale]?.products?.features }}</h3>
+                <ul class="space-y-2">
+                  <li v-for="(feature, index) in productsData.noteGPT.features" :key="index"
+                    class="flex items-center space-x-2 text-gray-600">
+                    <Check class="w-4 h-4 text-blue-500" />
+                    <span>{{ feature }}</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-3">{{ messages[effectiveLocale]?.products?.targetUsers }}</h3>
+                <ul class="space-y-2">
+                  <li v-for="(user, index) in productsData.noteGPT.targetUsers" :key="index"
+                    class="flex items-center space-x-2 text-gray-600">
+                    <User class="w-4 h-4 text-blue-500" />
+                    <span>{{ user }}</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="decopy" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-col lg:flex-row gap-12 items-center">
+            <div class="lg:w-1/2">
+              <div class="w-full aspect-video bg-gray-200 rounded-2xl flex items-center justify-center">
+                <img :src="decopyLogo" alt="Decopy AI" class="w-32 h-32 object-contain opacity-50" />
+              </div>
+            </div>
+            <div class="lg:w-1/2">
+              <h2 class="text-3xl font-bold text-gray-800 mb-2">{{ productsData.decopyAI.title }}</h2>
+              <p class="text-purple-600 font-semibold mb-4">{{ productsData.decopyAI.subtitle }}</p>
+              <a :href="productsData.decopyAI.url" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center space-x-2 text-purple-600 font-medium hover:underline mb-6">
+                <ExternalLink class="w-4 h-4" />
+                <span>{{ productsData.decopyAI.url }}</span>
+              </a>
+              <p class="text-gray-600 mb-6 leading-relaxed">{{ productsData.decopyAI.description }}</p>
+              <div class="mb-6">
+                <h3 class="text-lg font-semibold text-gray-800 mb-3">{{ messages[effectiveLocale]?.products?.features }}</h3>
+                <ul class="space-y-2">
+                  <li v-for="(feature, index) in productsData.decopyAI.features" :key="index"
+                    class="flex items-center space-x-2 text-gray-600">
+                    <Check class="w-4 h-4 text-purple-500" />
+                    <span>{{ feature }}</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-3">{{ messages[effectiveLocale]?.products?.targetUsers }}</h3>
+                <ul class="space-y-2">
+                  <li v-for="(user, index) in productsData.decopyAI.targetUsers" :key="index"
+                    class="flex items-center space-x-2 text-gray-600">
+                    <User class="w-4 h-4 text-purple-500" />
+                    <span>{{ user }}</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="visualgpt" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-col lg:flex-row gap-12 items-center">
+            <div class="lg:w-1/2">
+              <div class="w-full aspect-video bg-gray-200 rounded-2xl flex items-center justify-center">
+                <img :src="visualgptLogo" alt="VisualGPT" class="w-32 h-32 object-contain opacity-50" />
+              </div>
+            </div>
+            <div class="lg:w-1/2">
+              <h2 class="text-3xl font-bold text-gray-800 mb-2">{{ productsData.visualGPT.title }}</h2>
+              <p class="text-green-600 font-semibold mb-4">{{ productsData.visualGPT.subtitle }}</p>
+              <a :href="productsData.visualGPT.url" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center space-x-2 text-green-600 font-medium hover:underline mb-6">
+                <ExternalLink class="w-4 h-4" />
+                <span>{{ productsData.visualGPT.url }}</span>
+              </a>
+              <p class="text-gray-600 mb-6 leading-relaxed">{{ productsData.visualGPT.description }}</p>
+              <div class="mb-6">
+                <h3 class="text-lg font-semibold text-gray-800 mb-3">{{ messages[effectiveLocale]?.products?.features }}</h3>
+                <ul class="space-y-2">
+                  <li v-for="(feature, index) in productsData.visualGPT.features" :key="index"
+                    class="flex items-center space-x-2 text-gray-600">
+                    <Check class="w-4 h-4 text-green-500" />
+                    <span>{{ feature }}</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-3">{{ messages[effectiveLocale]?.products?.targetUsers }}</h3>
+                <ul class="space-y-2">
+                  <li v-for="(user, index) in productsData.visualGPT.targetUsers" :key="index"
+                    class="flex items-center space-x-2 text-gray-600">
+                    <User class="w-4 h-4 text-green-500" />
+                    <span>{{ user }}</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-2xl font-bold text-gray-800 text-center mb-12">{{ productsData.enterprise.title }}</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div v-for="(item, index) in productsData.enterprise.items" :key="index"
+              class="p-8 rounded-2xl bg-gray-50 border border-gray-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300 text-center">
+              <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center mb-6 mx-auto">
+                <component :is="enterpriseIcons[index]" class="w-7 h-7 text-blue-600" />
+              </div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">{{ item.title }}</h3>
+              <p class="text-gray-600 text-sm leading-relaxed">{{ item.description }}</p>
             </div>
           </div>
         </div>
@@ -150,15 +172,25 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { ArrowRight, Check, ChevronDown, ChevronUp, Sparkles } from 'lucide-vue-next'
+import { 
+  FileText, 
+  PenTool, 
+  Image, 
+  Check, 
+  User, 
+  ExternalLink,
+  Handshake,
+  Rocket,
+  HeadphonesIcon
+} from 'lucide-vue-next'
 import { messages } from '@/locales'
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 import notegptLogo from '@/assets/logo/notegpt.png'
+import decopyLogo from '@/assets/logo/decopy.png'
 import visualgptLogo from '@/assets/logo/visualgpt.png'
-import photogptLogo from '@/assets/logo/photogpt.png'
 
 type Locale = keyof typeof messages
 
@@ -182,47 +214,8 @@ const effectiveLocale = computed<Locale>(() => {
   return 'ja' as Locale
 })
 
-const expandedFeature = ref<string | null>(null)
-
-const products = [
-  {
-    key: 'noteGPT' as const,
-    logo: notegptLogo,
-    borderColor: 'border-sky-200',
-    bgGradient: 'from-sky-500 to-sky-600',
-    url: 'https://notegpt.io'
-  },
-  {
-    key: 'visualGPT' as const,
-    logo: visualgptLogo,
-    borderColor: 'border-wisteria-200',
-    bgGradient: 'from-wisteria-500 to-wisteria-600',
-    url: 'https://visualgpt.io'
-  },
-  {
-    key: 'photoGPT' as const,
-    logo: photogptLogo,
-    borderColor: 'border-seigaiha-200',
-    bgGradient: 'from-seigaiha-500 to-seigaiha-600',
-    url: 'https://photogpt.io'
-  }
-]
-
 const productsData = computed(() => messages[effectiveLocale.value]?.products)
 
-const labels = computed(() => messages[effectiveLocale.value]?.products?.labels)
-
-const cta = computed(() => messages[effectiveLocale.value]?.cta)
-
-const getProductData = (key: 'noteGPT' | 'visualGPT' | 'photoGPT') => {
-  return productsData.value[key]
-}
-
-const toggleFeature = (productKey: string) => {
-  expandedFeature.value = expandedFeature.value === productKey ? null : productKey
-}
-
-const openProduct = (url: string) => {
-  window.open(url, '_blank', 'noopener noreferrer')
-}
+const productIcons = [FileText, PenTool, Image]
+const enterpriseIcons = [Handshake, Rocket, HeadphonesIcon]
 </script>

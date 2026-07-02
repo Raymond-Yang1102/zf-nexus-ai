@@ -105,6 +105,17 @@ body {
   background-clip: text;
 }
 
+.brand-gradient-text {
+  background: linear-gradient(135deg, #0ea5e9 0%, #a855f7 50%, #f97316 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.filter-text-shadow {
+  filter: drop-shadow(0 2px 8px rgba(14, 165, 233, 0.2));
+}
+
 .btn-gradient-japanese {
   background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
   box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);
@@ -224,4 +235,78 @@ body {
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: #a68b6d;
+}
+
+:root {
+  --hero-light-blue-start: #f0f9ff;
+  --hero-light-blue-via: #e0f2fe;
+  --hero-light-blue-end: #f0f9ff;
+  --hero-light-blue-glow: rgba(14, 165, 233, 0.08);
+  
+  --hero-light-cyan-start: #ecfeff;
+  --hero-light-cyan-via: #d1fae5;
+  --hero-light-cyan-end: #ecfeff;
+  --hero-light-cyan-glow: rgba(16, 185, 129, 0.08);
+  
+  --hero-light-warm-start: #fefce8;
+  --hero-light-warm-via: #fef9c3;
+  --hero-light-warm-end: #fefce8;
+  --hero-light-warm-glow: rgba(245, 158, 11, 0.08);
+  
+  --hero-light-purple-start: #faf5ff;
+  --hero-light-purple-via: #f3e8ff;
+  --hero-light-purple-end: #faf5ff;
+  --hero-light-purple-glow: rgba(168, 85, 247, 0.08);
+}
+
+.hero-bg-indigo {
+  background: linear-gradient(135deg, var(--hero-light-blue-start) 0%, var(--hero-light-blue-via) 50%, var(--hero-light-blue-end) 100%);
+}
+
+.hero-bg-indigo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 40%, var(--hero-light-blue-glow), transparent 70%);
+  pointer-events: none;
+}
+
+.hero-bg-navy {
+  background: linear-gradient(135deg, var(--hero-light-cyan-start) 0%, var(--hero-light-cyan-via) 50%, var(--hero-light-cyan-end) 100%);
+}
+
+.hero-bg-navy::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 40%, var(--hero-light-cyan-glow), transparent 70%);
+  pointer-events: none;
+}
+
+.hero-bg-warm {
+  background: linear-gradient(135deg, var(--hero-light-warm-start) 0%, var(--hero-light-warm-via) 50%, var(--hero-light-warm-end) 100%);
+}
+
+.hero-bg-warm::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 40%, var(--hero-light-warm-glow), transparent 70%);
+  pointer-events: none;
+}
+
+.hero-bg-purple {
+  background: linear-gradient(135deg, var(--hero-light-purple-start) 0%, var(--hero-light-purple-via) 50%, var(--hero-light-purple-end) 100%);
+}
+
+.hero-bg-purple::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 40%, var(--hero-light-purple-glow), transparent 70%);
+  pointer-events: none;
+}
+
+.hero-content-shadow {
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
 }
