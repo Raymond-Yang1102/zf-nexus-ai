@@ -99,6 +99,18 @@ import notegptLogo from '@/assets/logo/notegpt.png'
 import decopyLogo from '@/assets/logo/decopy.png'
 import visualgptLogo from '@/assets/logo/visualgpt.png'
 
+// 合作伙伴logo
+import googleLogo from '@/assets/partner_logo/google_logo.png'
+import ungGamesLogo from '@/assets/partner_logo/unggames_logo.png'
+import alibabaGroupLogo from '@/assets/partner_logo/alibaba_group_logo.png'
+import baiduLogo from '@/assets/partner_logo/baidu_logo.png'
+import gismartLogo from '@/assets/partner_logo/gismart_logo.png'
+import netEaseGamesLogo from '@/assets/partner_logo/netease_games_logo.png'
+import elexLogo from '@/assets/partner_logo/elex_logo.png'
+import funPlusLogo from '@/assets/partner_logo/funplus_logo.png'
+
+
+
 type Locale = keyof typeof messages
 
 const { locale } = useI18n()
@@ -201,19 +213,13 @@ onUnmounted(() => {
 })
 
 const baseLogos = [
-  { id: 1, src: 'https://cdn.notegpt.io/notegpt/static/home/logos/logo1.png', alt: 'Enterprise Logo 1' },
-  { id: 2, src: 'https://cdn.notegpt.io/notegpt/static/home/logos/logo-youtube.png', alt: 'YouTube' },
-  { id: 3, src: 'https://cdn.notegpt.io/notegpt/static/home/logos/logo2.png', alt: 'Enterprise Logo 2' },
-  { id: 4, src: 'https://cdn.notegpt.io/notegpt/static/home/logos/logo3.png', alt: 'Enterprise Logo 3' },
-  { id: 5, src: 'https://cdn.notegpt.io/notegpt/static/home/logos/logo4.png', alt: 'Enterprise Logo 4' },
-  { id: 6, src: 'https://cdn.notegpt.io/notegpt/static/home/logos/logo5.png', alt: 'Enterprise Logo 5' },
-  { id: 7, src: 'https://cdn.notegpt.io/notegpt/static/home/logos/logo6.png', alt: 'Enterprise Logo 6' },
-  { id: 8, src: 'https://cdn.notegpt.io/notegpt/static/home/logos/logo7.png', alt: 'Enterprise Logo 7' },
-  { id: 9, src: 'https://cdn.static-boost.com/decopy/static/logo-icon/1.png', alt: 'DeCopy AI Enterprise 1' },
-  { id: 10, src: 'https://cdn.static-boost.com/decopy/static/logo-icon/2.png', alt: 'DeCopy AI Enterprise 2' },
-  { id: 11, src: 'https://cdn.static-boost.com/visualgpt/static/logo/BUSINESS_INSIDER.png', alt: 'Business Insider' },
-  { id: 12, src: 'https://cdn.static-boost.com/visualgpt/static/logo/FOX.png', alt: 'FOX' },
-  { id: 13, src: 'https://cdn.static-boost.com/visualgpt/static/logo/NBC.png', alt: 'NBC' },
-  { id: 14, src: 'https://cdn.static-boost.com/visualgpt/static/logo/Amazon_logo.webp', alt: 'Amazon' },
+  {id: 1, src: googleLogo, alt: 'Google'},
+  {id: 2, src: ungGamesLogo, alt: 'UngGames'},
+  {id: 3, src: alibabaGroupLogo, alt: 'Alibaba Group'},
+  {id: 4, src: baiduLogo, alt: 'Baidu'},
+  {id: 5, src: gismartLogo, alt: 'Gismart'},
+  {id: 6, src: netEaseGamesLogo, alt: 'NetEase Games'},
+  {id: 7, src: elexLogo, alt: 'Elex'},
+  {id: 8, src: funPlusLogo, alt: 'FunPlus'},
 ]
 </script>
