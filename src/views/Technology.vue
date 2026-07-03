@@ -10,8 +10,8 @@
 
       <section class="py-16 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 class="text-2xl font-bold text-gray-800 mb-8">{{ technologyData.overview.title }}</h2>
-          <div class="prose prose-lg text-gray-600 leading-relaxed">
+          <h2 class="text-2xl font-bold text-gray-800 mb-8 text-center">{{ technologyData.overview.title }}</h2>
+          <div class="prose prose-lg text-gray-600 leading-relaxed text-center">
             <p v-for="(paragraph, index) in technologyData.overview.content" :key="index" class="mb-4">
               {{ paragraph }}
             </p>
@@ -24,8 +24,8 @@
           <h2 class="text-2xl font-bold text-gray-800 text-center mb-12">{{ technologyData.coreTech.title }}</h2>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div v-for="(item, index) in technologyData.coreTech.items" :key="index"
-              class="p-8 rounded-2xl bg-white border border-gray-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300">
-              <div class="w-14 h-14 rounded-xl bg-gradient-to-br flex items-center justify-center mb-6"
+              class="p-8 rounded-2xl bg-white border border-gray-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300 text-center">
+              <div class="w-14 h-14 rounded-xl bg-gradient-to-br flex items-center justify-center mb-6 mx-auto"
                 :class="coreTechBgColors[index]">
                 <component :is="coreTechIcons[index]" class="w-7 h-7" :class="coreTechIconColors[index]" />
               </div>
@@ -41,14 +41,14 @@
 
       <section class="py-16 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 class="text-2xl font-bold text-gray-800 mb-8">{{ technologyData.rnd.title }}</h2>
-          <div class="prose prose-lg text-gray-600 leading-relaxed">
+          <h2 class="text-2xl font-bold text-gray-800 mb-8 text-center">{{ technologyData.rnd.title }}</h2>
+          <div class="prose prose-lg text-gray-600 leading-relaxed text-center">
             <p v-for="(paragraph, index) in technologyData.rnd.content" :key="index" class="mb-4">
               {{ paragraph }}
             </p>
           </div>
-          <div class="mt-8 bg-gray-50 rounded-2xl p-6">
-            <div class="flex items-center space-x-4 mb-4">
+          <div class="mt-8 bg-gray-50 rounded-2xl p-6 text-center">
+            <div class="flex items-center space-x-4 mb-4 justify-center">
               <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
                 <Users class="w-6 h-6 text-blue-600" />
               </div>
@@ -63,8 +63,8 @@
 
       <section class="py-16 bg-gray-50">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 class="text-2xl font-bold text-gray-800 mb-8">{{ technologyData.infrastructure.title }}</h2>
-          <div class="prose prose-lg text-gray-600 leading-relaxed">
+          <h2 class="text-2xl font-bold text-gray-800 mb-8 text-center">{{ technologyData.infrastructure.title }}</h2>
+          <div class="prose prose-lg text-gray-600 leading-relaxed text-center">
             <p v-for="(paragraph, index) in technologyData.infrastructure.content" :key="index" class="mb-4">
               {{ paragraph }}
             </p>

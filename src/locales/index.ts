@@ -118,15 +118,8 @@ export const messages = {
       overview: {
         title: '事業概要',
         content: [
-          'ZIFU技研株式会社は、シンガポール発のAIテクノロジー企業',
-          'ZINGDECK INTL PTE. LTD.の日本法人として、',
-          '日本市場におけるAIプロダクトの販売・マーケティング・',
-          '事業展開を担っています。',
-          '',
-          'グローバルで培われたAI技術と日本市場への理解を活かし、',
-          '企業・教育機関・個人のお客様へ、',
-          'より価値あるAI体験を提供するとともに、',
-          'AIのさらなる普及と活用促進に取り組んでいます。'
+          'ZIFU技研株式会社は、シンガポール発のAIテクノロジー企業ZINGDECK INTL PTE. LTD.の日本法人として、日本市場におけるAIプロダクトの販売・マーケティング・事業展開を担っています。',
+          'グローバルで培われたAI技術と日本市場への理解を活かし、企業・教育機関・個人のお客様へ、より価値あるAI体験を提供するとともに、AIのさらなる普及と活用促進に取り組んでいます。'
         ]
       },
       business: {
@@ -238,17 +231,9 @@ export const messages = {
       overview: {
         title: '技術概要',
         content: [
-          'ZIFU技研のテクノロジーは、シンガポールに本社を置く',
-          'ZINGDECK INTL PTE. LTD. がグローバルに展開する',
-          'AI開発基盤を基礎としています。',
-          '',
-          'ZINGDECKでは、大規模言語モデル（LLM）、自然言語処理（NLP）、',
-          'コンピュータビジョン、生成AIなどの先端技術を活用し、',
-          '多国籍のエンジニアチームによるAIプロダクト開発を継続的に推進しています。',
-          '',
-          '日本法人であるZIFU技研は、このグローバルな技術基盤を活かし、',
-          '日本市場における製品展開、ユーザーサポート、市場フィードバックを通じて、',
-          'より良いAI体験の提供に取り組んでいます。'
+          'ZIFU技研のテクノロジーは、シンガポールに本社を置くZINGDECK INTL PTE. LTD. がグローバルに展開する AI開発基盤を基礎としています。',
+          'ZINGDECKでは、大規模言語モデル（LLM）、自然言語処理（NLP）、コンピュータビジョン、生成AIなどの先端技術を活用し、多国籍のエンジニアチームによるAIプロダクト開発を継続的に推進しています。',
+          '日本法人であるZIFU技研は、このグローバルな技術基盤を活かし、日本市場における製品展開、ユーザーサポート、市場フィードバックを通じて、より良いAI体験の提供に取り組んでいます。'
         ]
       },
       coreTech: {
@@ -262,34 +247,20 @@ export const messages = {
       rnd: {
         title: '研究開発体制',
         content: [
-          'ZINGDECKグループでは、',
-          'AI・機械学習・自然言語処理・コンピュータビジョンなど、',
-          '複数分野の専門エンジニアによるグローバルな開発体制を構築しています。',
-          '',
-          '日本法人であるZIFU技研は、',
-          '日本市場におけるユーザーの声や市場ニーズを開発チームへ共有し、',
-          '製品改善やサービス向上に向けた取り組みを支えています。'
+          'ZINGDECKグループでは、AI・機械学習・自然言語処理・コンピュータビジョンなど、複数分野の専門エンジニアによるグローバルな開発体制を構築しています。',
+          '日本法人であるZIFU技研は、日本市場におけるユーザーの声や市場ニーズを開発チームへ共有し、製品改善やサービス向上に向けた取り組みを支えています。'
         ]
       },
       infrastructure: {
         title: '基盤・インフラ',
         content: [
-          'ZIFU技研が提供するAIサービスは、',
-          'ZINGDECKグループのグローバルなクラウド基盤を活用して提供されています。',
-          '',
-          'サービスの安定性と利便性を重視し、',
-          '継続的なシステム運用および品質改善に取り組んでいます。',
-          '',
-          '・クラウド基盤による安定したサービス提供',
-          '',
-          '・継続的なシステム運用・改善',
-          '',
-          '・安全性に配慮したデータ管理',
-          '',
-          '・日本語によるカスタマーサポート',
-          '',
-          '日本法人では、お客様からのフィードバックをもとに、',
-          'より快適なサービス提供に向けた改善を継続しています。'
+          'ZIFU技研が提供するAIサービスは、ZINGDECKグループのグローバルなクラウド基盤を活用して提供されています。',
+          'サービスの安定性と利便性を重視し、継続的なシステム運用および品質改善に取り組んでいます。',
+          'クラウド基盤による安定したサービス提供',
+          '継続的なシステム運用・改善',
+          '安全性に配慮したデータ管理',
+          '日本語によるカスタマーサポート',
+          '日本法人では、お客様からのフィードバックをもとに、より快適なサービス提供に向けた改善を継続しています。'
         ]
       }
     },
@@ -472,15 +443,8 @@ export const messages = {
       overview: {
         title: '事业概要',
         content: [
-          'ZIFU技研株式会社作为新加坡出身的AI科技企业',
-          'ZINGDECK INTL PTE. LTD.的日本法人，',
-          '负责日本市场的AI产品销售、营销和',
-          '业务拓展。',
-          '',
-          '利用在全球培养的AI技术和对日本市场的理解，',
-          '为企业、教育机构和个人用户提供',
-          '更有价值的AI体验，同时',
-          '致力于进一步普及和推广AI应用。'
+          'ZIFU技研株式会社作为新加坡出身的AI科技企业ZINGDECK INTL PTE. LTD.的日本法人，负责日本市场的AI产品销售、营销和业务拓展。',
+          '利用在全球培养的AI技术和对日本市场的理解，为企业、教育机构和个人用户提供更有价值的AI体验，同时致力于进一步普及和推广AI应用。'
         ]
       },
       business: {
@@ -592,17 +556,9 @@ export const messages = {
       overview: {
         title: '技术概要',
         content: [
-          'ZIFU技研的技术基于总部位于新加坡的',
-          'ZINGDECK INTL PTE. LTD.在全球开展的',
-          'AI开发基础。',
-          '',
-          'ZINGDECK运用大规模语言模型（LLM）、自然语言处理（NLP）、',
-          '计算机视觉、生成AI等尖端技术，',
-          '通过多国籍工程师团队持续推进AI产品开发。',
-          '',
-          '作为日本法人的ZIFU技研，利用这一全球技术基础，',
-          '通过日本市场的产品推广、用户支持和市场反馈，',
-          '致力于提供更好的AI体验。'
+          'ZIFU技研的技术基于总部位于新加坡的ZINGDECK INTL PTE. LTD.在全球开展的AI开发基础。',
+          'ZINGDECK运用大规模语言模型（LLM）、自然语言处理（NLP）、计算机视觉、生成AI等尖端技术，通过多国籍工程师团队持续推进AI产品开发。',
+          '作为日本法人的ZIFU技研，利用这一全球技术基础，通过日本市场的产品推广、用户支持和市场反馈，致力于提供更好的AI体验。'
         ]
       },
       coreTech: {
@@ -616,34 +572,20 @@ export const messages = {
       rnd: {
         title: '研究开发体制',
         content: [
-          'ZINGDECK集团构建了由',
-          'AI、机器学习、自然语言处理、计算机视觉等',
-          '多个领域的专业工程师组成的全球开发体制。',
-          '',
-          '作为日本法人的ZIFU技研，',
-          '将日本市场的用户声音和市场需求共享给开发团队，',
-          '支持产品改进和服务提升的努力。'
+          'ZINGDECK集团构建了由AI、机器学习、自然语言处理、计算机视觉等多个领域的专业工程师组成的全球开发体制。',
+          '作为日本法人的ZIFU技研，将日本市场的用户声音和市场需求共享给开发团队，支持产品改进和服务提升的努力。'
         ]
       },
       infrastructure: {
         title: '基础设施',
         content: [
-          'ZIFU技研提供的AI服务，',
-          '利用ZINGDECK集团的全球云基础设施提供。',
-          '',
-          '重视服务的稳定性和便利性，',
-          '致力于持续的系统运营和质量改进。',
-          '',
-          '·基于云基础设施的稳定服务提供',
-          '',
-          '·持续的系统运营与改进',
-          '',
-          '·考虑安全性的数据管理',
-          '',
-          '·日语客户支持',
-          '',
-          '日本法人将根据客户反馈，',
-          '持续改进以提供更舒适的服务。'
+          'ZIFU技研提供的AI服务，利用ZINGDECK集团的全球云基础设施提供。',
+          '重视服务的稳定性和便利性，致力于持续的系统运营和质量改进。',
+          '基于云基础设施的稳定服务提供',
+          '持续的系统运营与改进',
+          '考虑安全性的数据管理',
+          '日语客户支持',
+          '日本法人将根据客户反馈，持续改进以提供更舒适的服务。'
         ]
       }
     },
@@ -826,14 +768,8 @@ export const messages = {
       overview: {
         title: 'Business Overview',
         content: [
-          'ZIFU Giken Co., Ltd. serves as the Japanese subsidiary of',
-          'ZINGDECK INTL PTE. LTD., a Singapore-based AI technology company,',
-          'responsible for the sales, marketing, and',
-          'business expansion of AI products in the Japanese market.',
-          '',
-          'Leveraging AI technologies developed globally and our understanding of the Japanese market,',
-          'we provide more valuable AI experiences to businesses, educational institutions, and individual users,',
-          'while working to further popularize and promote AI utilization.'
+          'ZIFU Giken Co., Ltd. serves as the Japanese subsidiary of ZINGDECK INTL PTE. LTD., a Singapore-based AI technology company, responsible for the sales, marketing, and business expansion of AI products in the Japanese market.',
+          'Leveraging AI technologies developed globally and our understanding of the Japanese market, we provide more valuable AI experiences to businesses, educational institutions, and individual users, while working to further popularize and promote AI utilization.'
         ]
       },
       business: {
@@ -945,18 +881,9 @@ export const messages = {
       overview: {
         title: 'Technology Overview',
         content: [
-          'ZIFU Giken\'s technology is based on the AI development foundation',
-          'globally deployed by ZINGDECK INTL PTE. LTD.,',
-          'which is headquartered in Singapore.',
-          '',
-          'At ZINGDECK, we leverage cutting-edge technologies such as',
-          'Large Language Models (LLM), Natural Language Processing (NLP),',
-          'Computer Vision, and Generative AI,',
-          'continuously advancing AI product development with our multinational engineering team.',
-          '',
-          'As the Japanese subsidiary, ZIFU Giken leverages this global technology foundation',
-          'to provide better AI experiences through product deployment, user support,',
-          'and market feedback in the Japanese market.'
+          'ZIFU Giken\'s technology is based on the AI development foundation globally deployed by ZINGDECK INTL PTE. LTD., which is headquartered in Singapore.',
+          'At ZINGDECK, we leverage cutting-edge technologies such as Large Language Models (LLM), Natural Language Processing (NLP), Computer Vision, and Generative AI, continuously advancing AI product development with our multinational engineering team.',
+          'As the Japanese subsidiary, ZIFU Giken leverages this global technology foundation to provide better AI experiences through product deployment, user support, and market feedback in the Japanese market.'
         ]
       },
       coreTech: {
@@ -970,34 +897,20 @@ export const messages = {
       rnd: {
         title: 'R&D System',
         content: [
-          'ZINGDECK Group has established a global development system',
-          'with specialized engineers in multiple fields including',
-          'AI, machine learning, natural language processing, and computer vision.',
-          '',
-          'As the Japanese subsidiary, ZIFU Giken',
-          'shares user feedback and market needs from the Japanese market with the development team,',
-          'supporting efforts toward product improvement and service enhancement.'
+          'ZINGDECK Group has established a global development system with specialized engineers in multiple fields including AI, machine learning, natural language processing, and computer vision.',
+          'As the Japanese subsidiary, ZIFU Giken shares user feedback and market needs from the Japanese market with the development team, supporting efforts toward product improvement and service enhancement.'
         ]
       },
       infrastructure: {
         title: 'Infrastructure',
         content: [
-          'The AI services provided by ZIFU Giken',
-          'are delivered using ZINGDECK Group\'s global cloud infrastructure.',
-          '',
-          'We prioritize service stability and usability,',
-          'and are committed to continuous system operation and quality improvement.',
-          '',
-          '・Stable service delivery through cloud infrastructure',
-          '',
-          '・Continuous system operation and improvement',
-          '',
-          '・Security-conscious data management',
-          '',
-          '・Japanese-language customer support',
-          '',
-          'The Japanese subsidiary continues to improve service delivery',
-          'based on customer feedback to provide a better experience.'
+          'The AI services provided by ZIFU Giken are delivered using ZINGDECK Group\'s global cloud infrastructure.',
+          'We prioritize service stability and usability, and are committed to continuous system operation and quality improvement.',
+          'Stable service delivery through cloud infrastructure',
+          'Continuous system operation and improvement',
+          'Security-conscious data management',
+          'Japanese-language customer support',
+          'The Japanese subsidiary continues to improve service delivery based on customer feedback to provide a better experience.'
         ]
       }
     },

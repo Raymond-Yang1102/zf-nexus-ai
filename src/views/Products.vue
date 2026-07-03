@@ -4,7 +4,8 @@
     <main class="pt-16">
       <section class="relative py-16 hero-bg-indigo overflow-hidden">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h1 class="text-4xl md:text-5xl font-bold mb-4 brand-gradient-text filter-text-shadow animate-fade-in">{{ productsData.hero.title }}</h1>
+          <h1 class="text-4xl md:text-5xl font-bold mb-4 brand-gradient-text filter-text-shadow animate-fade-in">{{
+            productsData.hero.title }}</h1>
         </div>
       </section>
 
@@ -13,10 +14,11 @@
           <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">{{ productsData.overview.title }}</h2>
           <p class="text-gray-600 mb-8 text-center leading-relaxed">{{ productsData.overview.description }}</p>
           <div class="flex flex-wrap justify-center gap-6">
-            <div v-for="(icon, index) in productsData.overview.icons" :key="index"
-              class="flex flex-col items-center">
-              <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center mb-3">
-                <component :is="productIcons[index]" class="w-8 h-8 text-blue-600" />
+            <div v-for="(icon, index) in productsData.overview.icons" :key="index" class="flex flex-col items-center">
+              <div
+                class="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center mb-3">
+                <!-- <component :is="productIcons[index]" class="w-8 h-8 text-blue-600" /> -->
+                <img :src="productIcons[index]" alt="Icon" class="w-8 h-8 text-blue-600" />
               </div>
               <span class="text-sm font-semibold text-gray-700">{{ icon.name }}</span>
               <span class="text-xs text-gray-500">{{ icon.label }}</span>
@@ -43,7 +45,8 @@
               </a>
               <p class="text-gray-600 mb-6 leading-relaxed">{{ productsData.noteGPT.description }}</p>
               <div class="mb-6">
-                <h3 class="text-lg font-semibold text-gray-800 mb-3">{{ messages[effectiveLocale]?.products?.features }}</h3>
+                <h3 class="text-lg font-semibold text-gray-800 mb-3">{{ messages[effectiveLocale]?.products?.features }}
+                </h3>
                 <ul class="space-y-2">
                   <li v-for="(feature, index) in productsData.noteGPT.features" :key="index"
                     class="flex items-center space-x-2 text-gray-600">
@@ -53,7 +56,8 @@
                 </ul>
               </div>
               <div>
-                <h3 class="text-lg font-semibold text-gray-800 mb-3">{{ messages[effectiveLocale]?.products?.targetUsers }}</h3>
+                <h3 class="text-lg font-semibold text-gray-800 mb-3">{{ messages[effectiveLocale]?.products?.targetUsers
+                  }}</h3>
                 <ul class="space-y-2">
                   <li v-for="(user, index) in productsData.noteGPT.targetUsers" :key="index"
                     class="flex items-center space-x-2 text-gray-600">
@@ -85,7 +89,8 @@
               </a>
               <p class="text-gray-600 mb-6 leading-relaxed">{{ productsData.decopyAI.description }}</p>
               <div class="mb-6">
-                <h3 class="text-lg font-semibold text-gray-800 mb-3">{{ messages[effectiveLocale]?.products?.features }}</h3>
+                <h3 class="text-lg font-semibold text-gray-800 mb-3">{{ messages[effectiveLocale]?.products?.features }}
+                </h3>
                 <ul class="space-y-2">
                   <li v-for="(feature, index) in productsData.decopyAI.features" :key="index"
                     class="flex items-center space-x-2 text-gray-600">
@@ -95,7 +100,8 @@
                 </ul>
               </div>
               <div>
-                <h3 class="text-lg font-semibold text-gray-800 mb-3">{{ messages[effectiveLocale]?.products?.targetUsers }}</h3>
+                <h3 class="text-lg font-semibold text-gray-800 mb-3">{{ messages[effectiveLocale]?.products?.targetUsers
+                  }}</h3>
                 <ul class="space-y-2">
                   <li v-for="(user, index) in productsData.decopyAI.targetUsers" :key="index"
                     class="flex items-center space-x-2 text-gray-600">
@@ -127,7 +133,8 @@
               </a>
               <p class="text-gray-600 mb-6 leading-relaxed">{{ productsData.visualGPT.description }}</p>
               <div class="mb-6">
-                <h3 class="text-lg font-semibold text-gray-800 mb-3">{{ messages[effectiveLocale]?.products?.features }}</h3>
+                <h3 class="text-lg font-semibold text-gray-800 mb-3">{{ messages[effectiveLocale]?.products?.features }}
+                </h3>
                 <ul class="space-y-2">
                   <li v-for="(feature, index) in productsData.visualGPT.features" :key="index"
                     class="flex items-center space-x-2 text-gray-600">
@@ -137,7 +144,8 @@
                 </ul>
               </div>
               <div>
-                <h3 class="text-lg font-semibold text-gray-800 mb-3">{{ messages[effectiveLocale]?.products?.targetUsers }}</h3>
+                <h3 class="text-lg font-semibold text-gray-800 mb-3">{{ messages[effectiveLocale]?.products?.targetUsers
+                  }}</h3>
                 <ul class="space-y-2">
                   <li v-for="(user, index) in productsData.visualGPT.targetUsers" :key="index"
                     class="flex items-center space-x-2 text-gray-600">
@@ -157,7 +165,8 @@
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div v-for="(item, index) in productsData.enterprise.items" :key="index"
               class="p-8 rounded-2xl bg-gray-50 border border-gray-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300 text-center">
-              <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center mb-6 mx-auto">
+              <div
+                class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center mb-6 mx-auto">
                 <component :is="enterpriseIcons[index]" class="w-7 h-7 text-blue-600" />
               </div>
               <h3 class="text-xl font-bold text-gray-800 mb-3">{{ item.title }}</h3>
@@ -174,12 +183,12 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { 
-  FileText, 
-  PenTool, 
-  Image, 
-  Check, 
-  User, 
+import {
+  FileText,
+  PenTool,
+  Image,
+  Check,
+  User,
   ExternalLink,
   Handshake,
   Rocket,
@@ -216,6 +225,6 @@ const effectiveLocale = computed<Locale>(() => {
 
 const productsData = computed(() => messages[effectiveLocale.value]?.products)
 
-const productIcons = [FileText, PenTool, Image]
+const productIcons = [notegptLogo, decopyLogo, visualgptLogo]
 const enterpriseIcons = [Handshake, Rocket, HeadphonesIcon]
 </script>
