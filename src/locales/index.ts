@@ -143,7 +143,8 @@ export const messages = {
     },
     products: {
       features: '主な機能',
-      targetUsers: 'こんな方におすすめ',
+      targetUsers: '対象ユーザー',
+      visit: 'サイトを訪問',
       hero: {
         title: 'プロダクト'
       },
@@ -469,6 +470,7 @@ export const messages = {
     products: {
       features: '主要功能',
       targetUsers: '推荐给这样的人士',
+      visit: '访问网站',
       hero: {
         title: '产品'
       },
@@ -794,6 +796,7 @@ export const messages = {
     products: {
       features: 'Features',
       targetUsers: 'Recommended for',
+      visit: 'Visit Site',
       hero: {
         title: 'Products'
       },

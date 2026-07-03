@@ -39,9 +39,9 @@
               <h2 class="text-3xl font-bold text-gray-800 mb-2">{{ productsData.noteGPT.title }}</h2>
               <p class="text-blue-600 font-semibold mb-4">{{ productsData.noteGPT.subtitle }}</p>
               <a :href="productsData.noteGPT.url" target="_blank" rel="noopener noreferrer"
-                class="inline-flex items-center space-x-2 text-blue-600 font-medium hover:underline mb-6">
+                class="inline-flex items-center space-x-2 px-5 py-2.5 bg-blue-600 text-white font-medium rounded-xl hover:bg-blue-700 hover:shadow-lg hover:scale-105 transition-all duration-300 mb-6">
                 <ExternalLink class="w-4 h-4" />
-                <span>{{ productsData.noteGPT.url }}</span>
+                <span>{{ messages[effectiveLocale]?.products?.visit }}</span>
               </a>
               <p class="text-gray-600 mb-6 leading-relaxed">{{ productsData.noteGPT.description }}</p>
               <div class="mb-6">
@@ -57,7 +57,7 @@
               </div>
               <div>
                 <h3 class="text-lg font-semibold text-gray-800 mb-3">{{ messages[effectiveLocale]?.products?.targetUsers
-                  }}</h3>
+                }}</h3>
                 <ul class="space-y-2">
                   <li v-for="(user, index) in productsData.noteGPT.targetUsers" :key="index"
                     class="flex items-center space-x-2 text-gray-600">
@@ -83,9 +83,9 @@
               <h2 class="text-3xl font-bold text-gray-800 mb-2">{{ productsData.decopyAI.title }}</h2>
               <p class="text-purple-600 font-semibold mb-4">{{ productsData.decopyAI.subtitle }}</p>
               <a :href="productsData.decopyAI.url" target="_blank" rel="noopener noreferrer"
-                class="inline-flex items-center space-x-2 text-purple-600 font-medium hover:underline mb-6">
+                class="inline-flex items-center space-x-2 px-5 py-2.5 bg-purple-600 text-white font-medium rounded-xl hover:bg-purple-700 hover:shadow-lg hover:scale-105 transition-all duration-300 mb-6">
                 <ExternalLink class="w-4 h-4" />
-                <span>{{ productsData.decopyAI.url }}</span>
+                <span>{{ messages[effectiveLocale]?.products?.visit }}</span>
               </a>
               <p class="text-gray-600 mb-6 leading-relaxed">{{ productsData.decopyAI.description }}</p>
               <div class="mb-6">
@@ -101,7 +101,7 @@
               </div>
               <div>
                 <h3 class="text-lg font-semibold text-gray-800 mb-3">{{ messages[effectiveLocale]?.products?.targetUsers
-                  }}</h3>
+                }}</h3>
                 <ul class="space-y-2">
                   <li v-for="(user, index) in productsData.decopyAI.targetUsers" :key="index"
                     class="flex items-center space-x-2 text-gray-600">
@@ -127,9 +127,9 @@
               <h2 class="text-3xl font-bold text-gray-800 mb-2">{{ productsData.visualGPT.title }}</h2>
               <p class="text-green-600 font-semibold mb-4">{{ productsData.visualGPT.subtitle }}</p>
               <a :href="productsData.visualGPT.url" target="_blank" rel="noopener noreferrer"
-                class="inline-flex items-center space-x-2 text-green-600 font-medium hover:underline mb-6">
+                class="inline-flex items-center space-x-2 px-5 py-2.5 bg-green-600 text-white font-medium rounded-xl hover:bg-green-700 hover:shadow-lg hover:scale-105 transition-all duration-300 mb-6">
                 <ExternalLink class="w-4 h-4" />
-                <span>{{ productsData.visualGPT.url }}</span>
+                <span>{{ messages[effectiveLocale]?.products?.visit }}</span>
               </a>
               <p class="text-gray-600 mb-6 leading-relaxed">{{ productsData.visualGPT.description }}</p>
               <div class="mb-6">
@@ -145,7 +145,7 @@
               </div>
               <div>
                 <h3 class="text-lg font-semibold text-gray-800 mb-3">{{ messages[effectiveLocale]?.products?.targetUsers
-                  }}</h3>
+                }}</h3>
                 <ul class="space-y-2">
                   <li v-for="(user, index) in productsData.visualGPT.targetUsers" :key="index"
                     class="flex items-center space-x-2 text-gray-600">
