@@ -22,7 +22,7 @@ export const messages = {
       }
     },
     footer: {
-      companyName: 'ZIFU技研株式会社',
+      companyName: 'ZIFU技研',
       phone: '+81-6-7220-4600',
       address: '〒530-0001 大阪府大阪市北区梅田一丁目1番3号　大阪駅前第3ビル11階2号室',
       copyright: '© 2026 ZIFU技研株式会社 All Rights Reserved.'
@@ -364,7 +364,7 @@ export const messages = {
       }
     },
     footer: {
-      companyName: 'ZIFU技研株式会社',
+      companyName: 'ZIFU技研',
       phone: '+81-6-7220-4600',
       address: '〒530-0001 大阪府大阪市北区梅田一丁目1番3号 大阪站前第3大厦11楼2号室',
       copyright: '© 2026 ZIFU技研株式会社 All Rights Reserved.'
@@ -620,12 +620,9 @@ export const messages = {
             name: '王曾',
             title: '代表董事',
             bio: [
-              '在百度（Baidu）、人人网（RenRen）、泡泡玛特（POP MART）等',
-              '中国代表性IT企业中，担任人事、经营管理、',
-              '业务运营负责人超过20年。',
-              '利用在快速成长IT企业中积累的组织构建、人才战略、业务运营的丰富经验，',
-              '主导日本法人的成立。目前负责制定日本市场的业务战略、',
-              '销售拓展以及与合作伙伴企业的合作。'
+              '在百度（Baidu）、人人网（RenRen）、泡泡玛特（POP MART）等中国代表性IT企业中，担任人事、经营管理、业务运营负责人超过20年。',
+              '利用在快速成长IT企业中积累的组织构建、人才战略、业务运营的丰富经验，主导日本法人的成立。',
+              '目前负责制定日本市场的业务战略、销售拓展以及与合作伙伴企业的合作。'
             ]
           },
           {
@@ -634,20 +631,16 @@ export const messages = {
             bio: [
               '精通中文和英文，拥有丰富的全球商务经验。',
               '曾参与连接日本企业和海外企业的业务推进和对外沟通。',
-              '目前负责日本市场的业务运营、与合作伙伴企业的合作、',
-              '对外沟通，支持日本法人的顺利业务开展。'
+              '目前负责日本市场的业务运营、与合作伙伴企业的合作、对外沟通，支持日本法人的顺利业务开展。'
             ]
           },
           {
             name: '曹鸿源',
             title: 'AI产品开发负责人',
             bio: [
-              '在生成AI产品的规划和开发方面拥有丰富经验，',
-              '主导利用AI技术的产品设计和服务开发。',
-              '主导了NoteGPT的启动，',
-              '推动了重视用户价值的产品开发和持续的功能改进。',
-              '目前负责AI产品的战略规划和开发，',
-              '同时推动包括日本市场在内的全球拓展。'
+              '在生成AI产品的规划和开发方面拥有丰富经验，主导利用AI技术的产品设计和服务开发。',
+              '主导了NoteGPT的启动，推动了重视用户价值的产品开发和持续的功能改进。',
+              '目前负责AI产品的战略规划和开发，同时推动包括日本市场在内的全球拓展。'
             ]
           }
         ]
@@ -666,10 +659,7 @@ export const messages = {
           '',
           '·连接日本市场和全球团队的沟通',
           '',
-          '我们珍视与客户、合作伙伴企业',
-          '以及全球团队的信赖关系，',
-          '为了让AI成为更贴近生活的存在，',
-          '将继续挑战。'
+          '我们珍视与客户、合作伙伴企业以及全球团队的信赖关系，为了让AI成为更贴近生活的存在，将继续挑战。'
         ]
       }
     }
@@ -959,13 +949,9 @@ export const messages = {
             name: 'Wang Zeng',
             title: 'Representative Director',
             bio: [
-              'Over 20 years of experience as HR, management, and',
-              'business operations director at leading Chinese IT companies',
-              'including Baidu, RenRen, and POP MART.',
-              'Leveraging extensive experience in organizational development, talent strategy, and business operations',
-              'at rapidly growing IT companies, he led the establishment of the Japanese subsidiary.',
-              'Currently overseeing business strategy formulation, sales expansion,',
-              'and collaboration with partner companies in the Japanese market.'
+              'Over 20 years of experience as HR, management, and business operations director at leading Chinese IT companies including Baidu, RenRen, and POP MART.',
+              'Leveraging extensive experience in organizational development, talent strategy, and business operations at rapidly growing IT companies, he led the establishment of the Japanese subsidiary.',
+              'Currently overseeing business strategy formulation, sales expansion, and collaboration with partner companies in the Japanese market.'
             ]
           },
           {
@@ -974,20 +960,16 @@ export const messages = {
             bio: [
               'Proficient in Chinese and English with extensive experience in global business.',
               'Has been involved in business promotion and external communication connecting Japanese and overseas companies.',
-              'Currently responsible for business operations, collaboration with partner companies,',
-              'and external communication in the Japanese market, supporting the smooth business development of the Japanese subsidiary.'
+              'Currently responsible for business operations, collaboration with partner companies, and external communication in the Japanese market, supporting the smooth business development of the Japanese subsidiary.'
             ]
           },
           {
             name: 'Cao Hongyuan',
             title: 'AI Product Development Director',
             bio: [
-              'Extensive experience in planning and developing generative AI products,',
-              'leading product design and service development leveraging AI technology.',
-              'Led the launch of NoteGPT,',
-              'promoting user-value-focused product development and continuous feature improvements.',
-              'Currently overseeing AI product strategy planning and development,',
-              'while driving global expansion including the Japanese market.'
+              'Extensive experience in planning and developing generative AI products, leading product design and service development leveraging AI technology.',
+              'Led the launch of NoteGPT, promoting user-value-focused product development and continuous feature improvements.',
+              'Currently overseeing AI product strategy planning and development, while driving global expansion including the Japanese market.'
             ]
           }
         ]
@@ -1006,10 +988,7 @@ export const messages = {
           '',
           '・Communication connecting the Japanese market with the global team',
           '',
-          'We value trust relationships with customers, partner companies,',
-          'and our global team,',
-          'and continue to challenge ourselves',
-          'to make AI a more familiar presence.'
+          'We value trust relationships with customers, partner companies, and our global team, and continue to challenge ourselves to make AI a more familiar presence.'
         ]
       }
     }
