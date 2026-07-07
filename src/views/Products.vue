@@ -7,7 +7,7 @@
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         </div>
       </section>
-      
+
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">{{ productsData.overview.title }}</h2>
@@ -186,9 +186,6 @@ import {
   Check,
   User,
   ExternalLink,
-  Building2,
-  FlaskConical,
-  HeadphonesIcon
 } from 'lucide-vue-next'
 import { messages } from '@/locales'
 import Header from '@/components/Header.vue'
@@ -222,5 +219,4 @@ const effectiveLocale = computed<Locale>(() => {
 const productsData = computed(() => messages[effectiveLocale.value]?.products)
 
 const productIcons = [notegptLogo, decopyLogo, visualgptLogo]
-const enterpriseIcons = [Building2, FlaskConical, HeadphonesIcon]
 </script>

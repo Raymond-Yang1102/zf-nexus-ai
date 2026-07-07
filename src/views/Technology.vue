@@ -100,8 +100,6 @@ import {
   Brain,
   PenTool,
   Image,
-  Globe,
-  Cloud
 } from 'lucide-vue-next'
 import { messages } from '@/locales'
 import Header from '@/components/Header.vue'
