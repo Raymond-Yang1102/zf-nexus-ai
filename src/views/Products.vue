@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <div class="min-h-screen bg-white">
     <Header :currentLocale="currentLocale" @change-locale="handleLocaleChange" />
     <main class="pt-16">
@@ -11,7 +11,7 @@
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">{{ productsData.overview.title }}</h2>
-          <p class="text-gray-600 mb-12 leading-relaxed text-center max-w-3xl mx-auto">{{ productsData.overview.description }}</p>
+          <p class="text-gray-600 mb-12 leading-relaxed text-center max-w-5xl mx-auto">{{ productsData.overview.description }}</p>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div v-for="(icon, index) in productsData.overview.icons" :key="index"
               class="p-10 rounded-2xl bg-white border border-gray-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300 flex flex-col items-center text-center">

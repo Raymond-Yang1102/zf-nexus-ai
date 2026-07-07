@@ -11,8 +11,9 @@
       <section class="py-16 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 class="text-2xl font-bold text-gray-800 mb-8 text-center">{{ companyData.ceoMessage.title }}</h2>
-          <div class="prose prose-lg text-gray-600 leading-relaxed">
-            <p v-for="(paragraph, index) in companyData.ceoMessage.content" :key="index" class="mb-4">
+          <div class="prose prose-lg text-gray-600 leading-relaxed text-center">
+            <p v-for="(paragraph, index) in companyData.ceoMessage.content" :key="index"
+               :class="paragraph.endsWith('。') || paragraph.endsWith('.') ? 'mb-8' : 'mb-4'">
               {{ paragraph }}
             </p>
           </div>
