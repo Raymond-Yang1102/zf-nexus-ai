@@ -27,7 +27,8 @@
             <div v-for="(member, index) in teamData.members.items" :key="index"
               class="p-8 rounded-2xl bg-white border border-gray-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300">
               <h3 class="text-xl font-bold text-gray-800 mb-2">{{ member.name }}</h3>
-              <span class="inline-block px-3 py-1 bg-blue-100 text-blue-600 text-sm font-medium rounded-full mb-4">{{
+              <span class="inline-block px-3 py-1 text-sm font-medium rounded-full mb-4"
+                :class="member.title.includes('AI') ? 'bg-gray-100 text-gray-600' : 'bg-blue-100 text-blue-600'">{{
                 member.title }}</span>
               <div class="prose prose-sm text-gray-600 leading-relaxed">
                 <p v-for="(paragraph, pIndex) in member.bio" :key="pIndex" class="mb-2">
