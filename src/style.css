@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -12,6 +12,27 @@ body {
   font-family: 'Noto Sans JP', 'Noto Sans SC', 'Inter', system-ui, -apple-system, sans-serif;
   background-color: #fdfcfb;
   color: #0f172a;
+}
+
+.font-serif-jp {
+  font-family: 'Noto Serif JP', serif;
+}
+
+.font-sans-jp {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+[data-lang="ja"] body {
+  font-family: 'Noto Sans JP', 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+[data-lang="ja"] h1,
+[data-lang="ja"] h2,
+[data-lang="ja"] h3,
+[data-lang="ja"] h4,
+[data-lang="ja"] h5,
+[data-lang="ja"] h6 {
+  font-family: 'Noto Serif JP', serif;
 }
 
 [data-lang="zh"] body {

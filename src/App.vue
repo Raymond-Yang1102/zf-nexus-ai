@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <RouterView v-slot="{ Component }">
     <component :is="Component" :currentLocale="currentLocale" @change-locale="changeLocale" />
   </RouterView>

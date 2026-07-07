@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="min-h-screen bg-washi-50 flex flex-col">
     <Header :currentLocale="currentLocale" @change-locale="handleLocaleChange" />
     

@@ -50,7 +50,9 @@ export const messages = {
           subtitle: '経営陣と組織体制'
         }
       },
+      productsTitle: 'プロダクト',
       clients: {
+        title: 'パートナー',
         description: '親会社であるZINGDECKは、広告プラットフォーム、ゲーム、ECをはじめ、幅広い業界にサービスを提供しています。'
       },
       products: {
@@ -83,28 +85,20 @@ export const messages = {
       ceoMessage: {
         title: '代表挨拶',
         content: [
-          'ZIFU技研株式会社は、シンガポールに本社を置くAIテクノロジー企業',
-          'ZINGDECK INTL PTE. LTD.の日本法人として、2026年3月に大阪・梅田で設立されました。',
+          'ZIFU技研株式会社は、シンガポールに本社を置くAIテクノロジー企業 ZINGDECK INTL PTE. LTD.の日本法人として、2026年3月に大阪・梅田で設立されました。',
           '',
-          '私たちは、日本市場におけるAIプロダクトの普及と価値向上を使命とし、',
-          '企業・教育機関・個人のお客様に、より身近で使いやすいAI体験をお届けすることを目指しています。',
+          '私たちは、日本市場におけるAIプロダクトの普及と価値向上を使命とし、企業・教育機関・個人のお客様に、より身近で使いやすいAI体験をお届けすることを目指しています。',
           '',
-          '生成AIは、学習、ビジネス、コンテンツ制作など、さまざまな分野で急速に活用が広がり、',
-          '社会に新たな可能性をもたらしています。',
-          '一方で、その価値を十分に活かすためには、日本市場に適した形で製品を届け、',
-          '安心して利用できる環境を整えていくことが重要であると考えています。',
+          '生成AIは、学習、ビジネス、コンテンツ制作など、さまざまな分野で急速に活用が広がり、社会に新たな可能性をもたらしています。',
+          '一方で、その価値を十分に活かすためには、日本市場に適した形で製品を届け、安心して利用できる環境を整えていくことが重要であると考えています。',
           '',
-          '当社は、AIプロダクトの販売・マーケティング・カスタマーサポートを通じて、',
-          'より多くのお客様へ価値あるAI体験を提供するとともに、',
-          'パートナー企業の皆さまと連携しながら、日本市場におけるAI活用のさらなる発展に貢献してまいります。',
+          '当社は、AIプロダクトの販売・マーケティング・カスタマーサポートを通じて、より多くのお客様へ価値あるAI体験を提供するとともに、パートナー企業の皆さまと連携しながら、日本市場におけるAI活用のさらなる発展に貢献してまいります。',
           '',
-          'これからも、お客様一人ひとりに寄り添い、信頼される企業として、',
-          'AIと人がより自然につながる未来の実現を目指してまいります。',
+          'これからも、お客様一人ひとりに寄り添い、信頼される企業として、AIと人がより自然につながる未来の実現を目指してまいります。',
           '',
-          '今後とも、皆さまのご支援とご愛顧を賜りますよう、心よりお願い申し上げます。',
-          '',
-          '代表取締役 王 曾'
-        ]
+          '今後とも、皆さまのご支援とご愛顧を賜りますよう、心よりお願い申し上げます。'
+        ],
+        signature: '代表取締役 王 曾'
       },
       philosophy: {
         title: '経営理念・ビジョン',
@@ -118,8 +112,10 @@ export const messages = {
       overview: {
         title: '事業概要',
         content: [
-          'ZIFU技研株式会社は、シンガポール発のAIテクノロジー企業ZINGDECK INTL PTE. LTD.の日本法人として、日本市場におけるAIプロダクトの販売・マーケティング・事業展開を担っています。',
-          'グローバルで培われたAI技術と日本市場への理解を活かし、企業・教育機関・個人のお客様へ、より価値あるAI体験を提供するとともに、AIのさらなる普及と活用促進に取り組んでいます。'
+          'ZIFU技研株式会社は、シンガポール発のAIテクノロジー企業ZINGDECK INTL PTE. LTD.の日本法人として、',
+          '日本市場におけるAIプロダクトの販売・マーケティング・事業展開を担っています。',
+          'グローバルで培われたAI技術と日本市場への理解を活かし、企業・教育機関・個人のお客様へ、',
+          'より価値あるAI体験を提供するとともに、AIのさらなる普及と活用促進に取り組んでいます。'
         ]
       },
       business: {
@@ -302,6 +298,18 @@ export const messages = {
               '現在は、日本市場における事業運営、パートナー企業との連携、',
               '対外コミュニケーションを担当し、日本法人の円滑な事業展開を支えています。'
             ]
+          },
+          {
+            name: '曹 鴻源',
+            title: 'AIプロダクト開発責任者',
+            bio: [
+              '生成AIプロダクトの企画・開発に豊富な経験を持ち、',
+              'AI技術を活用したプロダクト設計およびサービス開発を主導。',
+              'NoteGPTの立ち上げを主導し、',
+              'ユーザー価値を重視したプロダクト開発と継続的な機能改善を推進してきました。',
+              '現在は、AIプロダクトの戦略立案、開発を統括するとともに、',
+              '日本市場を含むグローバル展開を推進しています。'
+            ]
           }
         ]
       },
@@ -376,7 +384,9 @@ export const messages = {
           subtitle: '管理层与组织体制'
         }
       },
+      productsTitle: '产品',
       clients: {
+        title: '合作伙伴',
         description: '母公司ZINGDECK提供广告平台、游戏、电商等广泛行业的服务。'
       },
       products: {
@@ -409,28 +419,19 @@ export const messages = {
       ceoMessage: {
         title: '代表致辞',
         content: [
-          'ZIFU技研株式会社作为总部位于新加坡的AI科技企业',
-          'ZINGDECK INTL PTE. LTD.的日本法人，于2026年3月在大阪梅田成立。',
+          'ZIFU技研株式会社作为总部位于新加坡的AI科技企业 ZINGDECK INTL PTE. LTD.的日本法人，于2026年3月在大阪梅田成立。',
           '',
-          '我们以在日本市场普及和提升AI产品价值为使命，',
-          '致力于为企业、教育机构和个人用户提供更贴近、更易用的AI体验。',
+          '我们以在日本市场普及和提升AI产品价值为使命，致力于为企业、教育机构和个人用户提供更贴近、更易用的AI体验。',
           '',
-          '生成AI在学习、商务、内容创作等多个领域迅速普及，',
-          '为社会带来了新的可能性。',
-          '另一方面，为了充分发挥其价值，我们认为重要的是将产品以适合日本市场的形式提供，',
-          '并建立一个可以安心使用的环境。',
+          '生成AI在学习、商务、内容创作等多个领域迅速普及，为社会带来了新的可能性。另一方面，为了充分发挥其价值，我们认为重要的是将产品以适合日本市场的形式提供，并建立一个可以安心使用的环境。',
           '',
-          '公司将通过AI产品的销售、营销和客户支持，',
-          '为更多用户提供有价值的AI体验，',
-          '同时与合作伙伴企业携手，为日本市场AI应用的进一步发展做出贡献。',
+          '公司将通过AI产品的销售、营销和客户支持，为更多用户提供有价值的AI体验，同时与合作伙伴企业携手，为日本市场AI应用的进一步发展做出贡献。',
           '',
-          '今后，我们将贴近每一位用户，作为值得信赖的企业，',
-          '致力于实现AI与人更加自然连接的未来。',
+          '今后，我们将贴近每一位用户，作为值得信赖的企业，致力于实现AI与人更加自然连接的未来。',
           '',
-          '衷心感谢各位的支持和厚爱。',
-          '',
-          '代表董事 王曾'
-        ]
+          '衷心感谢各位的支持和厚爱。'
+        ],
+        signature: '代表董事 王曾'
       },
       philosophy: {
         title: '经营理念·愿景',
@@ -628,6 +629,18 @@ export const messages = {
               '目前负责日本市场的业务运营、与合作伙伴企业的合作、',
               '对外沟通，支持日本法人的顺利业务开展。'
             ]
+          },
+          {
+            name: '曹鸿源',
+            title: 'AI产品开发负责人',
+            bio: [
+              '在生成AI产品的规划和开发方面拥有丰富经验，',
+              '主导利用AI技术的产品设计和服务开发。',
+              '主导了NoteGPT的启动，',
+              '推动了重视用户价值的产品开发和持续的功能改进。',
+              '目前负责AI产品的战略规划和开发，',
+              '同时推动包括日本市场在内的全球拓展。'
+            ]
           }
         ]
       },
@@ -702,7 +715,9 @@ export const messages = {
           subtitle: 'Management and organization'
         }
       },
+      productsTitle: 'Products',
       clients: {
+        title: 'Partners',
         description: 'Our parent company ZINGDECK provides services across various industries including advertising platforms, gaming, and e-commerce.'
       },
       products: {
@@ -735,28 +750,19 @@ export const messages = {
       ceoMessage: {
         title: 'CEO Message',
         content: [
-          'ZIFU Giken Co., Ltd. was established in March 2026 in Umeda, Osaka as the Japanese subsidiary of',
-          'ZINGDECK INTL PTE. LTD., an AI technology company headquartered in Singapore.',
+          'ZIFU Giken Co., Ltd. was established in March 2026 in Umeda, Osaka as the Japanese subsidiary of ZINGDECK INTL PTE. LTD., an AI technology company headquartered in Singapore.',
           '',
-          'Our mission is to popularize and enhance the value of AI products in the Japanese market,',
-          'aiming to deliver more accessible and user-friendly AI experiences to businesses, educational institutions, and individual users.',
+          'Our mission is to popularize and enhance the value of AI products in the Japanese market, aiming to deliver more accessible and user-friendly AI experiences to businesses, educational institutions, and individual users.',
           '',
-          'Generative AI is rapidly being adopted across various fields including learning, business, and content creation,',
-          'bringing new possibilities to society.',
-          'On the other hand, to fully leverage its value, we believe it is important to deliver products in a form suitable for the Japanese market,',
-          'and to create an environment where users can feel secure in using them.',
+          'Generative AI is rapidly being adopted across various fields including learning, business, and content creation, bringing new possibilities to society. On the other hand, to fully leverage its value, we believe it is important to deliver products in a form suitable for the Japanese market, and to create an environment where users can feel secure in using them.',
           '',
-          'Through the sales, marketing, and customer support of AI products, our company will',
-          'provide valuable AI experiences to more users,',
-          'and contribute to the further development of AI utilization in the Japanese market in collaboration with partner companies.',
+          'Through the sales, marketing, and customer support of AI products, our company will provide valuable AI experiences to more users, and contribute to the further development of AI utilization in the Japanese market in collaboration with partner companies.',
           '',
-          'In the future, we will continue to work closely with each user, and as a trusted company,',
-          'aim to realize a future where AI and humans connect more naturally.',
+          'In the future, we will continue to work closely with each user, and as a trusted company, aim to realize a future where AI and humans connect more naturally.',
           '',
-          'We sincerely appreciate your continued support and patronage.',
-          '',
-          'Wang Zeng, Representative Director'
-        ]
+          'We sincerely appreciate your continued support and patronage.'
+        ],
+        signature: 'Wang Zeng, Representative Director'
       },
       philosophy: {
         title: 'Corporate Philosophy & Vision',
@@ -954,6 +960,18 @@ export const messages = {
               'Has been involved in business promotion and external communication connecting Japanese and overseas companies.',
               'Currently responsible for business operations, collaboration with partner companies,',
               'and external communication in the Japanese market, supporting the smooth business development of the Japanese subsidiary.'
+            ]
+          },
+          {
+            name: 'Cao Hongyuan',
+            title: 'AI Product Development Director',
+            bio: [
+              'Extensive experience in planning and developing generative AI products,',
+              'leading product design and service development leveraging AI technology.',
+              'Led the launch of NoteGPT,',
+              'promoting user-value-focused product development and continuous feature improvements.',
+              'Currently overseeing AI product strategy planning and development,',
+              'while driving global expansion including the Japanese market.'
             ]
           }
         ]
