@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <header :class="[
     'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
     headerBgClass
@@ -199,7 +199,7 @@ const headerBgClass = computed(() => {
 })
 
 const brandNameClass = computed(() => {
-  return 'brand-gradient-text filter-text-shadow'
+  return 'text-gray-800'
 })
 
 const navTextColorClass = computed(() => {
