@@ -34,7 +34,7 @@
                 <component :is="coreTechIcons[index]" class="w-7 h-7" :class="coreTechIconColors[index]" />
               </div>
               <h3 class="text-xl font-bold text-gray-800 mb-3 ">{{ item.title }}</h3>
-              <p class="text-gray-600 text-sm leading-relaxed mb-4 ja-body-text flex-1">{{ item.description }}</p>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4 ja-body-text zh-body-text flex-1">{{ item.description }}</p>
               <span class="inline-block self-start px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-600">
                 {{ item.product }}
               </span>

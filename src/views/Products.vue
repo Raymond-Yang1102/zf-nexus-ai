@@ -43,7 +43,7 @@
                 <ExternalLink class="w-4 h-4" />
                 <span>{{ messages[effectiveLocale]?.products?.visit }}</span>
               </a>
-              <p class="text-gray-600 mb-6 leading-relaxed ja-body-text">{{ productsData.noteGPT.description }}</p>
+              <p class="text-gray-600 mb-6 leading-relaxed ja-body-text zh-body-text">{{ productsData.noteGPT.description }}</p>
               <div class="mb-6">
                 <h3 class="text-lg font-semibold text-gray-800 mb-3">{{ messages[effectiveLocale]?.products?.features }}
                 </h3>
@@ -87,7 +87,7 @@
                 <ExternalLink class="w-4 h-4" />
                 <span>{{ messages[effectiveLocale]?.products?.visit }}</span>
               </a>
-              <p class="text-gray-600 mb-6 leading-relaxed ja-body-text">{{ productsData.decopyAI.description }}</p>
+              <p class="text-gray-600 mb-6 leading-relaxed ja-body-text zh-body-text">{{ productsData.decopyAI.description }}</p>
               <div class="mb-6">
                 <h3 class="text-lg font-semibold text-gray-800 mb-3">{{ messages[effectiveLocale]?.products?.features }}
                 </h3>
@@ -131,7 +131,7 @@
                 <ExternalLink class="w-4 h-4" />
                 <span>{{ messages[effectiveLocale]?.products?.visit }}</span>
               </a>
-              <p class="text-gray-600 mb-6 leading-relaxed ja-body-text">{{ productsData.visualGPT.description }}</p>
+              <p class="text-gray-600 mb-6 leading-relaxed ja-body-text zh-body-text">{{ productsData.visualGPT.description }}</p>
               <div class="mb-6">
                 <h3 class="text-lg font-semibold text-gray-800 mb-3">{{ messages[effectiveLocale]?.products?.features }}
                 </h3>
@@ -171,7 +171,7 @@
                 <component :is="enterpriseIcons[index]" class="w-7 h-7 text-blue-600" />
               </div> -->
               <h3 class="text-xl font-bold text-gray-800 mb-3 ">{{ item.title }}</h3>
-              <p class="text-gray-600 text-sm leading-relaxed ja-body-text">{{ item.description }}</p>
+              <p class="text-gray-600 text-sm leading-relaxed ja-body-text zh-body-text">{{ item.description }}</p>
             </div>
           </div>
         </div>

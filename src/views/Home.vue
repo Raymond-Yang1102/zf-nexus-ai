@@ -67,7 +67,7 @@
                   class="w-10 h-10 object-contain" />
               </div>
               <h3 class="text-xl font-bold text-gray-800 mb-3 ">{{ product.name }}</h3>
-              <p class="text-gray-600 text-sm leading-relaxed ja-body-text">{{ product.description }}</p>
+              <p class="text-gray-600 text-sm leading-relaxed ja-body-text zh-body-text">{{ product.description }}</p>
             </div>
           </div>
         </div>

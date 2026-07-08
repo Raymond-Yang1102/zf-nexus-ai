@@ -32,7 +32,7 @@
               <span class="inline-block px-3 py-1 text-sm font-medium rounded-full mb-4"
                 :class="member.title.includes('AI') ? 'bg-gray-100 text-gray-600' : 'bg-blue-100 text-blue-600'">{{
                 member.title }}</span>
-              <div class="prose prose-sm text-gray-600 leading-relaxed ja-body-text">
+              <div class="prose prose-sm text-gray-600 leading-relaxed ja-body-text zh-body-text">
                 <p v-for="(paragraph, pIndex) in member.bio" :key="pIndex" class="mb-2">
                   {{ paragraph }}
                 </p>
@@ -47,7 +47,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 class="text-2xl font-bold text-gray-800 mb-8">{{ teamData.philosophy.title }}</h2>
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div class="prose prose-lg text-gray-600 leading-relaxed ja-body-text whitespace-pre-line">
+            <div class="prose prose-lg text-gray-600 leading-relaxed ja-body-text zh-body-text whitespace-pre-line">
               <p v-for="(paragraph, index) in teamData.philosophy.content" :key="index" class="">
                 {{ paragraph }}
               </p>

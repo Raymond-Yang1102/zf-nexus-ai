@@ -631,17 +631,11 @@ export const messages = {
       philosophy: {
         title: '人才理念',
         content: [
-          'ZIFU技研将"全球技术 × 扎根地域的现场力量"',
-          '作为企业价值观。',
-          '',
-          '我们重视的价值观：',
-          '',
+          'ZIFU技研将"全球技术 × 扎根地域的现场力量"作为企业价值观。\n\n',
+          '我们重视的价值观：\n\n',
           '·以技术解决现实问题的态度',
-          '',
           '·在快速变化的AI市场中持续学习、持续成长的态度',
-          '',
-          '·连接日本市场和全球团队的沟通',
-          '',
+          '·连接日本市场和全球团队的沟通\n\n',
           '我们珍视与客户、合作伙伴企业以及全球团队的信赖关系，为了让AI成为更贴近生活的存在，将继续挑战。'
         ]
       }
@@ -960,17 +954,11 @@ export const messages = {
       philosophy: {
         title: 'Talent Philosophy',
         content: [
-          'ZIFU Giken embraces "Global Technology × Locally Rooted Field Strength"',
-          'as its corporate value.',
-          '',
-          'Our core values:',
-          '',
+          'ZIFU Giken embraces "Global Technology × Locally Rooted Field Strength" as its corporate value.\n\n',
+          'Our core values:\n\n',
           '・A mindset to solve real-world problems with technology',
-          '',
           '・A mindset to continuously learn and grow in the rapidly changing AI market',
-          '',
-          '・Communication connecting the Japanese market with the global team',
-          '',
+          '・Communication connecting the Japanese market with the global team\n\n',
           'We value trust relationships with customers, partner companies, and our global team, and continue to challenge ourselves to make AI a more familiar presence.'
         ]
       }
