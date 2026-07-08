@@ -2,13 +2,14 @@
   <div class="min-h-screen bg-white">
     <Header :currentLocale="currentLocale" @change-locale="handleLocaleChange" />
     <main class="pt-16">
-      <section class="relative py-16 hero-bg-indigo overflow-hidden">
+      <!-- <section class="relative py-16 hero-bg-indigo overflow-hidden">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <!-- <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800  animate-fade-in">{{
-            teamData.hero.title }}</h1> -->
+          <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800  animate-fade-in">{{
+            teamData.hero.title }}</h1>
         </div>
-      </section>
+      </section> -->
 
+      <!-- 团队 -->
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 class="text-2xl font-bold text-gray-800 mb-8 text-center">{{ teamData.overview.title }}</h2>
@@ -20,6 +21,7 @@
         </div>
       </section>
 
+      <!-- 主要成员 -->
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 class="text-2xl font-bold text-gray-800 mb-12">{{ teamData.members.title }}</h2>
@@ -30,7 +32,7 @@
               <span class="inline-block px-3 py-1 text-sm font-medium rounded-full mb-4"
                 :class="member.title.includes('AI') ? 'bg-gray-100 text-gray-600' : 'bg-blue-100 text-blue-600'">{{
                 member.title }}</span>
-              <div class="prose prose-sm text-gray-600 leading-relaxed">
+              <div class="prose prose-sm text-gray-600 leading-relaxed ja-body-text">
                 <p v-for="(paragraph, pIndex) in member.bio" :key="pIndex" class="mb-2">
                   {{ paragraph }}
                 </p>
@@ -40,12 +42,13 @@
         </div>
       </section>
 
+      <!-- 人才理念 -->
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 class="text-2xl font-bold text-gray-800 mb-8">{{ teamData.philosophy.title }}</h2>
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div class="prose prose-lg text-gray-600 leading-relaxed">
-              <p v-for="(paragraph, index) in teamData.philosophy.content" :key="index" class="mb-4">
+            <div class="prose prose-lg text-gray-600 leading-relaxed ja-body-text whitespace-pre-line">
+              <p v-for="(paragraph, index) in teamData.philosophy.content" :key="index" class="">
                 {{ paragraph }}
               </p>
             </div>

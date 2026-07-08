@@ -2,17 +2,19 @@
   <div class="min-h-screen bg-white">
     <Header :currentLocale="currentLocale" @change-locale="handleLocaleChange" />
     <main class="pt-16">
-      <section class="relative py-16 hero-bg-indigo overflow-hidden">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <!-- <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800  animate-fade-in">{{
-            technologyData.hero.title }}</h1> -->
-        </div>
-      </section>
 
+      <!-- <section class="relative py-16 hero-bg-indigo overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800  animate-fade-in">{{
+            technologyData.hero.title }}</h1>
+        </div>
+      </section> -->
+
+      <!-- 技术概要 -->
       <section class="py-16 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 class="text-2xl font-bold text-gray-800 mb-8 text-center">{{ technologyData.overview.title }}</h2>
-          <div class="prose prose-lg text-gray-600 leading-relaxed text-center">
+          <div class="prose prose-lg text-gray-600 leading-relaxed text-center whitespace-pre-line">
             <p v-for="(paragraph, index) in technologyData.overview.content" :key="index" class="mb-4">
               {{ paragraph }}
             </p>
@@ -20,19 +22,20 @@
         </div>
       </section>
 
+      <!-- 核心技术 -->
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 class="text-2xl font-bold text-gray-800 mb-12 ">{{ technologyData.coreTech.title }}</h2>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div v-for="(item, index) in technologyData.coreTech.items" :key="index"
-              class="p-8 rounded-2xl bg-white border border-gray-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300">
+              class="p-8 rounded-2xl bg-white border border-gray-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300 h-full flex flex-col">
               <div class="w-14 h-14 rounded-xl bg-gradient-to-br flex items-center justify-center mb-6"
                 :class="coreTechBgColors[index]">
                 <component :is="coreTechIcons[index]" class="w-7 h-7" :class="coreTechIconColors[index]" />
               </div>
               <h3 class="text-xl font-bold text-gray-800 mb-3 ">{{ item.title }}</h3>
-              <p class="text-gray-600 text-sm leading-relaxed mb-4">{{ item.description }}</p>
-              <span class="inline-block px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-600">
+              <p class="text-gray-600 text-sm leading-relaxed mb-4 ja-body-text flex-1">{{ item.description }}</p>
+              <span class="inline-block self-start px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-600">
                 {{ item.product }}
               </span>
             </div>
@@ -40,12 +43,13 @@
         </div>
       </section>
 
+      <!-- 研究开发体制 -->
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex flex-col lg:flex-row gap-12 items-center">
             <div class="lg:w-1/2">
               <h2 class="text-2xl font-bold text-gray-800 mb-8">{{ technologyData.rnd.title }}</h2>
-              <div class="prose prose-lg text-gray-600 leading-relaxed">
+              <div class="prose prose-lg text-gray-600 leading-relaxed whitespace-pre-line">
                 <p v-for="(paragraph, index) in technologyData.rnd.content" :key="index" class="mb-4">
                   {{ paragraph }}
                 </p>
@@ -61,12 +65,13 @@
         </div>
       </section>
 
+      <!-- 基础设施 -->
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex flex-col lg:flex-row gap-12 items-center">
             <div class="lg:w-1/2">
               <h2 class="text-2xl font-bold text-gray-800 mb-8">{{ technologyData.infrastructure.title }}</h2>
-              <div class="prose prose-lg text-gray-600 leading-relaxed mb-6">
+              <div class="prose prose-lg text-gray-600 leading-relaxed mb-6 whitespace-pre-line">
                 <p v-for="(paragraph, index) in technologyData.infrastructure.content.slice(0, 2)" :key="`intro-${index}`" class="mb-4">
                   {{ paragraph }}
                 </p>

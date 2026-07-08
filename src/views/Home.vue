@@ -3,7 +3,7 @@
     <Header :currentLocale="currentLocale" @change-locale="handleLocaleChange" />
     <main class="pt-16">
       <section class=" relative min-h-[60vh] flex items-center hero-bg-indigo overflow-hidden">
-        <div class="relative z-10 px-4 max-w-7xl mx-auto w-full">
+        <div class="relative z-10 px-8 max-w-7xl mx-auto w-full">
           <h1 class="text-4xl md:text-6xl font-bold mb-6 text-gray-800  animate-fade-in">{{
             homeData.hero.title }}</h1>
           <p class="text-lg md:text-xl text-gray-600 max-w-2xl animate-fade-in delay-200">{{
@@ -53,6 +53,7 @@
         </div>
       </section>
 
+      <!-- 产品 -->
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 class="text-2xl font-bold text-gray-800 mb-8 ">{{ homeData.productsTitle }}</h2>
@@ -66,7 +67,7 @@
                   class="w-10 h-10 object-contain" />
               </div>
               <h3 class="text-xl font-bold text-gray-800 mb-3 ">{{ product.name }}</h3>
-              <p class="text-gray-600 text-sm leading-relaxed">{{ product.description }}</p>
+              <p class="text-gray-600 text-sm leading-relaxed ja-body-text">{{ product.description }}</p>
             </div>
           </div>
         </div>
@@ -78,7 +79,7 @@
           <div class="space-y-4">
             <div v-for="(item, index) in homeData.news.items" :key="index"
               class="flex items-start space-x-6 p-4 rounded-xl bg-white border border-gray-100 hover:border-blue-200 transition-colors">
-              <span class="text-sm font-medium text-blue-600 flex-shrink-0">{{ item.date }}</span>
+              <span class="text-sm font-medium text-blue-600 flex-shrink-0 min-w-[80px]">{{ item.date }}</span>
               <span class="text-gray-700">{{ item.content }}</span>
             </div>
           </div>

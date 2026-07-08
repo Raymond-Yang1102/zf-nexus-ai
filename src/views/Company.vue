@@ -3,10 +3,10 @@
     <Header :currentLocale="currentLocale" @change-locale="handleLocaleChange" />
     <main class="pt-16">
       
-      <section class="relative py-16 hero-bg-indigo overflow-hidden">
+      <!-- <section class="relative py-16 hero-bg-indigo overflow-hidden">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         </div>
-      </section>
+      </section> -->
 
       <section class="py-16 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -21,6 +21,7 @@
         </div>
       </section>
 
+      <!-- 经营理念 -->
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 class="text-2xl font-bold text-gray-800 mb-12 ">{{ companyData.philosophy.title }}</h2>
@@ -31,13 +32,14 @@
                 class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center mb-6">
                 <component :is="philosophyIcons[index]" class="w-7 h-7 text-blue-600" />
               </div> -->
-              <h3 class="text-xl font-bold text-gray-800 mb-3 ">{{ item.title }}</h3>
-              <p class="text-gray-600 text-sm leading-relaxed">{{ item.description }}</p>
+              <h3 class="text-xl font-bold text-gray-800 mb-3 min-h-16 whitespace-nowrap">{{ item.title }}</h3>
+              <p class="text-gray-600 text-sm leading-relaxed ja-body-text">{{ item.description }}</p>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- 事业概要 -->
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 class="text-2xl font-bold text-gray-800 mb-8 text-center">{{ companyData.overview.title }}</h2>
@@ -49,6 +51,7 @@
         </div>
       </section>
 
+      <!-- 事业内容 -->
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 class="text-2xl font-bold text-gray-800 mb-12 ">{{ companyData.business.title }}</h2>
@@ -59,8 +62,8 @@
                 class="w-14 h-14 rounded-xl bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center mb-6">
                 <component :is="businessIcons[index]" class="w-7 h-7 text-green-600" />
               </div> -->
-              <h3 class="text-xl font-bold text-gray-800 mb-3 ">{{ item.title }}</h3>
-              <p class="text-gray-600 text-sm leading-relaxed">{{ item.description }}</p>
+              <h3 class="text-xl font-bold text-gray-800 mb-3 min-h-16">{{ item.title }}</h3>
+              <p class="text-gray-600 text-sm leading-relaxed ja-body-text">{{ item.description }}</p>
             </div>
           </div>
         </div>

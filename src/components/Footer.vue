@@ -1,6 +1,6 @@
 ﻿<template>
   <footer class="bg-gray-900 text-gray-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
       <div class="mb-8">
         <div class="flex items-center space-x-2 mb-4">
           <img :src="logoImg" alt="ZIFU" class="w-10 h-10">
@@ -40,7 +40,7 @@
 
       <!-- <div class="border-t border-gray-700"></div> -->
 
-      <div class="pt-8">
+      <div class="">
         <p class="text-sm text-gray-400">
           {{ messages[effectiveLocale]?.footer?.copyright }}
         </p>

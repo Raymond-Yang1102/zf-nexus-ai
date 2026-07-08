@@ -2,16 +2,16 @@
   <div class="min-h-screen bg-white">
     <Header :currentLocale="currentLocale" @change-locale="handleLocaleChange" />
     <main class="pt-16">
-
+<!-- 
       <section class="relative py-16 hero-bg-indigo overflow-hidden">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         </div>
-      </section>
+      </section> -->
 
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">{{ productsData.overview.title }}</h2>
-          <p class="text-gray-600 mb-12 leading-relaxed text-center max-w-5xl mx-auto">{{ productsData.overview.description }}</p>
+          <p class="text-gray-600 mb-12 leading-relaxed text-center max-w-5xl mx-auto whitespace-pre-line">{{ productsData.overview.description }}</p>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div v-for="(icon, index) in productsData.overview.icons" :key="index"
               class="p-10 rounded-2xl bg-white border border-gray-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300 flex flex-col items-center text-center">
@@ -26,12 +26,13 @@
         </div>
       </section>
 
+      <!-- 产品列表 -->
       <section id="notegpt" class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex flex-col lg:flex-row gap-12 items-center">
             <div class="lg:w-1/2">
               <div class="w-full aspect-video bg-gray-200 rounded-2xl flex items-center justify-center">
-                <img src="@/assets/images/products-notegpt.png" alt="NoteGPT" class="w-full h-full object-cover opacity-50 rounded-2xl" />
+                <img src="@/assets/images/products-notegpt.png" alt="NoteGPT" class="w-full h-full object-cover rounded-2xl opacity-50" />
               </div>
             </div>
             <div class="lg:w-1/2">
@@ -42,7 +43,7 @@
                 <ExternalLink class="w-4 h-4" />
                 <span>{{ messages[effectiveLocale]?.products?.visit }}</span>
               </a>
-              <p class="text-gray-600 mb-6 leading-relaxed">{{ productsData.noteGPT.description }}</p>
+              <p class="text-gray-600 mb-6 leading-relaxed ja-body-text">{{ productsData.noteGPT.description }}</p>
               <div class="mb-6">
                 <h3 class="text-lg font-semibold text-gray-800 mb-3">{{ messages[effectiveLocale]?.products?.features }}
                 </h3>
@@ -75,7 +76,7 @@
           <div class="flex flex-col lg:flex-row gap-12 items-center">
             <div class="lg:w-1/2">
               <div class="w-full aspect-video bg-gray-200 rounded-2xl flex items-center justify-center">
-                <img src="@/assets/images/products-decopy.png" alt="Decopy AI" class="w-full h-full object-cover" />
+                <img src="@/assets/images/products-decopy.png" alt="Decopy AI" class="w-full h-full object-cover rounded-2xl" />
               </div>
             </div>
             <div class="lg:w-1/2">
@@ -86,7 +87,7 @@
                 <ExternalLink class="w-4 h-4" />
                 <span>{{ messages[effectiveLocale]?.products?.visit }}</span>
               </a>
-              <p class="text-gray-600 mb-6 leading-relaxed">{{ productsData.decopyAI.description }}</p>
+              <p class="text-gray-600 mb-6 leading-relaxed ja-body-text">{{ productsData.decopyAI.description }}</p>
               <div class="mb-6">
                 <h3 class="text-lg font-semibold text-gray-800 mb-3">{{ messages[effectiveLocale]?.products?.features }}
                 </h3>
@@ -119,7 +120,7 @@
           <div class="flex flex-col lg:flex-row gap-12 items-center">
             <div class="lg:w-1/2">
               <div class="w-full aspect-video bg-gray-200 rounded-2xl flex items-center justify-center">
-                <img src="@/assets/images/products-visualgpt.png" alt="VisualGPT" class=" object-contain opacity-50 rounded-2xl" />
+                <img src="@/assets/images/products-visualgpt.png" alt="VisualGPT" class="w-full h-full  rounded-2xl opacity-50" />
               </div>
             </div>
             <div class="lg:w-1/2">
@@ -130,7 +131,7 @@
                 <ExternalLink class="w-4 h-4" />
                 <span>{{ messages[effectiveLocale]?.products?.visit }}</span>
               </a>
-              <p class="text-gray-600 mb-6 leading-relaxed">{{ productsData.visualGPT.description }}</p>
+              <p class="text-gray-600 mb-6 leading-relaxed ja-body-text">{{ productsData.visualGPT.description }}</p>
               <div class="mb-6">
                 <h3 class="text-lg font-semibold text-gray-800 mb-3">{{ messages[effectiveLocale]?.products?.features }}
                 </h3>
@@ -158,6 +159,7 @@
         </div>
       </section>
 
+      <!-- 企业服务 -->
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 class="text-2xl font-bold text-gray-800 mb-12 ">{{ productsData.enterprise.title }}</h2>
@@ -169,7 +171,7 @@
                 <component :is="enterpriseIcons[index]" class="w-7 h-7 text-blue-600" />
               </div> -->
               <h3 class="text-xl font-bold text-gray-800 mb-3 ">{{ item.title }}</h3>
-              <p class="text-gray-600 text-sm leading-relaxed">{{ item.description }}</p>
+              <p class="text-gray-600 text-sm leading-relaxed ja-body-text">{{ item.description }}</p>
             </div>
           </div>
         </div>

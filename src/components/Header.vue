@@ -5,33 +5,35 @@
   ]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
-        <button @click="goToHome" class="flex items-center space-x-2 cursor-pointer">
-          <img :src="logoImg" alt="ZIFU" class="w-10 h-10">
-          <span :class="['font-bold text-xl', brandNameClass]">
-            ZIFU
-          </span>
-        </button>
+        <div class="flex items-center space-x-8">
+          <button @click="goToHome" class="flex items-center space-x-2 cursor-pointer">
+            <img :src="logoImg" alt="ZIFU" class="w-10 h-10">
+            <span :class="['font-bold text-xl', brandNameClass]">
+              ZIFU
+            </span>
+          </button>
 
-        <nav class="hidden md:flex items-center space-x-8">
-          <a href="#" @click.prevent="goToHome" :class="['text-sm font-medium transition-colors', navTextColorClass]">
-            {{ messages[effectiveLocale]?.header?.nav['home'] }}
-          </a>
-          <a href="#" @click.prevent="goToCompany"
-            :class="['text-sm font-medium transition-colors', navTextColorClass]">
-            {{ messages[effectiveLocale]?.header?.nav['company'] }}
-          </a>
-          <a href="#" @click.prevent="goToProducts"
-            :class="['text-sm font-medium transition-colors', navTextColorClass]">
-            {{ messages[effectiveLocale]?.header?.nav['products'] }}
-          </a>
-          <a href="#" @click.prevent="goToTechnology"
-            :class="['text-sm font-medium transition-colors', navTextColorClass]">
-            {{ messages[effectiveLocale]?.header?.nav['technology'] }}
-          </a>
-          <a href="#" @click.prevent="goToTeam" :class="['text-sm font-medium transition-colors', navTextColorClass]">
-            {{ messages[effectiveLocale]?.header?.nav['team'] }}
-          </a>
-        </nav>
+          <nav class="hidden md:flex items-center space-x-8">
+            <a href="#" @click.prevent="goToHome" :class="['text-sm font-medium transition-colors', navTextColorClass]">
+              {{ messages[effectiveLocale]?.header?.nav['home'] }}
+            </a>
+            <a href="#" @click.prevent="goToCompany"
+              :class="['text-sm font-medium transition-colors', navTextColorClass]">
+              {{ messages[effectiveLocale]?.header?.nav['company'] }}
+            </a>
+            <a href="#" @click.prevent="goToProducts"
+              :class="['text-sm font-medium transition-colors', navTextColorClass]">
+              {{ messages[effectiveLocale]?.header?.nav['products'] }}
+            </a>
+            <a href="#" @click.prevent="goToTechnology"
+              :class="['text-sm font-medium transition-colors', navTextColorClass]">
+              {{ messages[effectiveLocale]?.header?.nav['technology'] }}
+            </a>
+            <a href="#" @click.prevent="goToTeam" :class="['text-sm font-medium transition-colors', navTextColorClass]">
+              {{ messages[effectiveLocale]?.header?.nav['team'] }}
+            </a>
+          </nav>
+        </div>
 
         <div class="hidden md:flex items-center space-x-4">
           <div class="relative" @mouseenter="openLangMenu" @mouseleave="closeLangMenu">
