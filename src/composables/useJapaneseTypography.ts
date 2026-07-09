@@ -44,11 +44,11 @@ const protectPatterns: RegExp[] = [
 export function useJapaneseTypography() {
   const { locale } = useI18n()
 
-  const isCJK = computed(() => locale.value === 'ja' || locale.value === 'zh')
+  const isCJK = computed(() => locale.value === 'ja')
 
   /**
    * 将文本中匹配到的受保护词组包裹在 <span class="whitespace-nowrap"> 中
-   * 仅在日语/中文环境下生效，英文环境直接返回原文
+   * 仅在日语环境下生效，英文环境直接返回原文
    */
   function protectTerms(text: string): string {
     if (!text) return text

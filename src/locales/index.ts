@@ -1,4 +1,4 @@
-export type Locale = 'ja' | 'zh' | 'en'
+export type Locale = 'ja' | 'en'
 
 export const messages = {
   ja: {
@@ -17,7 +17,6 @@ export const messages = {
       },
       language: {
         ja: '日本語',
-        zh: '简体中文',
         en: 'English'
       }
     },
@@ -304,7 +303,7 @@ export const messages = {
           },
           {
             name: '曹 鴻源',
-            title: 'AIプロダクト開発責任者',
+            title: '共同創業者',
             bio: [
               '生成AIプロダクトの企画・開発に豊富な経験を持ち、AI技術を活用したプロダクト設計およびサービス開発を主導。',
               'NoteGPTの立ち上げを主導し、ユーザー価値を重視したプロダクト開発と継続的な機能改善を推進してきました。',
@@ -326,321 +325,6 @@ export const messages = {
       }
     }
   },
-  zh: {
-    meta: {
-      title: 'ZIFU技研株式会社 - 用AI的力量，让学习和创造更加自由。',
-      description: 'ZIFU技研是新加坡AI科技企业ZINGDECK的日本法人。提供NoteGPT、Decopy AI、VisualGPT三款产品，在学习、商务、内容创作的所有场景中，简单、实用地发挥AI的力量。',
-      keywords: 'AI, ZIFU, NoteGPT, Decopy AI, VisualGPT, AI摘要, 文章生成, 图像生成'
-    },
-    header: {
-      nav: {
-        home: '首页',
-        company: '关于我们',
-        products: '产品',
-        technology: '技术',
-        team: '团队'
-      },
-      language: {
-        ja: '日本語',
-        zh: '简体中文',
-        en: 'English'
-      }
-    },
-    footer: {
-      companyName: 'ZIFU技研',
-      phone: '+81-6-7220-4600',
-      address: '〒530-0001 大阪府大阪市北区梅田一丁目1番3号 大阪站前第3大厦11楼2号室',
-      copyright: '© 2026 ZIFU技研株式会社 All Rights Reserved.'
-    },
-    home: {
-      hero: {
-        title: 'ZIFU 技研',
-        subtitle: '用AI的力量，让学习和创造更加自由。'
-      },
-      fourCards: {
-        company: {
-          title: '关于我们',
-          subtitle: 'ZIFU技研的理念、愿景、公司概要'
-        },
-        products: {
-          title: '产品',
-          subtitle: 'NoteGPT · Decopy AI · VisualGPT 三款产品'
-        },
-        technology: {
-          title: '技术',
-          subtitle: 'AI技术基础与研发体制'
-        },
-        team: {
-          title: '团队',
-          subtitle: '管理层与组织体制'
-        }
-      },
-      productsTitle: '产品',
-      clients: {
-        title: '合作伙伴',
-        description: '母公司ZINGDECK提供广告平台、游戏、电商等广泛行业的服务。'
-      },
-      products: {
-        noteGPT: {
-          name: 'NoteGPT',
-          description: '从视频、音频、PDF、Web文章中提取要点。飞跃性提升学习、会议、研究效率的AI摘要·笔记生成工具。'
-        },
-        decopyAI: {
-          name: 'Decopy AI',
-          description: '涵盖文章生成、改写、可读性优化、AI检测。支持日语特有的文体、敬语、商务文书的全能文章创作辅助工具。'
-        },
-        visualGPT: {
-          name: 'VisualGPT',
-          description: '涵盖图像生成、编辑、视频生成、背景去除、高清化、商品图像制作。强力支持电商、设计、内容创作的AI视觉工具。'
-        }
-      },
-      news: {
-        title: '新闻',
-        items: [
-          { date: '2025年度', content: 'ZINGDECK AI产品在日本市场实现用户数同比增长376.67%' },
-          { date: '2026年3月', content: 'ZIFU技研株式会社成立' },
-          { date: '2026年5月', content: 'NoteGPT・Decopy AI・VisualGPT 日语版UI发布' }
-        ]
-      }
-    },
-    company: {
-      hero: {
-        title: '关于我们'
-      },
-      ceoMessage: {
-        title: '代表致辞',
-        content: [
-          'ZIFU技研株式会社作为总部位于新加坡的AI科技企业 ZINGDECK INTL PTE. LTD.的日本法人，于2026年3月在大阪梅田成立。',
-          '',
-          '我们以在日本市场普及和提升AI产品价值为使命，致力于为企业、教育机构和个人用户提供更贴近、更易用的AI体验。',
-          '',
-          '生成AI在学习、商务、内容创作等多个领域迅速普及，为社会带来了新的可能性。另一方面，为了充分发挥其价值，我们认为重要的是将产品以适合日本市场的形式提供，并建立一个可以安心使用的环境。',
-          '',
-          '公司将通过AI产品的销售、营销和客户支持，为更多用户提供有价值的AI体验，同时与合作伙伴企业携手，为日本市场AI应用的进一步发展做出贡献。',
-          '',
-          '今后，我们将贴近每一位用户，作为值得信赖的企业，致力于实现AI与人更加自然连接的未来。',
-          '',
-          '衷心感谢各位的支持和厚爱。'
-        ],
-        signature: '代表董事 王曾'
-      },
-      philosophy: {
-        title: '经营理念·愿景',
-        items: [
-          { title: '让AI更加贴近生活', description: '通过营造人人都能安心使用AI的环境，使AI成为更贴近生活的存在。' },
-          { title: '为日本市场提供价值', description: '贴近日本市场的需求，持续提供更好的AI体验。' },
-          { title: '值得信赖的合作伙伴', description: '珍惜与客户、合作伙伴企业的信赖关系，共同创造长期价值。' },
-          { title: '支撑未来的技术', description: '将AI的可能性扩展到社会，致力于成为支持学习、工作和创造的企业。' }
-        ]
-      },
-      overview: {
-        title: '事业概要',
-        content: [
-          'ZIFU技研株式会社作为新加坡出身的AI科技企业ZINGDECK INTL PTE. LTD.的日本法人，负责日本市场的AI产品销售、营销和业务拓展。',
-          '利用在全球培养的AI技术和对日本市场的理解，为企业、教育机构和个人用户提供更有价值的AI体验，同时致力于进一步普及和推广AI应用。'
-        ]
-      },
-      business: {
-        title: '事业内容',
-        items: [
-          { title: 'AI产品销售', description: '销售和提供包括NoteGPT、Decopy AI、VisualGPT在内的AI产品订阅服务。' },
-          { title: '营销推广', description: '提升日本市场的品牌认知度，促进用户获取，扩大与合作伙伴企业的销售渠道。' },
-          { title: '导入支持', description: '为企业和教育机构用户提供从产品选择到使用开始的支持。' },
-          { title: '客户支持', description: '建立日语支持体制，提供可以安心使用产品的环境。' }
-        ]
-      },
-      companyInfo: {
-        title: '公司概要',
-        table: [
-          { label: '名称', value: 'ZIFU技研株式会社' },
-          { label: '所在地', value: '〒530-0001 大阪府大阪市北区梅田1丁目1番3号 大阪站前第3大厦11楼2号室' },
-          { label: '电话号码', value: '+81-6-7220-4600' },
-          { label: '代表社员', value: '王曾、福田高干' }
-        ]
-      }
-    },
-    products: {
-      features: '主要功能',
-      targetUsers: '推荐给这样的人士',
-      visit: '访问网站',
-      hero: {
-        title: '产品'
-      },
-      overview: {
-        title: '产品概要',
-        description: 'ZIFU技研从ZINGDECK在全球开展的AI产品群中，以与日本市场亲和度高的三款产品为核心进行提供。在学习、商务、内容创作的所有场景中，简单、实用地发挥AI的力量。',
-        icons: [
-          { name: 'NoteGPT', label: 'AI摘要·笔记生成' },
-          { name: 'Decopy AI', label: '文章生成·AI检测' },
-          { name: 'VisualGPT', label: '图像·视频生成' }
-        ]
-      },
-      noteGPT: {
-        title: 'NoteGPT',
-        subtitle: 'AI摘要·笔记生成工具',
-        url: 'https://notegpt.io/ja',
-        description: 'NoteGPT是一款AI能从视频、音频、PDF、Web文章等所有内容中瞬间提取要点，自动生成整理好的笔记的工具。在信息爆炸的时代，可以快速掌握"真正需要的信息"，适用于学习、会议纪要制作、研究资料整理等场景。',
-        features: [
-          'YouTube·音频文件的摘要',
-          'PDF·Web文章的要点提取',
-          'AI笔记自动生成与编辑',
-          '日语摘要精度的持续改善',
-          '支持学习·资格考试·商务文书模板'
-        ],
-        targetUsers: [
-          '希望提高在线学习效率的学生和上班族',
-          '希望自动化会议和采访的文字转录·摘要的人士',
-          '希望从大量资料中快速把握要点的研究人员和商务人士'
-        ]
-      },
-      decopyAI: {
-        title: 'Decopy AI',
-        subtitle: '文章生成·改写·AI检测工具',
-        url: 'https://decopy.ai/jp/',
-        description: 'Decopy是一款一站式支持文章自动生成、改写、可读性优化以及AI生成内容检测等所有与文章相关工作的工具。适用于商务文书、报告、博客文章、SNS投稿等所有文章创作场景。',
-        features: [
-          'AI文章自动生成',
-          '文章改写·语调调整',
-          '可读性优化',
-          'AI生成内容检测',
-          '支持日语特有的文体·敬语·商务文书格式'
-        ],
-        targetUsers: [
-          '希望提高商务文书制作质量和效率的人士',
-          '希望持续发布博客·SNS内容的人士',
-          '对日语文体和敬语感到不安的全球商务人士'
-        ]
-      },
-      visualGPT: {
-        title: 'VisualGPT',
-        subtitle: 'AI图像·视频生成·编辑工具',
-        url: 'https://visualgpt.io/ja',
-        description: 'VisualGPT不仅能从文本生成图像和视频，还能在一个工具中实现图像编辑、背景去除、高清化、商品图像制作、AI头像生成、室内·建筑透视制作等多样的视觉内容制作。从电商从业者、设计师、内容创作者到企业营销人员，满足所有视觉制作需求。',
-        features: [
-          '文本到图像生成',
-          '图像编辑·润色',
-          '视频生成',
-          '背景去除·图像高清化',
-          '商品图像·电商视觉制作',
-          'AI头像生成',
-          '室内·建筑透视制作'
-        ],
-        targetUsers: [
-          '希望高效制作商品图像和促销视觉的电商从业者',
-          '希望持续制作SNS·广告用视觉内容的人士',
-          '设计资源有限的中小企业和初创企业'
-        ]
-      },
-      enterprise: {
-        title: '企业服务',
-        items: [
-          { title: '导入支持', description: '为企业和教育机构用户提供从产品选择到使用开始的支持。' },
-          { title: '试用支持', description: '支持免费试用和初始设置，提供可以安心使用产品的环境。' },
-          { title: '使用支持', description: '对合同手续和产品使用相关的咨询，用日语迅速对应。' }
-        ]
-      }
-    },
-    technology: {
-      globalTeam: '全球开发团队',
-      globalTeamDesc: '多国籍工程师组成的开发体制',
-      infrastructureItems: ['云基础设施', '持续运营', '数据管理', '日语支持'],
-      hero: {
-        title: '技术'
-      },
-      overview: {
-        title: '技术概要',
-        content: [
-          'ZIFU技研的技术基于总部位于新加坡的ZINGDECK INTL PTE. LTD.在全球开展的AI开发基础。',
-          'ZINGDECK运用大规模语言模型（LLM）、自然语言处理（NLP）、计算机视觉、生成AI等尖端技术，通过多国籍工程师团队持续推进AI产品开发。',
-          '作为日本法人的ZIFU技研，利用这一全球技术基础，通过日本市场的产品推广、用户支持和市场反馈，致力于提供更好的AI体验。'
-        ]
-      },
-      coreTech: {
-        title: '核心技术',
-        items: [
-          { title: 'AI摘要·自然语言处理', description: '从视频·音频的文字转录到多模态内容理解，再到高精度自动摘要。通过利用大规模语言模型的高级自然语言处理技术，持续改善日语内容的摘要精度。', product: 'NoteGPT' },
-          { title: '文章生成·AI检测', description: '理解上下文的自然文章生成、文体和语调的自定义、AI生成内容的高精度检测。是支持日语特有的敬语表达和商务文书格式的多层次文章处理技术。', product: 'Decopy AI' },
-          { title: '图像·视频生成AI', description: '从文本到高质量图像生成、视频生成、图像编辑·润色、背景去除、超分辨率处理。整合最新图像生成模型和计算机视觉技术，实现专业用途也能承受的视觉AI。', product: 'VisualGPT' }
-        ]
-      },
-      rnd: {
-        title: '研究开发体制',
-        content: [
-          'ZINGDECK集团构建了由AI、机器学习、自然语言处理、计算机视觉等多个领域的专业工程师组成的全球开发体制。',
-          '作为日本法人的ZIFU技研，将日本市场的用户声音和市场需求共享给开发团队，支持产品改进和服务提升的努力。'
-        ]
-      },
-      infrastructure: {
-        title: '基础设施',
-        content: [
-          'ZIFU技研提供的AI服务，利用ZINGDECK集团的全球云基础设施提供。',
-          '重视服务的稳定性和便利性，致力于持续的系统运营和质量改进。',
-          '基于云基础设施的稳定服务提供',
-          '持续的系统运营与改进',
-          '考虑安全性的数据管理',
-          '日语客户支持',
-          '日本法人将根据客户反馈，持续改进以提供更舒适的服务。'
-        ]
-      }
-    },
-    team: {
-      values: ['用技术解决问题', '持续学习持续成长', '连接全球与地域'],
-      hero: {
-        title: '团队'
-      },
-      overview: {
-        title: '团队',
-        content: [
-          'ZIFU技研汇聚了在IT·AI行业拥有丰富经验的成员，',
-          '利用全球技术能力和对日本市场的理解，',
-          '致力于AI产品的普及和业务增长。'
-        ]
-      },
-      members: {
-        title: '主要成员',
-        items: [
-          {
-            name: '王曾',
-            title: '代表董事',
-            bio: [
-              '在百度（Baidu）、人人网（RenRen）、泡泡玛特（POP MART）等中国代表性IT企业中，担任人事、经营管理、业务运营负责人超过20年。',
-              '利用在快速成长IT企业中积累的组织构建、人才战略、业务运营的丰富经验，主导日本法人的成立。',
-              '目前负责制定日本市场的业务战略、销售拓展以及与合作伙伴企业的合作。'
-            ]
-          },
-          {
-            name: '福田高干',
-            title: '代表董事',
-            bio: [
-              '精通中文和英文，拥有丰富的全球商务经验。',
-              '曾参与连接日本企业和海外企业的业务推进和对外沟通。',
-              '目前负责日本市场的业务运营、与合作伙伴企业的合作、对外沟通，支持日本法人的顺利业务开展。'
-            ]
-          },
-          {
-            name: '曹鸿源',
-            title: 'AI产品开发负责人',
-            bio: [
-              '在生成AI产品的规划和开发方面拥有丰富经验，主导利用AI技术的产品设计和服务开发。',
-              '主导了NoteGPT的启动，推动了重视用户价值的产品开发和持续的功能改进。',
-              '目前负责AI产品的战略规划和开发，同时推动包括日本市场在内的全球拓展。'
-            ]
-          }
-        ]
-      },
-      philosophy: {
-        title: '人才理念',
-        content: [
-          'ZIFU技研将"全球技术 × 扎根地域的现场力量"作为企业价值观。\n\n',
-          '我们重视的价值观：\n\n',
-          '·以技术解决现实问题的态度',
-          '·在快速变化的AI市场中持续学习、持续成长的态度',
-          '·连接日本市场和全球团队的沟通\n\n',
-          '我们珍视与客户、合作伙伴企业以及全球团队的信赖关系，为了让AI成为更贴近生活的存在，将继续挑战。'
-        ]
-      }
-    }
-  },
   en: {
     meta: {
       title: 'ZIFU Giken Co., Ltd. - Empower learning and creation with AI.',
@@ -657,7 +341,6 @@ export const messages = {
       },
       language: {
         ja: '日本語',
-        zh: '简体中文',
         en: 'English'
       }
     },
@@ -942,7 +625,7 @@ export const messages = {
           },
           {
             name: 'Cao Hongyuan',
-            title: 'AI Product Development Director',
+            title: 'Co-Founder',
             bio: [
               'Extensive experience in planning and developing generative AI products, leading product design and service development leveraging AI technology.',
               'Led the launch of NoteGPT, promoting user-value-focused product development and continuous feature improvements.',

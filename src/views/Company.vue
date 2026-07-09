@@ -33,7 +33,7 @@
                 <component :is="philosophyIcons[index]" class="w-7 h-7 text-blue-600" />
               </div> -->
               <h3 class="text-xl font-bold text-gray-800 mb-3 min-h-16 whitespace-nowrap">{{ item.title }}</h3>
-              <p class="text-gray-600 text-sm leading-relaxed ja-body-text zh-body-text">{{ item.description }}</p>
+              <p class="text-gray-600 text-sm leading-relaxed ja-body-text">{{ item.description }}</p>
             </div>
           </div>
         </div>
@@ -63,7 +63,7 @@
                 <component :is="businessIcons[index]" class="w-7 h-7 text-green-600" />
               </div> -->
               <h3 class="text-xl font-bold text-gray-800 mb-3 min-h-16">{{ item.title }}</h3>
-              <p class="text-gray-600 text-sm leading-relaxed ja-body-text zh-body-text">{{ item.description }}</p>
+              <p class="text-gray-600 text-sm leading-relaxed ja-body-text">{{ item.description }}</p>
             </div>
           </div>
         </div>

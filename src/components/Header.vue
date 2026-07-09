@@ -183,7 +183,7 @@ const languages = Object.entries(messages[effectiveLocale.value]?.header?.langua
 
 const isHomePage = computed(() => {
   const path = router.currentRoute.value.path
-  return path === '/' || path === '/ja/' || path === '/zh/' || path === '/en/'
+  return path === '/' || path === '/ja/' || path === '/en/'
 })
 
 const shouldUseDarkText = computed(() => {

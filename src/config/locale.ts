@@ -4,7 +4,7 @@ export const LOCALE_STORAGE_KEY = 'locale'
 
 export const DEFAULT_LOCALE: Locale = 'ja'
 
-export const SUPPORTED_LOCALES: Locale[] = ['ja', 'zh', 'en']
+export const SUPPORTED_LOCALES: Locale[] = ['ja', 'en']
 
 export function detectSystemLocale(): Locale {
   if (typeof navigator === 'undefined') return DEFAULT_LOCALE

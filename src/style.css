@@ -39,32 +39,16 @@ body {
   overflow-wrap: break-word;
 }
 
-[data-lang="zh"] body {
-  font-family: 'Noto Sans SC', 'Noto Sans JP', 'Inter', system-ui, -apple-system, sans-serif;
-  word-break: keep-all;
-  overflow-wrap: break-word;
-}
 
-[data-lang="zh"] h1,
-[data-lang="zh"] h2,
-[data-lang="zh"] h3,
-[data-lang="zh"] h4,
-[data-lang="zh"] h5,
-[data-lang="zh"] h6 {
-  word-break: keep-all;
-  overflow-wrap: break-word;
-}
 
 /* 日语/中文短标题：防止卡片标题等短文本在词内断行 */
-[data-lang="ja"] .ja-nowrap,
-[data-lang="zh"] .zh-nowrap {
+[data-lang="ja"] .ja-nowrap {
   white-space: nowrap;
   overflow-wrap: anywhere;
 }
 
 /* 日语/中文正文：恢复自然 CJK 换行，避免 keep-all 导致标点处提前换行、右侧大量留白 */
-[data-lang="ja"] .ja-body-text,
-[data-lang="zh"] .zh-body-text {
+[data-lang="ja"] .ja-body-text {
   word-break: normal;
   line-break: strict;
   overflow-wrap: break-word;
