@@ -22,7 +22,7 @@ export const messages = {
     },
     footer: {
       companyName: 'ZIFU技研',
-      phone: '+81-6-7220-4600',
+      phone: '06-7220-4600',
       address: '〒530-0001 大阪府大阪市北区梅田一丁目1番3号　大阪駅前第3ビル11階2号室',
       copyright: '© 2026 ZIFU技研株式会社 All Rights Reserved.'
     },
@@ -139,8 +139,8 @@ export const messages = {
         table: [
           { label: '名称', value: 'ZIFU技研株式会社' },
           { label: '所在地', value: '〒530-0001 大阪府大阪市北区梅田1丁目1番3号　大阪駅前第3ビル11階2号室' },
-          { label: '電話番号', value: '+81-6-7220-4600' },
-          { label: '代表社員', value: '王 曾、福田 高幹' }
+          { label: '電話番号', value: '06-7220-4600' },
+          { label: '代表取締役', value: '王 曾、福田 高幹' }
         ]
       }
     },
@@ -323,6 +323,11 @@ export const messages = {
           '私たちは、お客様、パートナー企業、そしてグローバルチームとの信頼関係を大切にし、AIをより身近な存在にするため、挑戦を続けてまいります。'
         ]
       }
+    },
+    notFound: {
+      title: 'ページが見つかりません',
+      description: 'お探しのページが移動または削除された可能性があります。',
+      backToHome: 'ホームに戻る'
     }
   },
   en: {
@@ -346,7 +351,7 @@ export const messages = {
     },
     footer: {
       companyName: 'ZIFU Giken Co., Ltd.',
-      phone: '+81-6-7220-4600',
+      phone: '06-7220-4600',
       address: 'Room 2, 11th Floor, Osaka Ekimae Dai-3 Building, 1-1-3 Umeda, Kita-ku, Osaka 530-0001, Japan',
       copyright: '© 2026 ZIFU Giken Co., Ltd. All Rights Reserved.'
     },
@@ -460,7 +465,7 @@ export const messages = {
         table: [
           { label: 'Name', value: 'ZIFU Giken Co., Ltd.' },
           { label: 'Location', value: 'Room 2, 11th Floor, Osaka Ekimae Dai-3 Building, 1-1-3 Umeda, Kita-ku, Osaka 530-0001, Japan' },
-          { label: 'Phone', value: '+81-6-7220-4600' },
+          { label: 'Phone', value: '06-7220-4600' },
           { label: 'Representatives', value: 'Wang Zeng, Takamoto Fukuda' }
         ]
       }
@@ -645,6 +650,11 @@ export const messages = {
           'We value trust relationships with customers, partner companies, and our global team, and continue to challenge ourselves to make AI a more familiar presence.'
         ]
       }
+    },
+    notFound: {
+      title: 'Page Not Found',
+      description: 'The page you are looking for may have been moved or deleted.',
+      backToHome: 'Back to Home'
     }
   }
 }

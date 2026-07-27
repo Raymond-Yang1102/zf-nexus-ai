@@ -26,10 +26,11 @@ const baseRoutes: BaseRoute[] = [
     name: 'Technology',
     component: () => import('@/views/Technology.vue')
   },
-  {
-    name: 'Team',
-    component: () => import('@/views/Team.vue')
-  }
+  // 暂时不开放团队页面
+  // {
+  //   name: 'Team',
+  //   component: () => import('@/views/Team.vue')
+  // }
 ]
 
 const routes: RouteRecordRaw[] = []

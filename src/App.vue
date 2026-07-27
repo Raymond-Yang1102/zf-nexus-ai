@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <RouterView v-slot="{ Component }">
     <component :is="Component" :currentLocale="currentLocale" @change-locale="changeLocale" />
   </RouterView>
@@ -53,17 +53,41 @@ const updateDocumentHead = () => {
   document.querySelector('meta[name="keywords"]')?.setAttribute('content', t('meta.keywords'))
 }
 
+const extractLocaleFromPath = (path: string): string | null => {
+  const match = path.match(/^\/(ja|en)(?:\/|$)/)
+  return match ? match[1] : null
+}
+
+const syncLocaleFromRoute = () => {
+  const langParam = route.params.lang as string | undefined
+
+  if (langParam && SUPPORTED_LOCALES.includes(langParam as any)) {
+    if (locale.value !== langParam) {
+      locale.value = langParam
+      localStorage.setItem(LOCALE_STORAGE_KEY, langParam)
+    }
+    return
+  }
+
+  const pathLocale = extractLocaleFromPath(route.path)
+  if (pathLocale && locale.value !== pathLocale) {
+    locale.value = pathLocale
+    localStorage.setItem(LOCALE_STORAGE_KEY, pathLocale)
+  }
+}
+
 watch(currentLocale, () => {
   updateDocumentHead()
 })
 
-onMounted(() => {
-  const langParam = route.params.lang as string
+watch(() => route.path, () => {
+  syncLocaleFromRoute()
+})
 
-  if (langParam && SUPPORTED_LOCALES.includes(langParam as any)) {
-    locale.value = langParam
-    localStorage.setItem(LOCALE_STORAGE_KEY, langParam)
-  } else if (!localStorage.getItem(LOCALE_STORAGE_KEY)) {
+onMounted(() => {
+  syncLocaleFromRoute()
+
+  if (!localStorage.getItem(LOCALE_STORAGE_KEY)) {
     locale.value = DEFAULT_LOCALE
     localStorage.setItem(LOCALE_STORAGE_KEY, DEFAULT_LOCALE)
   }

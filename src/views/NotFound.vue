@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <div class="min-h-screen bg-washi-50 flex flex-col">
     <Header :currentLocale="currentLocale" @change-locale="handleLocaleChange" />
     
@@ -35,13 +35,15 @@ const emit = defineEmits<{
 }>()
 
 const router = useRouter()
-const { t } = useI18n()
+const { t, locale } = useI18n()
 
 const handleLocaleChange = (lang: string) => {
   emit('change-locale', lang)
 }
 
 const goHome = () => {
-  router.push('/')
+  const lang = locale.value as string
+  const homePath = lang === 'ja' ? '/' : `/${lang}/`
+  router.push(homePath)
 }
 </script>

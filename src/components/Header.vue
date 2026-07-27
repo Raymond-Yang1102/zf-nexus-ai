@@ -29,9 +29,10 @@
               :class="['text-sm font-medium transition-colors', navTextColorClass]">
               {{ messages[effectiveLocale]?.header?.nav['technology'] }}
             </a>
-            <a href="#" @click.prevent="goToTeam" :class="['text-sm font-medium transition-colors', navTextColorClass]">
+            <!-- team隐藏，暂不对外开放 -->
+            <!-- <a href="#" @click.prevent="goToTeam" :class="['text-sm font-medium transition-colors', navTextColorClass]">
               {{ messages[effectiveLocale]?.header?.nav['team'] }}
-            </a>
+            </a> -->
           </nav>
         </div>
 
