@@ -40,7 +40,7 @@ type SiteMessages = {
   }
   products: {
     overview: { title: string; description: string }
-    desktopStatus: string
+    officialWebsiteLabel: string
     featureLabel: string
     useCaseLabel: string
     items: Record<ProductId, ProductDetail>
@@ -109,7 +109,7 @@ export const messages: Record<Locale, SiteMessages> = {
     },
     products: {
       overview: { title: 'デスクトップメディアツール', description: 'ZingStoneの各製品は、ユーザーのデバイス上でFFmpegを利用してメディアを処理します。ファイルをアップロードせず、制作から納品準備までのワークフローを支えます。' },
-      desktopStatus: 'デスクトップ版の提供情報は準備中です。',
+      officialWebsiteLabel: '公式サイトを見る',
       featureLabel: '主な機能',
       useCaseLabel: '活用シーン',
       items: {
@@ -205,7 +205,7 @@ export const messages: Record<Locale, SiteMessages> = {
     },
     products: {
       overview: { title: 'Desktop Media Tools', description: 'Each ZingStone product uses FFmpeg on the user’s device to process media locally. The tools support workflows from creation through delivery preparation without describing upload processing.' },
-      desktopStatus: 'Desktop availability information is being prepared.', featureLabel: 'Key capabilities', useCaseLabel: 'Use cases',
+      officialWebsiteLabel: 'Visit official website', featureLabel: 'Key capabilities', useCaseLabel: 'Use cases',
       items: {
         videocompress: { title: 'VideoCompress', subtitle: 'Video Compression, Conversion and Editing', description: 'A desktop tool for adjusting video size, converting formats, and completing practical editing and media-preparation tasks.', features: ['Video compression and output-size adjustment', 'Video format conversion', 'Video trimming and simple editing', 'Audio extraction and text-transcription assistance', 'Image and PDF compression'], useCases: ['Preparing files for sharing and sending', 'Converting files for different playback environments', 'Removing unneeded video sections'] },
         videobee: { title: 'VideoBee', subtitle: 'Video Conversion, Compression and Batch Processing', description: 'A desktop tool for large video files, repeated jobs, parameter control, and output preparation for publishing or delivery.', features: ['Video format conversion', 'Large-file compression optimization', 'Batch processing for multiple files', 'Video and audio parameter control', 'Output preparation for publishing and delivery'], useCases: ['Converting multiple videos together', 'Preparing output for a target platform', 'Preparing large source files for delivery'] },
@@ -265,7 +265,7 @@ export const messages: Record<Locale, SiteMessages> = {
       }
     },
     products: {
-      overview: { title: '桌面媒體工具', description: 'ZingStone 的各項產品會在使用者裝置上以 FFmpeg 本機處理媒體檔案，協助完成從創作到交付準備的工作流程。' }, desktopStatus: '桌面版提供資訊正在準備中。', featureLabel: '主要功能', useCaseLabel: '使用情境',
+      overview: { title: '桌面媒體工具', description: 'ZingStone 的各項產品會在使用者裝置上以 FFmpeg 本機處理媒體檔案，協助完成從創作到交付準備的工作流程。' }, officialWebsiteLabel: '前往官方網站', featureLabel: '主要功能', useCaseLabel: '使用情境',
       items: {
         videocompress: { title: 'VideoCompress', subtitle: '影片壓縮、轉換與編輯工具', description: '在桌面上調整影片檔案大小、轉換格式並完成必要編輯與媒體整理的工具。', features: ['影片壓縮與輸出大小調整', '影片格式轉換', '影片裁剪與簡易編輯', '音訊擷取與文字轉換輔助', '圖片與 PDF 壓縮'], useCases: ['分享或傳送前調整檔案大小', '轉換為不同播放環境所需格式', '整理不需要的影片片段'] },
         videobee: { title: 'VideoBee', subtitle: '影片轉換、壓縮與批次處理工具', description: '協助處理大型影片、重複工作、參數調整及發布或交付輸出的桌面工具。', features: ['影片格式轉換', '大型影片壓縮最佳化', '多檔案批次處理', '影片與音訊參數調整', '發布與交付前的輸出準備'], useCases: ['一次轉換多支影片', '依目標平台準備輸出', '準備大型來源檔案以供交付'] },
