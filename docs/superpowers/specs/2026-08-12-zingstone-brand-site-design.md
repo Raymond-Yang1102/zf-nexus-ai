@@ -10,12 +10,14 @@
 
 ## 语言与路由
 
-保留日文与英文，新增繁体中文。日文为默认语言。
+保留日文与英文，新增繁体中文。默认语言已由
+[`2026-08-14-default-english-locale-design.md`](./2026-08-14-default-english-locale-design.md)
+调整为英文；下表以最新规范为准。
 
 | 语言 | 首页 | 其他页面示例 |
 | --- | --- | --- |
-| 日文 | `/` | `/products`、`/company`、`/technology`、`/contact`、`/privacy`、`/terms` |
-| 英文 | `/en/` | `/en/products`、`/en/company`、`/en/technology`、`/en/contact`、`/en/privacy`、`/en/terms` |
+| 英文 | `/` | `/products`、`/company`、`/technology`、`/contact`、`/privacy`、`/terms` |
+| 日文 | `/ja/` | `/ja/products`、`/ja/company`、`/ja/technology`、`/ja/contact`、`/ja/privacy`、`/ja/terms` |
 | 繁体中文 | `/zh-Hant/` | `/zh-Hant/products`、`/zh-Hant/company`、`/zh-Hant/technology`、`/zh-Hant/contact`、`/zh-Hant/privacy`、`/zh-Hant/terms` |
 
 语言切换应保持当前页面路径；没有对应页面时回到该语言首页。页面标题、description 与 keywords 随当前语言更新。
