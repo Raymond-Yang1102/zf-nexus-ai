@@ -15,19 +15,19 @@ export const PRODUCT_PRESENTATION: Record<ProductId, {
   videocompress: {
     anchor: 'videocompress',
     icon: videoCompressIcon,
-    backgroundClass: 'from-blue-100 to-blue-200',
+    backgroundClass: 'from-slate-50 to-slate-100',
     websiteUrl: 'https://videocompress.ai/'
   },
   videobee: {
     anchor: 'videobee',
     icon: videoBeeIcon,
-    backgroundClass: 'from-amber-100 to-amber-200',
+    backgroundClass: 'from-slate-50 to-slate-100',
     websiteUrl: 'https://videobee.ai/'
   },
   audiocut: {
     anchor: 'audiocut',
     icon: audioCutIcon,
-    backgroundClass: 'from-violet-100 to-violet-200',
+    backgroundClass: 'from-slate-50 to-slate-100',
     websiteUrl: 'https://audiocut.io/'
   }
 }

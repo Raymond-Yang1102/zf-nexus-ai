@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="-38 -27.5 220 220" role="img" aria-label="Blue chevron logo">
+  <defs>
+    <linearGradient id="outerGradient" x1="0" y1="0" x2="0.9" y2="1"><stop offset="0" stop-color="#0078FF"/><stop offset="0.48" stop-color="#0058FC"/><stop offset="1" stop-color="#003FF3"/></linearGradient>
+    <linearGradient id="innerGradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#05AEFF"/><stop offset="0.55" stop-color="#0297FF"/><stop offset="1" stop-color="#017BFF"/></linearGradient>
+  </defs>
+  <path fill="url(#outerGradient)" d="M72 0 144 41.5v83L72 166 0 124.5v-83Z"/><path fill="url(#innerGradient)" d="m72 26 49.5 28.5v57L72 140 22.5 111.5v-57Z"/>
+</svg>

@@ -7,7 +7,7 @@ const pageRoutes: Array<{ name: string; path: string; component: Component; prop
   { name: 'Company', path: '/company', component: () => import('@/views/Company.vue') },
   { name: 'Products', path: '/products', component: () => import('@/views/Products.vue') },
   { name: 'Technology', path: '/technology', component: () => import('@/views/Technology.vue') },
-  { name: 'Contact', path: '/contact', component: () => import('@/views/InformationPage.vue'), props: { page: 'contact' } },
+  { name: 'Team', path: '/team', component: () => import('@/views/Team.vue') },
   { name: 'Privacy', path: '/privacy', component: () => import('@/views/InformationPage.vue'), props: { page: 'privacy' } },
   { name: 'Terms', path: '/terms', component: () => import('@/views/InformationPage.vue'), props: { page: 'terms' } }
 ]

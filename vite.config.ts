@@ -10,6 +10,7 @@ export default defineConfig({
     }
   },
   server: {
-    port: 3200
+    port: 3200,
+    allowedHosts: ['prospect-hub-anaheim-routing.trycloudflare.com']
   }
 })
