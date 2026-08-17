@@ -1,8 +1,16 @@
 import type { Locale } from '@/locales'
 
 export const LOCALE_STORAGE_KEY = 'locale'
-export const DEFAULT_LOCALE: Locale = 'ja'
+export const DEFAULT_LOCALE: Locale = 'en'
 export const SUPPORTED_LOCALES: Locale[] = ['ja', 'en', 'zh-Hant']
+
+export function isSupportedLocale(locale: string): locale is Locale {
+  return SUPPORTED_LOCALES.includes(locale as Locale)
+}
+
+export function resolveSupportedLocale(locale: string): Locale {
+  return isSupportedLocale(locale) ? locale : DEFAULT_LOCALE
+}
 
 export function normalizeBrowserLocale(browserLocale: string): Locale {
   const normalized = browserLocale.toLowerCase()
@@ -18,7 +26,7 @@ export function detectSystemLocale(): Locale {
 
 export function resolveInitialLocale(): Locale {
   const saved = localStorage.getItem(LOCALE_STORAGE_KEY)
-  if (saved !== null && SUPPORTED_LOCALES.includes(saved as Locale)) return saved as Locale
+  if (saved !== null && isSupportedLocale(saved)) return saved
   const systemLocale = detectSystemLocale()
   localStorage.setItem(LOCALE_STORAGE_KEY, systemLocale)
   return systemLocale
