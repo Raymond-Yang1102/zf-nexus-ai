@@ -15,6 +15,7 @@ export function resolveSupportedLocale(locale: string): Locale {
 export function normalizeBrowserLocale(browserLocale: string): Locale {
   const normalized = browserLocale.toLowerCase()
   if (normalized.startsWith('zh-hant') || normalized.startsWith('zh-tw') || normalized.startsWith('zh-hk')) return 'zh-Hant'
+  if (normalized.startsWith('ja')) return 'ja'
   if (normalized.startsWith('en')) return 'en'
   return DEFAULT_LOCALE
 }

@@ -21,6 +21,11 @@ describe('locale contract', () => {
     expect(normalizeBrowserLocale('zh-TW')).toBe('zh-Hant')
   })
 
+  it('normalizes Japanese browser languages to Japanese', () => {
+    expect(normalizeBrowserLocale('ja')).toBe('ja')
+    expect(normalizeBrowserLocale('ja-JP')).toBe('ja')
+  })
+
   it('preserves a previously saved supported locale', () => {
     const setItem = vi.fn()
     vi.stubGlobal('localStorage', {

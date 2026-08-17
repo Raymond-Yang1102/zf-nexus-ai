@@ -9,8 +9,13 @@ export function localeFromPath(path: string): Locale {
 }
 
 export function localizedPath(fullPath: string, targetLocale: Locale): string {
-  const [pathAndQuery, hash = ''] = fullPath.split('#', 2)
-  const canonicalPath = pathAndQuery.replace(localizedPrefixPattern, '') || '/'
+  const hashIndex = fullPath.indexOf('#')
+  const pathAndQuery = hashIndex === -1 ? fullPath : fullPath.slice(0, hashIndex)
+  const hash = hashIndex === -1 ? '' : fullPath.slice(hashIndex)
+  const queryIndex = pathAndQuery.indexOf('?')
+  const pathname = queryIndex === -1 ? pathAndQuery : pathAndQuery.slice(0, queryIndex)
+  const query = queryIndex === -1 ? '' : pathAndQuery.slice(queryIndex)
+  const canonicalPath = pathname.replace(localizedPrefixPattern, '') || '/'
   const translatedPath = targetLocale === DEFAULT_LOCALE ? canonicalPath : `/${targetLocale}${canonicalPath === '/' ? '/' : canonicalPath}`
-  return hash ? `${translatedPath}#${hash}` : translatedPath
+  return `${translatedPath}${query}${hash}`
 }
