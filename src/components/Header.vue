@@ -32,6 +32,7 @@ import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 import { Globe, Menu, X } from 'lucide-vue-next'
 import { messages, type Locale } from '@/locales'
+import { resolveSupportedLocale } from '@/config/locale'
 import { localizedPath } from '@/composables/useLocalizedPath'
 import logoImg from '@/assets/logo/zingstone-logo-transparent.png'
 
@@ -42,7 +43,7 @@ const router = useRouter()
 const isScrolled = ref(false)
 const isMobileOpen = ref(false)
 const isLanguageOpen = ref(false)
-const effectiveLocale = computed(() => (locale.value in messages ? locale.value : 'ja') as Locale)
+const effectiveLocale = computed(() => resolveSupportedLocale(locale.value))
 const languages = computed(() => Object.entries(messages[effectiveLocale.value].header.language).map(([code, label]) => ({ code: code as Locale, label })))
 const navItems = computed(() => [
   { path: '/', label: messages[effectiveLocale.value].header.nav.home }, { path: '/company', label: messages[effectiveLocale.value].header.nav.company }, { path: '/products', label: messages[effectiveLocale.value].header.nav.products }, { path: '/technology', label: messages[effectiveLocale.value].header.nav.technology }

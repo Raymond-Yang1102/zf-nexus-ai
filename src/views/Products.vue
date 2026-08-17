@@ -12,7 +12,8 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { Check, User } from 'lucide-vue-next'
-import { messages, type Locale } from '@/locales'
+import { messages } from '@/locales'
+import { resolveSupportedLocale } from '@/config/locale'
 import { PRODUCT_IDS, PRODUCT_PRESENTATION } from '@/config/products'
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
@@ -23,7 +24,7 @@ import audioCutImage from '@/assets/images/audiocut-website.png'
 defineProps<{ currentLocale: string }>()
 const emit = defineEmits<{ (event: 'change-locale', lang: string): void }>()
 const { locale } = useI18n()
-const activeLocale = computed(() => (locale.value in messages ? locale.value : 'ja') as Locale)
+const activeLocale = computed(() => resolveSupportedLocale(locale.value))
 const products = computed(() => messages[activeLocale.value].products)
 const changeLocale = (language: string) => emit('change-locale', language)
 const productImages = { videocompress: videoCompressImage, videobee: videoBeeImage, audiocut: audioCutImage }

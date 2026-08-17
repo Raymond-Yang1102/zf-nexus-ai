@@ -5,14 +5,15 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { messages, type Locale } from '@/locales'
+import { messages } from '@/locales'
+import { resolveSupportedLocale } from '@/config/locale'
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 type InformationPageId = 'privacy' | 'terms'
 const props = defineProps<{ currentLocale: string; page: InformationPageId }>()
 const emit = defineEmits<{ (event: 'change-locale', lang: string): void }>()
 const { locale } = useI18n()
-const activeLocale = computed(() => (locale.value in messages ? locale.value : 'ja') as Locale)
+const activeLocale = computed(() => resolveSupportedLocale(locale.value))
 const legalPage = computed(() => props.page === 'privacy' ? messages[activeLocale.value].information.privacy : messages[activeLocale.value].information.terms)
 const changeLocale = (language: string) => emit('change-locale', language)
 </script>

@@ -10,10 +10,11 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { messages, type Locale } from '@/locales'
+import { messages } from '@/locales'
+import { resolveSupportedLocale } from '@/config/locale'
 import logoImg from '@/assets/logo/zingstone-logo-transparent.png'
 
 const { locale } = useI18n()
-const currentLocale = computed(() => (locale.value in messages ? locale.value : 'ja') as Locale)
+const currentLocale = computed(() => resolveSupportedLocale(locale.value))
 const footer = computed(() => messages[currentLocale.value].footer)
 </script>

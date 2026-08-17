@@ -11,13 +11,14 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { Files, HardDrive, SlidersHorizontal } from 'lucide-vue-next'
-import { messages, type Locale } from '@/locales'
+import { messages } from '@/locales'
+import { resolveSupportedLocale } from '@/config/locale'
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 defineProps<{ currentLocale: string }>()
 const emit = defineEmits<{ (event: 'change-locale', lang: string): void }>()
 const { locale } = useI18n()
-const activeLocale = computed(() => (locale.value in messages ? locale.value : 'ja') as Locale)
+const activeLocale = computed(() => resolveSupportedLocale(locale.value))
 const technology = computed(() => messages[activeLocale.value].technology)
 const icons = [HardDrive, SlidersHorizontal, Files]
 const backgrounds = ['from-blue-100 to-blue-200', 'from-purple-100 to-purple-200', 'from-green-100 to-green-200']

@@ -1,7 +1,8 @@
 import { type Component } from 'vue'
 import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
+import { DEFAULT_LOCALE, SUPPORTED_LOCALES } from '@/config/locale'
 
-const localized = '(en|zh-Hant)'
+const localized = `(${SUPPORTED_LOCALES.filter((locale) => locale !== DEFAULT_LOCALE).join('|')})`
 const pageRoutes: Array<{ name: string; path: string; component: Component; props?: Record<string, string> }> = [
   { name: 'Home', path: '/', component: () => import('@/views/Home.vue') },
   { name: 'Company', path: '/company', component: () => import('@/views/Company.vue') },

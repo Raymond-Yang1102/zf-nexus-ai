@@ -21,7 +21,8 @@ import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 import { Building2, Cpu, Package, Users } from 'lucide-vue-next'
-import { messages, type Locale } from '@/locales'
+import { messages } from '@/locales'
+import { resolveSupportedLocale } from '@/config/locale'
 import { PRODUCT_IDS, PRODUCT_PRESENTATION, type ProductId } from '@/config/products'
 import { localizedPath } from '@/composables/useLocalizedPath'
 import Header from '@/components/Header.vue'
@@ -39,7 +40,7 @@ defineProps<{ currentLocale: string }>()
 const emit = defineEmits<{ (event: 'change-locale', lang: string): void }>()
 const { locale } = useI18n()
 const router = useRouter()
-const activeLocale = computed(() => (locale.value in messages ? locale.value : 'ja') as Locale)
+const activeLocale = computed(() => resolveSupportedLocale(locale.value))
 const home = computed(() => messages[activeLocale.value].home)
 const cardIcons = { company: Building2, products: Package, technology: Cpu, team: Users }
 const paths = { company: '/company', products: '/products', technology: '/technology', team: '/team' }
